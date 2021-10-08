@@ -5,8 +5,8 @@ console.log( "Hello from external JavaScript");
 alert("Red alert dude!!");
 
 var userInput = prompt("What is your favorite color?");
-alert("That's my favorite color too!!");
-
+alert("Great!! " + userInput + "That's my favorite color too!!");
+//
 // var jeff = "Jeff";
 // console.log(jeff);
 //
