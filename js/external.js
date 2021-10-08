@@ -36,7 +36,6 @@ console.log("How many days?" + numberOfDays );
 //var priceForMovies = parseFloat(3.00);
 
 function priceForMovies(x, y, z)
-
 console.log(priceForMovies(littleMermaid, brotherBear, hercules));
 
 
