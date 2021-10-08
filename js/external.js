@@ -67,12 +67,12 @@ var google = 400;
 var amazon = 380;
 var facebook = 350;
 
-var company =prompt("Enter company worked at: ")
-alert =(google || amazon || facebook);
 
-
+var company =prompt("Which company worked at? ")
 var perHour = prompt("Enter hours: ");
-alert("Paycheck " + (perHour * (google || amazon || facebook)));
+alert(perHour*(google || amazon || facebook));
+
+// alert(perHour * (google || amazon || facebook));
 
 
-//FYI add, commit, push- I figured it out!!
+
