@@ -73,6 +73,71 @@ var perHour = prompt("Enter hours: ");
 alert(perHour*(google || amazon || facebook));
 
 // alert(perHour * (google || amazon || facebook));
+//-----------------------------------------------------------------------//
+
+// A student can be enrolled in a class only if the class is not full and the class
+// schedule does not conflict with her current schedule.
+
+var classNotFull = true;
+var classConflict = true;
+var enrolled = classNotFull && classConflict;
+
+var classAt8am = false;
+var classSize = 125;
+var currentClassSize = 108;
+var canRegister = (currentClassSize < classSize) && !classAt8am;
+
+
+//     A product offer can be applied only if a person buys more than 2 items,
+//     and the offer has not expired. Premium members do not need to buy a specific
+//     amount of products.
+
+// var hasPremium = true;
+// var cartSize = 6;
+// var offerValid = true;
+
+// var canHaveDiscount = offerValid && (cartSize > 2 || hasPremium);
+
+
+
+
+// premiumMember = true;
+// offerValid = true;
+// moreThanTwo => 2 && offerValid == true;
+
+
+//______________________________________________________________________//
+
+
+
+
+
+// password must be at least 5 characters
+//the password must not include the username
+var username = 'codeup';
+var password = 'notastrongpassword';
+
+var atLeastFivePassword = password.length >= 5;
+var password.length >= 5;
+
+
+//var usernameNotInPassword = password.indexOf(username) === -1;
+// var usernameNotInPassword = ! password.includes(username;
+// the username must be no more than 20 characters
+// var userNameNotaParagraph = username.length <= 20;
+
+// var username.length <= 20;
+// neither the username or password can start or end with whitespace
+// var whitespace = username.trim() && password.trim();
+
+// var noWhitespace = username.trim() === username && password.trim() === password;
+
+// username.trim();
+// password.trim();
+
+// console.log(password);
+// console.log(username);
+// console.log(password.length);
 
 
 
