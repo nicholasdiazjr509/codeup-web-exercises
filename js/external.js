@@ -34,7 +34,7 @@ alert("Great!! " + userInput + "That's my favorite color too!!");
 // var numberOfDays = prompt ("How many days for movies?");
 // console.log("How many days?" + numberOfDays );
 //(littleMermaid + brotherBear + hercules) *3;
-
+/////// Parse dude....////////
 var littleMermaid = prompt("How many days did you rent The Little Mermaid?");
 var brotherBear = prompt("How many days did you rent Brother Bear?");
 var hercules = prompt("How many days did you rent hercules?");
