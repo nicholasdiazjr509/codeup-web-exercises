@@ -147,8 +147,6 @@ console.log(discountApplied);
 // var atLeastFivePassword = password.length >= 5;
 //
 // var atLeastFivePassword =prompt("Enter password: " );
-//
-//
 // //var usernameNotInPassword = password.indexOf(username) === -1;
 // // var usernameNotInPassword = ! password.includes(username);
 //
