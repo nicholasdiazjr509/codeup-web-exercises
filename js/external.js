@@ -13,7 +13,6 @@ alert("That's my favorite color too!!");
 // console.log("Hello, im in a separate file!");
 
 
-
 // var returnOfConfirm = confirm("Got any plans for the darn weekend?");
 // console.log(returnOfConfirm);
 //
@@ -25,16 +24,18 @@ alert("That's my favorite color too!!");
 
 
 
+
+var numberOfDays = prompt ("How many days for movies?");
+console.log("How many days?" + numberOfDays );
  //(littleMermaid + brotherBear + hercules) *3;
 
 //var littleMermaid = 3 * 3;
 //var brotherBear = 5 * 3;
 //var hercules = 1 * 3;
 
+//var priceForMovies = parseFloat(3.00);
 
-function priceForMovies(x, y, z){
-    return littleMermaid + brotherBear + hercules;
-}
+function priceForMovies(x, y, z)
 
 console.log(priceForMovies(littleMermaid, brotherBear, hercules));
 
