@@ -26,16 +26,13 @@ alert("Great!! " + userInput + "That's my favorite color too!!");
 //     Brother Bear (for 5 days, they love it),
 //     and Hercules (1 day, you don't know yet if they're going to like it).
 //     If price for a movie per day is $3, how much will you have to pay?
+//++++++++++Easier one below!!+++++++++++++//
 // var littleMermaid = 3;
 // var brotherBear = 5;
 // var hercules = 1;
 // (littleMermaid + brotherBear + hercules) *3;
-
-
 // var numberOfDays = prompt ("How many days for movies?");
 // console.log("How many days?" + numberOfDays );
-
-
 //(littleMermaid + brotherBear + hercules) *3;
 
 var littleMermaid = prompt("How many days did you rent The Little Mermaid?");
