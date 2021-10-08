@@ -73,3 +73,6 @@ alert =(google || amazon || facebook);
 
 var perHour = prompt("Enter hours: ");
 alert("Paycheck " + (perHour * (google || amazon || facebook)));
+
+
+//FYI add, commit, push- I figured it out!!
