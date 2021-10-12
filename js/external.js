@@ -163,4 +163,10 @@ console.log(discountApplied);
 // console.log(password.length);
 
 
+<html>
+<body>
+<script src="js/external.js">
+
+</script>
+</body>
 
