@@ -23,6 +23,40 @@ prompt("What is your name dude?"); // returns a string;
 //     ...Do something..
 //       .. return something
  //}
+
+(function(){
+
+    // warm-ups
+    // The following code will set the variable hadBreakfast to a random boolean value.
+    // Copy and paste the following code into your warmups JS file:
+    //     var hadBreakfast = Boolean(Math.round(Math.random()));
+    // Write a ternary expression to set a variable of hadBreakfastMessage to a string
+    // expressing whether or not you have had breakfast.
+    // You will use the variable hadBreakfast as your condition.
+
+
+
+
+        var hadBreakfast = Boolean(Math.round(Math.random()));
+        var hadBreakfastMessage = (hadBreakfast) ? "Yes, I had breakfast" : "No, I didn't eat any breakfast";
+
+        console.log(hadBreakfast);
+        console.log(hadBreakfastMessage);
+
+/**_____________________________________________________________________________________*/
+
+    function printSeven(){
+        return 7;
+    }
+    console.log(printSeven());
+
+    if(false) { //(34 < 24 === false)
+        console.log("See this?");
+    }else{
+        console.log("What about this?");
+    }
+
+
 function  todaysDate(greeting){
     return greeting + Date();
 
@@ -39,10 +73,10 @@ console.log(date);
 
 // Example:
 
-//Create a functioni which takes in two number parameters
-// to find the Hypetenuse angle.
+//Create a function which takes in two number parameters
+// to find the Hypotenuse angle.
 
-// Parameters are the placeholders stated in the functioin definition.
+// Parameters are the placeholders stated in the function definition.
 function findHypotenuse(a, b){
     var result;
     result = Math.sqrt((a * a) + (b * b))
@@ -95,15 +129,17 @@ console.log(printFour());
  console.log(firstName, lastName);
 
  // Immediately Invoked Function Expression (IIFE)
-(function ()){
-    var ifyVar = 'I am local to the IIFE'
 
-    function myFunction(){
-        return info;
-        //var of info can still be accessed here because it was defined
-        //"globally" (inside the IIFE).
-        //kind of like containers of a function
+    {
+        var ifyVar = 'I am local to the IIFE'
+
+        function myFunction() {
+            return info;
+            //var of info can still be accessed here because it was defined
+            //"globally" (inside the IIFE).
+            //kind of like containers of a function
+        }
+
     }
-})();
-
 console.log(ifyVar);
+    })();
