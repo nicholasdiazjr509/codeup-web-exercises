@@ -135,7 +135,6 @@ var discountApplied = alert("Discount may be applied" + productOffer);
 console.log(discountApplied);
 
 
-
 //______________________________________________________________________//
 // password must be at least 5 characters
 //the password must not include the username
@@ -161,12 +160,12 @@ console.log(discountApplied);
 // console.log(password);
 // console.log(username);
 // console.log(password.length);
-
-
-<html>
-<body>
-<script src="js/external.js">
-
-</script>
-</body>
-
+//
+//
+// <html>
+// <body>
+// <script src="js/external.js">
+//
+// </script>
+// </body>
+//
