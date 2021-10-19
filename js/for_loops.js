@@ -20,17 +20,18 @@
 
 showMultiplicationTable(7);
 
-for (var j = 20; j<=200; j++); //will run 10 times
+for (var j = 1; j<=10; j++) { //will run 10 times
 
-    var randomNum = Math.floor((Math.random() * 180) + 20 ) ; // 200 - 20 + 1
+    var randomNum = Math.floor((Math.random() * 180) + 20); // 200 - 20 + 1
     // Math.floor(math.random() * (max - min) + min );
-        if (randomNum % 2 === 0) {
+    if (randomNum % 2 === 0) {
 
-            console.log(randomNum +" is an even number")
+        console.log(randomNum + " is an even number");
 
-        }else{
-            console.log( randomNum + " is an odd, so never mind dude");
+    } else {
+        console.log(randomNum + " is an odd, so never mind dude");
     }
+}
 // for (var multiplier = 1; multiplier <= 7; multiplier++) for (var i = 1; i <= 7; i++) {
 //     var result = multiplier * i;
 //     console.log(multiplier + ' x' + ' = ' + result);
@@ -51,10 +52,15 @@ for (var j = 20; j<=200; j++); //will run 10 times
 
 
 
-for (  i = 1; i <=9; i++){
-     console.log(i.toString().repeat(i));
+for ( var k = 1; k <=9; k++){
+     console.log(k.toString().repeat(k));
     }
-
+//for ( var k = 1; k <=9; k++){
+//     var str = "";
+//     for (var l = 1;  l <= k; k +=1)
+//         str += "\n";
+//          }
+//         console.log(str);  }
 
 //#5
 //Create a for loop that uses console.log to create the output shown below.
