@@ -1,5 +1,32 @@
 "use strict";
 
+
+
+
+//write a program that console.logs the numbers from 1 to 100.
+// multiples of three console.log "FIZZ" instead of the number
+//and for the multiples of five console.log " BUZZ". For numbers which
+//are multiples of both three and five console.log "FIZZBUZZ" . USE A FOR LOOP
+
+for (var i = 1;  i <= 100; i++){
+    if(i % 3 == 0 && i % 5 == 0) //using the and && kind of threw me off, it works.
+    {
+        console.log("FIZZBUZZ");
+    }else if (i % 3 === 0)
+    {
+        console.log("FIZZ");
+
+    }else if (i % 5 === 0)
+    {
+        console.log("BUZZ");
+    }else{
+        console.log(i);
+    }
+}
+
+
+
+
 //A function is a block of re-usable code that performs a specific task.
 //Function typically take in an input, and produce an output.
 //Dont necessarily "need" one.

@@ -1,4 +1,6 @@
-"use strict"
+"use strict";
+
+
 
 //#2
 // Prompt the user for an odd number between 1 and 50.
