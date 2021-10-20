@@ -36,7 +36,7 @@ var oddNumber;
             if (i % 2 === 0) {
                 continue;
             }
-            if (b === oddNumber)
+            if (b === oddNumber){
                 console.log(oddNumber + "yikes, not that one!");
             continue;
         }
