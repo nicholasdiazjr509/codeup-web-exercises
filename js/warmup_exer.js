@@ -1,6 +1,10 @@
+(function(){
 "use strict";
-
-
+// create a function that accepts an array argument that returns the second to last element
+function secondToLast(arr) {
+    return arr[arr.length - 2];
+}
+console.log(secondToLast(["First", "Second", "not last dude", "Last"]));
 
 
 //write a program that console.logs the numbers from 1 to 100.
@@ -171,7 +175,7 @@ prompt("What is your name dude?"); // returns a string;
 //       .. return something
  //}
 
-(function(){
+
 
     // warm-ups
     // The following code will set the variable hadBreakfast to a random boolean value.
