@@ -16,7 +16,7 @@
         fName: "Nick ",
         lName: "Diaz"
     }];
-console.log("My name is " + person[0].fName+person[0].lName);
+    console.log("My name is " + person[0].fName + person[0].lName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -28,11 +28,11 @@ console.log("My name is " + person[0].fName+person[0].lName);
      */
 
 
-    person.sayHello = function (){
-        console.log ("Hello from "+ person[0].fName + person[0].lName + "!");
+    person.sayHello = function () {
+        console.log("Hello from " + person[0].fName + person[0].lName + "!");
     };
 
- person.sayHello();
+    person.sayHello();
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -47,11 +47,42 @@ console.log("My name is " + person[0].fName+person[0].lName);
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    var i;
+    for (i = 0; i > shoppers.valueOf(i); i++)
+        console.log(shoppers[i]);
+    var amount;
+
+     shoppers.forEach(function(amount){
+         console.log(amount);
+
+     });
+
+
+
+
+         // amount {[shoppers.totalBill]} = function () {
+         //    if (this.amount > 200) {
+         //
+         //        return "Price before discount: " + this.amount + "." + "Price after discount";
+         //    } else if{
+         //
+         //        totalBill = ("The total amount did not qualify for discount. Total amount is: " + totalBill);
+         //        return totalBill;
+
+
+   //>200 - .12 discountApplied;
+//using conditionals,   logs to the
+// browser, how much Ryan, Cameron and George need to pay
+// display a line with the name of the person, the amount before the
+// discount, the discount, if any, and the amount after the discount.
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -65,6 +96,10 @@ console.log("My name is " + person[0].fName+person[0].lName);
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
+
+
 
     /**
      * TODO:
@@ -91,6 +126,12 @@ console.log("My name is " + person[0].fName+person[0].lName);
      *      ...
      */
 
+
+
+
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -101,5 +142,15 @@ console.log("My name is " + person[0].fName+person[0].lName);
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+
+
+
+
+
+
+
+
 
 })();
