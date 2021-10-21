@@ -24,14 +24,19 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-    planetsArray = planetsArray.values(); //Using values() method.
-
-    for (let x of planetsArray) {
-        console.log("The array elements are: " + x);
 
 
-        //console.log(x);
+    var planetsArrayTag = planetsArray.join("<br>");
+        console.log(planetsArrayTag);
+    // var planetsArrayTag = planetsArray.values(); //Using values() method.
+    // console.log(planetsArrayTag);
+    //
+    // for (let x of planetsArrayTag) {
+    //     console.log("The array elements are: " + x);
+       //console.log(x);
         //could also print it in the browser.
        // document.write("<br>"+x);
-    }
+    var underorderedList = "<ul><li>" + planetsArray.join("</li><li>")+ "</li><li>"
+        console.log(underorderedList);
+    document.write(underorderedList);
     })();

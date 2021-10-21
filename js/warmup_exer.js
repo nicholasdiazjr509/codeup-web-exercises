@@ -1,5 +1,18 @@
 (function(){
 "use strict";
+
+
+
+
+function moveToEnd (arr) {
+    var movElement = arr.shift();
+    arr.push(moveElement);
+
+    return arr;
+}
+console.log(moveToEnd(1,2,3,4))
+console.log(moveToEnd(['rock', 'roll', 'and']));
+
 // create a function that accepts an array argument that returns the second to last element
 function secondToLast(arr) {
     return arr[arr.length - 2];
