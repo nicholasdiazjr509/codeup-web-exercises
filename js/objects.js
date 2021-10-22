@@ -74,7 +74,7 @@
             }else if( spent.amount <= 200){
                 amount = spent.amount
                 totalAmount += amount
-                console.log(" Total amount: " + (totalAmount)+ "." + " Discount is applied at $200 or more. Thx though.")
+                console.log(" Total amount: " + totalAmount+ "." + " Discount is applied at $200 or more. Thx though.")
             }
         })
         console.log("Total spent " + totalAmount)
@@ -147,6 +147,12 @@
         //The Stand by Stephen King
 
     var books = [{
+            title:'1984',
+            author:{
+                firstName:'George',
+                lastName: 'Orwell'}
+        },
+            {
                 title:'Dune',
                 author:{
                     firstName:'Frank',
@@ -170,10 +176,14 @@
                     firstName: 'Stephen',
                     lastName: 'King'}
              }];
-            console.log("The novel by " + books[0].author);
-            books.forEach(function (){
-                console.log(books)
-            })
+    books.forEach(book => {
+    })
+            console.log("The novel " + books[0].title +  " by " + books[0].author.firstName + " " + books[0].author.lastName);
+
+
+            // books.forEach(function (){
+            //     console.log(books)
+            // })
 
 
 
