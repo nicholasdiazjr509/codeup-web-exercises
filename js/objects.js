@@ -216,13 +216,13 @@
             books[i].author.firstName + " " + books[i].author.lastName)
     }
 
-     //var book;
-    //books.forEach(function(books.length){
-        // console.log(book);
- //
- //    console.log("Here is a great book. ");
- // console.log( book  )
- //    });
+//var book;
+//books.forEach(function(books.length){
+// console.log(book);
+//
+//    console.log("Here is a great book. ");
+// console.log( book  )
+//    });
 
 
     /**
