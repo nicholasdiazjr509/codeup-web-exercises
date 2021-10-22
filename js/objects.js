@@ -29,10 +29,11 @@
 
 
     person.sayHello = function () {
-        console.log("Hello from " + person[0].fName + person[0].lName + "!");
+        console.log("Hello from " + person[0].firstName + person[0].lastName + "!");
     };
 
     person.sayHello();
+    console.log("Hello from " + person[0].firstName + person[0].lastName + "!")
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -71,10 +72,13 @@
             if (spent.amount >= 200) {
                 var amount = spent.amount * .12
                 totalAmount += amount
-            } else if (spent.amount <= 200) {
+                console.log(("For " + name +"Total amount: " + totalAmount.toFixed(2) +  "." +
+                    " Minus 12% discount amount: ")+ amount.toFixed(2))
+            } else if (spent.amount < 200) {
                 amount = spent.amount
                 totalAmount += amount
-                console.log(" Total amount: " + totalAmount + "." + " Discount is applied at $200 or more. Thx though.")
+                console.log(" Total amount: " + totalAmount.toFixed(2) + "."
+                    + " Discount is applied at $200 or more. Thx though.")
             }
         })
         console.log("Total spent " + totalAmount)
