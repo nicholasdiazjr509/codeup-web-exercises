@@ -74,7 +74,7 @@
             }else if( spent.amount <= 200){
                 amount = spent.amount
                 totalAmount += amount
-                console.log( totalAmount + " You not come here!")
+                console.log(" Total amount: " + (totalAmount)+ "." + " Discount is applied at $200 or more. Thx though.")
             }
         })
         console.log("Total spent " + totalAmount)
@@ -140,6 +140,42 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+        //Dune by Frank Herbert
+        //The Salmon of Doubt by Douglas Adams
+        //1984 by George Orwell
+        //Fahrenheit 451 by Ray Bradbury
+        //The Stand by Stephen King
+
+    var books = [{
+                title:'Dune',
+                author:{
+                    firstName:'Frank',
+                    lastName: 'Herbert'}
+                },
+            {
+                title: 'The Salmon of Doubt',
+                author: {
+                    firstName: 'Douglas',
+                    lastName: 'Adams'}
+                },
+            {
+                title: 'Fahrenheit 451',
+                author: {
+                    firstName: 'Ray',
+                    lastName: 'Bradbury'}
+                },
+            {
+                title: 'The Stand',
+                author: {
+                    firstName: 'Stephen',
+                    lastName: 'King'}
+             }];
+            console.log("The novel by " + books[0].author);
+            books.forEach(function (){
+                console.log(books)
+            })
+
+
 
 
 
