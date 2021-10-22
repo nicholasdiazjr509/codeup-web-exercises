@@ -13,10 +13,10 @@
      */
 
     var person = [{
-        fName: "Nick ",
-        lName: "Diaz"
+        firstName: "Nick ",
+        lastName: "Diaz"
     }];
-    console.log("My name is " + person[0].fName + person[0].lName);
+    console.log("My name is " + person[0].firstName + person[0].lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
