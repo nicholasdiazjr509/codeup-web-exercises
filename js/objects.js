@@ -207,22 +207,11 @@
      */
 var book;
     books.forEach(function(book){
-        console.log(book);
-        });
- console.log( books.title + " book" )
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
-    // var amountSpent = (cart) => {
-    //     cart.forEach(spent => {
-    //         // console.log(spent)
-    //     })
-    // }
-    // amountSpent( shoppers )
+        // console.log(book);
 
+    console.log("Here is a great book. ");
+ console.log( book  )
+    });
 
 
     /**
