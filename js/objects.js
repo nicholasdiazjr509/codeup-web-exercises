@@ -46,21 +46,68 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
+//NOTES:
+       // using conditionals,   logs to the
+       // browser, how much Ryan, Cameron and George need to pay
+       // display a line with the name of the person, the amount before the
+       // discount, the discount, if any, and the amount after the discount.
     var shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    var i;
-    for (i = 0; i > shoppers.valueOf(i); i++)
-        console.log(shoppers[i]);
-    var amount;
 
-     shoppers.forEach(function(amount){
-         console.log(amount);
+    var amountSpent = (cart) => {
+        cart.forEach(spent => {
+            console.log(spent)
+        })
+    }
+    amountSpent( shoppers )
 
-     });
+    var amountTotalSpent = (cart) =>{
+        var totalAmount = 0
+
+        cart.forEach(spent => {
+            if(spent.amount >= 200){
+                var amount = spent.amount * .12
+                totalAmount += amount
+            }else if( spent.amount <= 200){
+                amount = spent.amount
+                totalAmount += amount
+                console.log( totalAmount + " You not come here!")
+            }
+        })
+        console.log("Total spent " + totalAmount)
+        return totalAmount
+    }
+    amountTotalSpent(shoppers)
+    // var totalPrice = 0;
+    // cart.forEach( item => {
+    //     var
+    // })
+
+//Trying to learn this for loop conversion...
+// Converting for loop to forEach
+// Converting for loop to forEach
+    /**
+
+    var items = ['item1', 'item2', 'item3']
+    var copyItems = []
+
+    items.forEach(function(item){
+        copyItems.push(item)
+    })
+                console.log(items);
+   **/
+
+    // var i;
+    // for (i = 0; i > shoppers.valueOf(i); i++)
+    //     console.log(shoppers[i]);
+    // var amount;
+    // {
+    //  shoppers.forEach(myFunction())
+    //     // console.log(amount);
+    // }
 
 
 
@@ -76,10 +123,7 @@
 
 
    //>200 - .12 discountApplied;
-//using conditionals,   logs to the
-// browser, how much Ryan, Cameron and George need to pay
-// display a line with the name of the person, the amount before the
-// discount, the discount, if any, and the amount after the discount.
+
 
 
 
