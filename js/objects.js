@@ -72,8 +72,8 @@
             if (spent.amount >= 200) {
                 var amount = spent.amount * .12
                 totalAmount += amount
-                console.log(("For " + name +"Total amount: " + totalAmount.toFixed(2) +  "." +
-                    " Minus 12% discount amount: ")+ amount.toFixed(2))
+                console.log(("For " + name + "Total amount: " + totalAmount.toFixed(2) + "." +
+                    " Minus 12% discount amount: ") + amount.toFixed(2))
             } else if (spent.amount < 200) {
                 amount = spent.amount
                 totalAmount += amount
@@ -182,7 +182,7 @@
             }];
     books.forEach(book => {
     })
-    console.log("The novel " + books[0].title + " by " + books[0].author.firstName + " " + books[0].author.lastName);
+    //console.log("The novel " + books[0].title + " by " + books[0].author.firstName + " " + books[0].author.lastName);
 
 
     /**
@@ -209,13 +209,20 @@
      *      ---
      *      ...
      */
-var book;
-    books.forEach(function(book){
-        // console.log(book);
 
-    console.log("Here is a great book. ");
- console.log( book  )
-    });
+    for (var i = 0; i < books.length; i++)
+    {
+        console.log("Book # " + (i+1) + " Title | " + books[i].title + " Author: " +
+            books[i].author.firstName + " " + books[i].author.lastName)
+    }
+
+     //var book;
+    //books.forEach(function(books.length){
+        // console.log(book);
+ //
+ //    console.log("Here is a great book. ");
+ // console.log( book  )
+ //    });
 
 
     /**
