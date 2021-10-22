@@ -47,34 +47,34 @@
      * and console.log the relevant messages for each person
      */
 //NOTES:
-       // using conditionals,   logs to the
-       // browser, how much Ryan, Cameron and George need to pay
-       // display a line with the name of the person, the amount before the
-       // discount, the discount, if any, and the amount after the discount.
+        // using conditionals,   logs to the
+        // browser, how much Ryan, Cameron and George need to pay
+        // display a line with the name of the person, the amount before the
+        // discount, the discount, if any, and the amount after the discount.
     var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320}
+        ];
 
     var amountSpent = (cart) => {
         cart.forEach(spent => {
-            console.log(spent)
+            // console.log(spent)
         })
     }
-    amountSpent( shoppers )
+    amountSpent(shoppers)
 
-    var amountTotalSpent = (cart) =>{
+    var amountTotalSpent = (cart) => {
         var totalAmount = 0
 
         cart.forEach(spent => {
-            if(spent.amount >= 200){
+            if (spent.amount >= 200) {
                 var amount = spent.amount * .12
                 totalAmount += amount
-            }else if( spent.amount <= 200){
+            } else if (spent.amount <= 200) {
                 amount = spent.amount
                 totalAmount += amount
-                console.log(" Total amount: " + totalAmount+ "." + " Discount is applied at $200 or more. Thx though.")
+                console.log(" Total amount: " + totalAmount + "." + " Discount is applied at $200 or more. Thx though.")
             }
         })
         console.log("Total spent " + totalAmount)
@@ -91,14 +91,14 @@
 // Converting for loop to forEach
     /**
 
-    var items = ['item1', 'item2', 'item3']
-    var copyItems = []
+     var items = ['item1', 'item2', 'item3']
+     var copyItems = []
 
-    items.forEach(function(item){
+     items.forEach(function(item){
         copyItems.push(item)
     })
-                console.log(items);
-   **/
+     console.log(items);
+     **/
 
     // var i;
     // for (i = 0; i > shoppers.valueOf(i); i++)
@@ -110,22 +110,17 @@
     // }
 
 
+    // amount {[shoppers.totalBill]} = function () {
+    //    if (this.amount > 200) {
+    //
+    //        return "Price before discount: " + this.amount + "." + "Price after discount";
+    //    } else if{
+    //
+    //        totalBill = ("The total amount did not qualify for discount. Total amount is: " + totalBill);
+    //        return totalBill;
 
 
-         // amount {[shoppers.totalBill]} = function () {
-         //    if (this.amount > 200) {
-         //
-         //        return "Price before discount: " + this.amount + "." + "Price after discount";
-         //    } else if{
-         //
-         //        totalBill = ("The total amount did not qualify for discount. Total amount is: " + totalBill);
-         //        return totalBill;
-
-
-   //>200 - .12 discountApplied;
-
-
-
+    //>200 - .12 discountApplied;
 
 
     /** TODO:
@@ -147,48 +142,43 @@
         //The Stand by Stephen King
 
     var books = [{
-            title:'1984',
-            author:{
-                firstName:'George',
-                lastName: 'Orwell'}
+            title: '1984',
+            author: {
+                firstName: 'George',
+                lastName: 'Orwell'
+            }
         },
             {
-                title:'Dune',
-                author:{
-                    firstName:'Frank',
-                    lastName: 'Herbert'}
-                },
+                title: 'Dune',
+                author: {
+                    firstName: 'Frank',
+                    lastName: 'Herbert'
+                }
+            },
             {
                 title: 'The Salmon of Doubt',
                 author: {
                     firstName: 'Douglas',
-                    lastName: 'Adams'}
-                },
+                    lastName: 'Adams'
+                }
+            },
             {
                 title: 'Fahrenheit 451',
                 author: {
                     firstName: 'Ray',
-                    lastName: 'Bradbury'}
-                },
+                    lastName: 'Bradbury'
+                }
+            },
             {
                 title: 'The Stand',
                 author: {
                     firstName: 'Stephen',
-                    lastName: 'King'}
-             }];
+                    lastName: 'King'
+                }
+            }];
     books.forEach(book => {
     })
-            console.log("The novel " + books[0].title +  " by " + books[0].author.firstName + " " + books[0].author.lastName);
-
-
-            // books.forEach(function (){
-            //     console.log(books)
-            // })
-
-
-
-
-
+    console.log("The novel " + books[0].title + " by " + books[0].author.firstName + " " + books[0].author.lastName);
 
 
     /**
@@ -215,10 +205,23 @@
      *      ---
      *      ...
      */
-
-
-
-
+var book;
+    books.forEach(function(book){
+        console.log(book);
+        });
+ console.log( books.title + " book" )
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    // var amountSpent = (cart) => {
+    //     cart.forEach(spent => {
+    //         // console.log(spent)
+    //     })
+    // }
+    // amountSpent( shoppers )
 
 
 
