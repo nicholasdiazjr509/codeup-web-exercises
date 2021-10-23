@@ -236,14 +236,27 @@
      *   `showBookInfo` function.
      */
 
+    var library = [];
 
+    function createBook(title, author){
 
+        //expected input would be " first name and last name"
+        var namesArr = author.split(" ");
+        //store it as a variable
 
+        //console.log(author.FirstName);
 
+        var book = {
+            title: title,
+            author: {
+                firstName: namesArr[0],
+                lastName: namesArr[1]
 
-
-
-
-
-
+            }
+        }
+        return library.push(book);
+    }
+    createBook("1984", "George Orwell");
+    console.log(library);
+//parameters (title and book)
 })();
