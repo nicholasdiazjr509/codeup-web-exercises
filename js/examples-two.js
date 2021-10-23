@@ -21,13 +21,21 @@
 
 
 
-    function sleepIn(weekday, vacation){
-        return !weekday|| vacation;
-
-       console.log ();
+    function sleepIn(weekday, vacation) {
+    if (!weekday || vacation)
+        return Boolean;
+    console.log(Boolean +'')
     }
+        //return !weekday || vacation;
+        //console.log (Boolean('' ));
 
-    console.log(Boolean(''));
+       //console.log (Boolean( ));
+
+console.log('******************************************');
+
+console.log(Boolean()); // this is equal to false duh
+
+console.log(Boolean(''));
     console.log(Boolean('0'));
     console.log(Boolean(0));
 
