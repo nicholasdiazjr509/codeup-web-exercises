@@ -81,8 +81,7 @@
                     + " Discount is applied at $200 or more. Thx though.")
             }
         })
-        console.log("Total spent " + totalAmount)
-        return totalAmount
+        console.log("Total spent " + totalAmount.toFixed(2))
     }
     amountTotalSpent(shoppers)
     // var totalPrice = 0;
@@ -103,7 +102,8 @@
     })
      console.log(items);
      **/
-
+    // WHAT was trying to do??
+    //geez!!
     // var i;
     // for (i = 0; i > shoppers.valueOf(i); i++)
     //     console.log(shoppers[i]);
