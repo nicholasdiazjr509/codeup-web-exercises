@@ -1,6 +1,32 @@
 (function() {
     "use strict";
 
+/**
+
+    Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt,
+    apparently the pain subsides for a while.
+
+    2' 7", Duck category, 43.2 lbs,
+    Abilities-Damp,Cloud Nine
+    Type-Water
+    Weaknesses-Grass, Electric
+    Hp-3, Atk-4, Def-3, Spec. Atk-4, Spec. Def-3, Speed-4
+ Evolution from psyduck #054  => Golduck #055
+*/
+
+var Psyduck = {
+    name: 'Psyduck',
+    description: 'Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt,\n' +
+        '    apparently the pain subsides for a while.',
+    height: {
+        feet: 2,
+        inches: 7 },
+    type: ['water']
+    }
+
+
+
+//___________________________________________________________________________________________//
     var dogs = [myDog];
     var peridot = {
         name: "Peridot",
