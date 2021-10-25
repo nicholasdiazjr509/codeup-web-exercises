@@ -1,11 +1,12 @@
-(function (){
-  "use strict"
+(function () {
+    "use strict"
 
 
-   /**
-    Doing the assessment exercises here. :)
-   */
-  //----------------------------------------------------------------------//
+    /**
+     Doing the assessment exercises here. :)
+     */
+
+    //----------------------------------------------------------------------//
 
 
     /**
@@ -14,9 +15,10 @@
      * true if the input is numeric or not. Numeric strings are not considered
      * as numbers and should return false.
      */
-function isANumber (input) {
-      return  typeof input === 'number';
-           }
+    function isANumber(input) {
+        return typeof input === 'number';
+    }
+
 // is so simple and I still complicate it.
 
     /**
@@ -24,61 +26,63 @@ function isANumber (input) {
      *  Define a function named increment that takes in an input and adds 1 to it if the
      *  input is numeric. If the input is not numeric, then return false.
      */
-function increment(input){
-    if(!isNaN(parseFloat(input))){
-    return input +1;
-    }else{
-    return false;
-    }
-
-
-    /**
-     * 3.
-     *  Define a function named decrement. If the provided input is numeric,
-     *  the function should subtract 1 and return the result. If the input is not numeric, decrement should return false.
-     */
-    function decrement(input) {
+    function increment(input) {
         if (!isNaN(parseFloat(input))) {
-            return input - 1;
+            return input + 1;
         } else {
             return false;
         }
 
-        /**
-         * 4.
-         *Write a function named getHighestNumber that takes in 3 arguments.
-         * If all 3 inputs are numbers or numeric strings, then return the highest number.
-         * If any of the 3 inputs is missing or non-numeric, then return false.
-         */
-        function getHighestNumber(a, b, c) {
-            a = parseFloat(a);
-            b = parseFloat(b);
-            c = parseFloat(c);
 
-            if (a >= b && a >= c) {
-                return a;
-            } else if
-            (b >= a && b >= c) {
-                return b;
-            } else if
-            (c >= a && c >= b) {
-                return b;
+        /**
+         * 3.
+         *  Define a function named decrement. If the provided input is numeric,
+         *  the function should subtract 1 and return the result. If the input is not numeric, decrement should return false.
+         */
+        function decrement(input) {
+            if (!isNaN(parseFloat(input))) {
+                return input - 1;
             } else {
                 return false;
             }
 
-        }}}
+            /**
+             * 4.
+             *Write a function named getHighestNumber that takes in 3 arguments.
+             * If all 3 inputs are numbers or numeric strings, then return the highest number.
+             * If any of the 3 inputs is missing or non-numeric, then return false.
+             */
+            function getHighestNumber(a, b, c) {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                c = parseFloat(c);
+
+                if (a >= b && a >= c) {
+                    return a;
+                } else if
+                (b >= a && b >= c) {
+                    return b;
+                } else if
+                (c >= a && c >= b) {
+                    return b;
+                } else {
+                    return false;
+                }
+
+            }
+        }
+    }
 
 
-
-
-     /**
+    /**
      * 5.
      *Define a function named parseNumber that parses (converts) a numeric String
-      * and returns it's value as a number, the function should be able to decide
-      * if it should be parsing an Integer or a Float value.
-      */
-
+     * and returns it's value as a number, the function should be able to decide
+     * if it should be parsing an Integer or a Float value.
+     */
+    function parseNumber(input) {
+        return parseFloat(input);
+    }
 
 
     /**
@@ -87,11 +91,19 @@ function increment(input){
      *  If both inputs provided are numeric, add will return the sum of both inputs.
      *  If one or both inputs is not numeric, add should return false.
      */
+    function add(a, b) {
+        if (!NaN(parseNumber(a)) && !isNaN(parseNumber(b))) {
+            return parseNumber(a) + parseNumber(b);
 
+        } else {
+            return false;
+        }
+    }
     /**
      * 7.
-     *Write a function named multiply that takes in two inputs. If both inputs provided are numeric, multiply returns the product of the first input multiplied by the second. If either or both inputs are not numeric, multiply should return false.
-
+     *Write a function named multiply that takes in two inputs. If both inputs provided are numeric,
+     * multiply returns the product of the first input multiplied by the second.
+     * If either or both inputs are not numeric, multiply should return false.
      multiply(4, 2)              // 8
      multiply(0, 44)             // 0
      multiply(-5, 10)            // -50
@@ -99,6 +111,19 @@ function increment(input){
      multiply(true, false)       // false
      multiply("Monday")          // false
      */
+
+    function multiply(x, y){
+    x = parseNumber(x);
+    y = parseNumber(y);
+
+    if(x * y){
+        return true;
+    }else{
+        return false;
+    }
+    }
+
+
 
     /**
      * 8.
