@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms Lecture</h1>
+    <!--<form method="GET" action="https:https://request-inspector.glitch.me/">
+    -->
+    <form method="post" action="https://request-inspector.glitch.me/">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="input dudes name here">
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+        <br>
+
+        <label for="bio">Tell me about yourself, dude.</label>
+        <br>
+        <textarea name="bio" id="bio" cols="35" rows="12"></textarea>
+        <br>
+
+        <input type="checkbox" name="yes or no" value="true" checked> Would you like to jump a cliff?
+        <br>
+        <button type="submit">Come'on man, send it.</button>
+
+        <!--  <input type="submit"> -->
+        <br>
+        <hr>
+        Check all that are true:
+        <label for="quiz 1">Pluto is a dwarf planet</label><input type="checkbox" name="quiz" id="quiz 1" value="A"> <br>
+        <label for="quiz 2">Pluto is a Mickey's dog</label><input type="checkbox" name="quiz" id="quiz 2" value="B"> <br>
+        <label for="quiz 3">Pluto is one of the Sailor Scouts on Sailor Moon</label>
+                <input type="checkbox" name="quiz" id="quiz 3" value="C"><br>
+        <label for="quiz 4">Pluto is a larger than the Sun</label>
+                <input type="checkbox" name="quiz" id="quiz 4" value="D"><br>
+        <br>
+        <hr>
+        <h3>"Radio Gaga" is a song by the band_______</h3>
+        <input type="radio" name="radioQuestion" id="rq-1" value="hall and oates"><label for="rq-1">Hall & Oates</label><br>
+        <input type="radio" name="radioQuestion" id="rq-2" value="queen"><label for="rq-2">Queen</label><br>
+        <input type="radio" name="radioQuestion" id="rq-3" value="red velvet"><label for="rq-3">Red Velvet</label><br>
+        <input type="radio" name="radioQuestion" id="rq-4" value="lady gaga"><label for="rq-4">Lady Gaga</label><br>
+
+        <input type="submit">Send off Your Information, My Funky Duude</input><br>
+        <hr>
+        <label for="select">What's your favorite video game console?</label>
+        <select name="vg-console" id="select">
+            <option value="atari 5400"> Atari 5200</option>
+            <option value="colecovision-amico">Coleco Amico</option>
+            <option value="3do">3-DO</option>
+            <option value="vectrex">Vectrex</option>
+            <option value="atari-jaguar">Atari Jaguar</option>
+        </select>
+        <br>
+        <label for="gender">Are you a boy or girl?</label><input type="text" disabled id="gender"
+                    name="gender" value="male">
+        <!--  Disable is for testing, used on button until like a form is
+                    all filled or whatever is required   -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </form>
+</body>
+</html>
