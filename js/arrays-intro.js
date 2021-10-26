@@ -1,23 +1,21 @@
 "use strict";
-(function (){
-
-
-
+(function () {
 
 
 // Our testArray variable has now been declared, but it is an empty array.
 // To declare an array with information inside of it, we would do the following.
 
-var instructors = ["David", "Jay", "Javier", "Codey The Duck"];
+    var instructors = ["David", "Jay", "Javier", "Codey The Duck"];
 
 // Our instructors variable has been assigned to an array with 4 elements inside of it.
 // All four of our elements are strings, but not all elements have to be of the same type.
 
-var falsyValues = [false, null, "", 0, undefined, NaN, true];
+    var falsyValues = [false, null, "", 0, undefined, NaN, true];   {
 
 // Our falsyValues array has been declared with many different types of values.
 
-    console.log([].length);
+    console.log([i].length);
+}
     //console.log([1,1,1,1,1,1,1,1,9,9,9,9,0,0,0,10000000,11,22,23,24,34,45].length);
 
     // Here we're console logging the length of some arrays.
@@ -26,8 +24,9 @@ var falsyValues = [false, null, "", 0, undefined, NaN, true];
     // We can also access the individual values held in an array. It's important to note: the elements of an array are zero indexed, meaning
     // the first element is at index point 0, the second at index point 1, etc.
 
-        console.log("One of your instructors is named: " + instructors[i]);
-    })
+    console.log("One of your instructors is named: " + instructors[i]);
+
+
     // Note that we wanted i to increment only when it was less than the length of our instructor array, but not until it was equal to it.
     // Remember that an array is zero indexed, meaning our arrays start at the index of zero, and continue until an index point one number
     // lower than the length of the array. This saves us from accessing an undefined index, and performing an undesired behavior, as seen
@@ -85,7 +84,7 @@ var falsyValues = [false, null, "", 0, undefined, NaN, true];
 
                 function introduction(name) {
                     console.log("Hi, my name is " + name + "!");
-                }
+
 
                 instructors.forEach(introduction);
 
@@ -101,7 +100,6 @@ var falsyValues = [false, null, "", 0, undefined, NaN, true];
                 numbers.forEach(function (number, index) {
                     if (index % 2 === 0) {
                         console.log(number * 2);
-                    }
-                })();
-            }}}
-// Any Questions???
+                    }})}}}}})
+
+ // Any Questions???
