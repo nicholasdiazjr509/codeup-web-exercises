@@ -265,7 +265,7 @@ function reverse(numbers){
     return reversed;
     }
 
-   // return (reverse(Arr));
+   // return (reverse(arr));
 
 console.log(reverse(12345))
 

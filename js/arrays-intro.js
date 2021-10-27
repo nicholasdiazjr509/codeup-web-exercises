@@ -1,5 +1,5 @@
 "use strict";
-(function () {
+// (function () {
 
 
 // Our testArray variable has now been declared, but it is an empty array.
@@ -99,7 +99,7 @@
 
                 numbers.forEach(function (number, index) {
                     if (index % 2 === 0) {
-                        console.log(number * 2);
+                        console.log(number * 2);}})}}}}
 
 
-                    })();
+                    //})();
