@@ -73,14 +73,14 @@ a:active {
 }
 body {
     background-color: yellow;
-    background-image: url("") ;
+    background-image: url("/image/background img.jpg") ;
     background-repeat: repeat-y;
     background-position-x: center ;
 
 }
 .type-list{
     list-style: inside;
-    list-style:  url(".png" ) ;
+    list-style:  url("image/background img.jpg" ) ;
 }
 .type-list h1{
 
