@@ -99,6 +99,7 @@
             return false;
         }
     }
+
     /**
      * 7.
      *Write a function named multiply that takes in two inputs. If both inputs provided are numeric,
@@ -112,17 +113,16 @@
      multiply("Monday")          // false
      */
 
-    function multiply(x, y){
-    x = parseNumber(x);
-    y = parseNumber(y);
+    function multiply(x, y) {
+        x = parseNumber(x);
+        y = parseNumber(y);
 
-    if(x * y){
-        return true;
-    }else{
-        return false;
+        if (x * y) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    }
-
 
 
     /**
@@ -165,10 +165,107 @@
      isPalindrome(232)           // false
      isPalindrome(null)          // false
      */
+    /**
+     * Instructions
+
+     Carefully read all the instructions and problems before beginning your work.
+
+     Clone this repository to your local projects directory.
+
+     Write your solutions to the problems presented below inside solutions.js.
+
+     */
+//Create a function named calcAge that takes the age and return the age in days.
+// If input is not numeric, calcAge should return false.
+
+
+    function calcAge(age) {
+        if (isNaN(age) || age !== "number") {
+            return false;
+        } else {
+            return age * 365;
+        }
+    }
+
+    console.log(calcAge())
+
+//
+// Create a function named increment that takes a number as an argument,
+// increments the number by +1 and returns the result. If input is not numeric
+    function increment(input) {
+        if (!isNan(parseFloat(input))) {
+            return input + 1;
+        } else {
+            return false;
+        }
+    }
+
+//
+//     if(age !== Number) {
+//     }else{
+//         return age * 365;
+//     }
+// }
+
+//Define a function named isOdd that takes in a number,
+// return true is that number is odd. Return false if the number is either not a number or even.
+    if (typeof number !== "number" || isNaN(number)) {
+        return false;
+    } else if(number % 2 !== 0) {
+        return false;
+    }else{
+        return true;
+    }
+
+//number % 2 === 0
 
 
 
+//Write a function named oddArr. Given the array of
+// var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] return the odd numbers.
 
+    var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    arry.forEach(function oddArr(number, index) {
+        if (index % 2 === 0) {
+            return number;
+        }
+
+    })
+//Define a function named creditCard that takes a credit card number
+// and only displays the last four characters.
+// The rest of the card number must be replaced by ************.
+
+    function creditCard(card) {
+        card = card.split('');
+        for (var i = 0; card.length - 4; i++) {
+            card[i] = '*'
+
+        }
+        return card.join('');
+
+   // console.log(creditCard(132164))
+}
+//create a function named AlphabetSoup that takes a string
+// and returns a string with its letters in alphabetical order.
+// Return false if string is empty or null
+    function AlphabetSoup(str) {
+        if(str === "" || !str){
+            return false;
+        }else{
+            return str.toString().split('').sort().join('');
+        }
+    }
+//create a function named reverse that takes in and reverses an array.
+
+
+function reverse(arr){
+    return arr.reverse();
+}
+
+return (reverse(arr));
+
+console.log(reverse(arr[1,2,3,4,5]))
 
 
 
