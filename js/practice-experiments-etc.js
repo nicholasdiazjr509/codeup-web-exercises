@@ -1,4 +1,4 @@
-(function () {
+//(function () {
     "use strict"
 
 
@@ -187,7 +187,7 @@
         }
     }
 
-    console.log(calcAge())
+//    console.log(calcAge())
 
 //
 // Create a function named increment that takes a number as an argument,
@@ -209,14 +209,14 @@
 
 //Define a function named isOdd that takes in a number,
 // return true is that number is odd. Return false if the number is either not a number or even.
-    if (typeof number !== "number" || isNaN(number)) {
-        return false;
-    } else if(number % 2 !== 0) {
-        return false;
-    }else{
-        return true;
-    }
-
+//     if (typeof number !== "number" || isNaN(number)) {
+//         return false;
+//     } else if(number % 2 !== 0) {
+//         return false;
+//     }else{
+//         return true;
+//     }
+/** solution above causing error without the truthy */
 //number % 2 === 0
 
 
@@ -259,17 +259,30 @@
 //create a function named reverse that takes in and reverses an array.
 
 
-function reverse(arr){
-    return arr.reverse();
+function reverse(numbers){
+        var arr = numbers.toString().split("");
+    var reversed = arr.reverse().join("");
+    return reversed;
+    }
+
+   // return (reverse(Arr));
+
+console.log(reverse(12345))
+
+
+function reverse(num){
+        var last_digit, reversed = 0, number = num;
+        while(number !=0) {
+            last_digit = number % 10;
+            reversed = reversed * 10 + last_digit;
+            number = Math.floor( number / 10);
+        }
+        if(num<0){
+            return -1 * reversed;
+        }
+        return reversed;
 }
-
-return (reverse(arr));
-
-console.log(reverse(arr[1,2,3,4,5]))
+    console.log(reverse(123456789))
 
 
-
-
-
-
-    })();
+  //  })();
