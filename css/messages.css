@@ -3,5 +3,38 @@ body, html {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: Arial, Ubuntu, sans-serif;
+    font-family: Calibri, Ubuntu, sans-serif;
+}
+:root {
+    --main-bg-color: rgb(207, 227, 252);
+/*  found out how to use the :root of CSS var() Function
+https://www.w3schools.com/cssref/func_var.asp */
+}
+.message {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.message-info{
+    background-color: var(--main-bg-color);
+ /*   color: rgb(59,62,75);    */
+}
+.message-success{
+    background-color: rgb(195, 242, 194);
+}
+.message-warning{
+    background-color: lightyellow;/* this is one way */
+}
+.message-error{
+    background-color: rgb(245, 196, 198);
+}
+#icon{
+    background-color:  var(--main-bg-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
 }
