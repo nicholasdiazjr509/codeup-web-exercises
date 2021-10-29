@@ -112,17 +112,26 @@
      multiply(true, false)       // false
      multiply("Monday")          // false
      */
-
+var x = 2;
+var y = 3;
     function multiply(x, y) {
-        x = parseNumber(x);
-        y = parseNumber(y);
-
-        if (x * y) {
-            return true;
-        } else {
-            return false;
-        }
+    if ((  parseNumber(x) && parseNumber(y)) === Number) {
+        return (x * y);
+    }else
+        return false;
     }
+    // console.log(x*y)
+
+        //===i.e.  ======  return !!(x * y);
+
+
+
+    //      ======REDUDNDANT=============
+    // if (x * y) {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
 
 
     /**
