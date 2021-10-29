@@ -247,16 +247,55 @@ var y = 3;
 // The rest of the card number must be replaced by ************.
 
     function creditCard(cardNumber) {
-        cardNumber = cardNumber.toString().split("");
-
-        for (var i = 0; cardNumber.length - 4; i++) {
-            cardNumber[i] = '*'
-              return  cardNumber().join("")
+        if(typeof cardNumber === 'number'){
+            cardNumber = cardNumber.toString();
         }
-      //  return card.join('');
+    var length = cardNumber.length;
+        for(let x = 0; x < cardNumber.length; x++){
 
-    console.log(cardNumber(132164))
+        }
+ //    cardNumber = cardNumber.toString().split("");
+//for (var i = 0; i< cardNumber.length - 4; i++) {
+//  cardNumber[i] = '*';
+//  return  cardNumber().join("")
+//}
+//  return card.join('');
+
+    console.log(creditCard(132164))
 }
+// var number= $('#creditCard');
+// var display = $('#show');
+//
+//     function $(show) {
+//
+//     }
+//
+//     $('#creditCard').keyup(function (){
+//     if($('#creditCard').val().length < 1){
+//             $('#show').text('');
+//     }else{
+//         var a = '';
+//             if(number.val().length <= 8){
+//                 for(var i = 0; i < number.val().length; i++){
+//                     a = a + '*';
+//                     display.text(a);
+//                 }
+//             }else{
+//                 for(var i = 0; i < number.val().length; i++){
+//                     if(i <= 8) {
+//                         a = a + '*';
+//                         display.text(a);
+//                     }else{
+//                         a = a + number.val().substring(i, i+1);
+//                         display.text(a);
+//                     }
+//                 }
+//             }
+// }
+// });
+
+console.log(number)
+
 //create a function named AlphabetSoup that takes a string
 // and returns a string with its letters in alphabetical order.
 // Return false if string is empty or null
