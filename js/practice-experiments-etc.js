@@ -1,4 +1,4 @@
-//(function () {
+(function () {
     "use strict"
 
 
@@ -6,7 +6,7 @@
      Doing the assessment exercises here. :)
      */
 
-    //----------------------------------------------------------------------//
+
 
 
     /**
@@ -32,7 +32,7 @@
         } else {
             return false;
         }
-
+    }
 
         /**
          * 3.
@@ -45,7 +45,7 @@
             } else {
                 return false;
             }
-
+        }
             /**
              * 4.
              *Write a function named getHighestNumber that takes in 3 arguments.
@@ -69,9 +69,9 @@
                     return false;
                 }
 
-            }
-        }
-    }
+             }
+
+
 
 
     /**
@@ -227,24 +227,26 @@
     var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     arry.forEach(function oddArr(number, index) {
-        if (index % 2 === 0) {
+        if (index % 2 !== 0) {
             return number;
         }
-
+        console.log(number)
     })
+
 //Define a function named creditCard that takes a credit card number
 // and only displays the last four characters.
 // The rest of the card number must be replaced by ************.
 
-    function creditCard(card) {
-        card = card.split('');
-        for (var i = 0; card.length - 4; i++) {
-            card[i] = '*'
+    function creditCard(cardNumber) {
+        cardNumber = cardNumber.toString().split("");
 
+        for (var i = 0; cardNumber.length - 4; i++) {
+            cardNumber[i] = '*'
+              return  cardNumber().join("")
         }
-        return card.join('');
+      //  return card.join('');
 
-   // console.log(creditCard(132164))
+    console.log(cardNumber(132164))
 }
 //create a function named AlphabetSoup that takes a string
 // and returns a string with its letters in alphabetical order.
@@ -265,7 +267,7 @@ function reverse(numbers){
     return reversed;
     }
 
-   // return (reverse(arr));
+   // return (reverse(numbers));
 
 console.log(reverse(12345))
 
@@ -285,4 +287,4 @@ function reverse(num){
     console.log(reverse(123456789))
 
 
-  //  })();
+    })();
