@@ -7,8 +7,6 @@
      */
 
 
-
-
     /**
      * 1.
      * Define a function named isANumber that takes in a value and returns
@@ -34,42 +32,41 @@
         }
     }
 
-        /**
-         * 3.
-         *  Define a function named decrement. If the provided input is numeric,
-         *  the function should subtract 1 and return the result. If the input is not numeric, decrement should return false.
-         */
-        function decrement(input) {
-            if (!isNaN(parseFloat(input))) {
-                return input - 1;
-            } else {
-                return false;
-            }
+    /**
+     * 3.
+     *  Define a function named decrement. If the provided input is numeric,
+     *  the function should subtract 1 and return the result. If the input is not numeric, decrement should return false.
+     */
+    function decrement(input) {
+        if (!isNaN(parseFloat(input))) {
+            return input - 1;
+        } else {
+            return false;
         }
-            /**
-             * 4.
-             *Write a function named getHighestNumber that takes in 3 arguments.
-             * If all 3 inputs are numbers or numeric strings, then return the highest number.
-             * If any of the 3 inputs is missing or non-numeric, then return false.
-             */
-            function getHighestNumber(a, b, c) {
-                a = parseFloat(a);
-                b = parseFloat(b);
-                c = parseFloat(c);
+    }
 
-                if (a >= b && a >= c) {
-                    return a;
-                } else if
-                (b >= a && b >= c) {
-                    return b;
-                } else if
-                (c >= a && c >= b) {
-                    return b;
-                } else {
-                    return false;
-                }
+    /**
+     * 4.
+     *Write a function named getHighestNumber that takes in 3 arguments.
+     * If all 3 inputs are numbers or numeric strings, then return the highest number.
+     * If any of the 3 inputs is missing or non-numeric, then return false.
+     */
+    function getHighestNumber(a, b, c) {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        c = parseFloat(c);
 
-             }
+        if (a >= b && a >= c) {
+            return a;
+        } else if
+        (b >= a && b >= c) {
+            return b;
+        } else if
+        (c >= a && c >= b) {
+            return b;
+        } else
+            return false;
+        }
 
 
 
@@ -112,18 +109,21 @@
      multiply(true, false)       // false
      multiply("Monday")          // false
      */
-var x = 2;
-var y = 3;
+    var x = 2;
+    var y = 3;
+
     function multiply(x, y) {
-    if ((  parseNumber(x) && parseNumber(y)) === Number) {
-        return (x * y);
-    }else
-        return false;
+        if ((parseNumber(x) && parseNumber(y)) === Number) {
+            var result = (xy);
+            return result;
+
+        } else
+            return false;
     }
-    // console.log(x*y)
 
-        //===i.e.  ======  return !!(x * y);
+    console.log(x,y);
 
+    //===i.e.  ======  return !!(x * y);
 
 
     //      ======REDUDNDANT=============
@@ -196,38 +196,38 @@ var y = 3;
         }
     }
 
-//    console.log(calcAge())
+   console.log(calcAge())
 
 //
 // Create a function named increment that takes a number as an argument,
 // increments the number by +1 and returns the result. If input is not numeric
-    function increment(input) {
-        if (!isNan(parseFloat(input))) {
-            return input + 1;
-        } else {
-            return false;
-        }
-    }
+            function increment(input) {
+                if (!isNan(parseFloat(input))) {
+                    return input + 1;
+                } else{
+                    return false;
 
-//
-//     if(age !== Number) {
-//     }else{
-//         return age * 365;
-//     }
-// }
+    // if(age !== Number) {
+    // }else{
+    //     return age * 365;
+    // }
+                }
+            }
 
 //Define a function named isOdd that takes in a number,
 // return true is that number is odd. Return false if the number is either not a number or even.
-//     if (typeof number !== "number" || isNaN(number)) {
-//         return false;
-//     } else if(number % 2 !== 0) {
-//         return false;
-//     }else{
-//         return true;
-//     }
-/** solution above causing error without the truthy */
-//number % 2 === 0
 
+   function isOdd (number) {
+       if (typeof number !== "number" || isNaN(number)) {
+           return false;
+       } else if (number % 2 !== 0) {
+           return false;
+       } else {
+           return true;
+       }
+   }
+   // /** solution above causing error without the truthy **//
+//number % 2 === 0
 
 
 //Write a function named oddArr. Given the array of
@@ -235,104 +235,118 @@ var y = 3;
 
     var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    arry.forEach(function oddArr(number, index) {
-        if (index % 2 !== 0) {
-            return number;
-        }
-        console.log(number)
-    })
+    // arry.forEach(function oddArr(number, index) {
+    //     if (index % 2 !== 0) {
+    //         return number;
+    //     }
+    //     console.log(number)
+    //
+    // }
+
 
 //Define a function named creditCard that takes a credit card number
 // and only displays the last four characters.
 // The rest of the card number must be replaced by ************.
 
-    function creditCard(cardNumber) {
-        if(typeof cardNumber === 'number'){
-            cardNumber = cardNumber.toString();
-        }
-    var length = cardNumber.length;
-        for(let x = 0; x < cardNumber.length; x++){
-
-        }
- //    cardNumber = cardNumber.toString().split("");
+        // function creditCard(cardNumber) {
+        //     if (typeof cardNumber === 'number') {
+        //         cardNumber = cardNumber.toString();
+        //     }
+        //     var length = cardNumber.length;
+        //     for (let x = 0; x < cardNumber.length; x++) {
+        //
+        //     }
+        //    cardNumber = cardNumber.toString().split("");
 //for (var i = 0; i< cardNumber.length - 4; i++) {
 //  cardNumber[i] = '*';
 //  return  cardNumber().join("")
 //}
 //  return card.join('');
 
-    console.log(creditCard(132164))
-}
-// var number= $('#creditCard');
+        //     console.log(creditCard(132164))
+        // })
+
+
+    ////////////////////////////////////////////////////////////
+// var number = $('#creditCard');
 // var display = $('#show');
 //
-//     function $(show) {
-//
-//     }
-//
-//     $('#creditCard').keyup(function (){
-//     if($('#creditCard').val().length < 1){
-//             $('#show').text('');
-//     }else{
+// $('#creditCard').keyup(function() {
+//     if($('creditCard').val().length < 1){
+//         $('#show').text('');
+//     }else {
 //         var a = '';
-//             if(number.val().length <= 8){
-//                 for(var i = 0; i < number.val().length; i++){
-//                     a = a + '*';
-//                     display.text(a);
-//                 }
-//             }else{
-//                 for(var i = 0; i < number.val().length; i++){
-//                     if(i <= 8) {
+//
+//         if (number.val().length <= 8) {
+//             for (var i = 0; i < number.val().length; i++) {
+//                 a = a + '*';
+//                 display.text(a);
+//
+//             }
+//         }
+//         else
+//             {
+//                 for (var i = 0; i < number.val().length; i++) {
+//                     if (i <= 8) {
 //                         a = a + '*';
+//                         display(a);
+//                     } else {
+//                         a = a + number.val().substring(i, i + 1);
 //                         display.text(a);
-//                     }else{
-//                         a = a + number.val().substring(i, i+1);
-//                         display.text(a);
+//
 //                     }
 //                 }
+//
 //             }
-// }
-// });
-
-console.log(number)
+//         }
+//
+//     });
+//console.log(number)
 
 //create a function named AlphabetSoup that takes a string
 // and returns a string with its letters in alphabetical order.
 // Return false if string is empty or null
-    function AlphabetSoup(str) {
-        if(str === "" || !str){
-            return false;
-        }else{
-            return str.toString().split('').sort().join('');
+        function AlphabetSoup(str) {
+            if (str === "" || !str) {
+                return false;
+            } else {
+                return str.toString().split('').sort().join('');
+            }
         }
-    }
+
 //create a function named reverse that takes in and reverses an array.
 
 
-function reverse(numbers){
-        var arr = numbers.toString().split("");
-    var reversed = arr.reverse().join("");
-    return reversed;
-    }
+        function reverse(numbers) {
+            var arr = numbers.toString().split("");
+            var reversed = arr.reverse().join("");
 
-   // return (reverse(numbers));
-
-console.log(reverse(12345))
-
-
-function reverse(num){
-        var last_digit, reversed = 0, number = num;
-        while(number !=0) {
-            last_digit = number % 10;
-            reversed = reversed * 10 + last_digit;
-            number = Math.floor( number / 10);
+            return reversed;
         }
-        if(num<0){
+
+        return (reverse(numbers));
+
+        console.log(reverse(12345))
+
+
+        function reverse(num) {
+            var last_digit, reversed = 0, number = num;
+            while (number != 0) {
+                last_digit = number % 10;
+                reversed = reversed * 10 + last_digit;
+                number = Math.floor(number / 10)
+            }
+
+        }
+
+        if (num < 0) {
             return -1 * reversed;
+        } else {
+            return reversed;
         }
-        return reversed;
-}
-    console.log(reverse(123456789))
 
 
-    })();
+   console.log(reverse(123456789))
+
+
+})();
