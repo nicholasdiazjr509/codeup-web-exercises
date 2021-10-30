@@ -1,4 +1,5 @@
-/**if (a = true)  Then B, Else C, End if
+
+/** if (a = true)  Then B, Else C, End if
  * Java If-ElseIn this challenge, we test your knowledge of using if-else
  * conditional statements to automate decision-making processes.
  An if-else statement has the following logical flow:
@@ -35,10 +36,10 @@
  n > 20 and n is even, so it isn't weird. Thus, we print  Not Weird  */
 
 
-
-if ( n !== 0) {
-    return weird;
-}
+//
+// if ( n !== 0) {
+//     return weird;
+//}
 /**Remember this?
  *  Scanner sc=new Scanner(System.in);
  for(int i=0; i<3; ++i) {

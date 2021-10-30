@@ -244,34 +244,73 @@
 //Define a function named creditCard that takes a credit card number
 // and only displays the last four characters.
 // The rest of the card number must be replaced by ************.
-
-    function creditCard(cardNumber) {
-        // if (typeof cardNumber === 'number') {
-        if (cardNumber.length > 4) {
-            let reversed = reverse(cardNumber);
-            let newString = ' ';
-            //if i < 4, we want to reveal these numbers in our output
-            for (let i = 0; i < reversed.length; i++) {
-                if (i < 4) {
-                    newString += reverse[i];
-                } else {
-                      += '#');
-                }
-            }
-            //return the reversal of the string to revert it back to origin
-            return reverse(newString);
-        } else {
-            return cardNumber;
-        }
+    /** Here is try #5  */
+function maskify(cc){
+    return cc.length < 5 ? cc : '*'.repeat(cc.length - 4)+cc.slice(-4);
     }
 
-    function reverse(str) {
-        return str.toString().split("").reverse().join("");
-    }
 
-    console.log(reverse(123))
-    console.log(newString(12345678))
+    //
+    // function maskify(cc) {
+    //
+    //     if (cc.length > 4) {
+    //         let result = '';
+    //         return cc.split('').reduce((acc, cur, i) => {
+    //             if (cc.length - i > 4) {
+    //               result += '*';
+    //             } else {
+    //                 result += cur;
+    //             }
+    //             return result;
+    //         },'');
+    //
+    //     } else {
+    //         return cc;
+    //
+    //     }
+    // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TRY NUMBER 4, damn dude.
+    // function creditCard(cardNumber) {
+    //     // if (typeof cardNumber === 'number') {
+    //     if (cardNumber.length > 4) {
+    //         let reversed = reverse(cardNumber);
+    //         let newString = ' ';
+    //         //if i < 4, we want to reveal these numbers in our output
+    //         for (let i = 0; i < reversed.length; i++) {
+    //             if (i < 4) {
+    //                 newString += reverse[i];
+    //             } else {
+    //                   += '#');
+    //             }
+    //         }
+    //         //return the reversal of the string to revert it back to origin
+    //         return reverse(newString);
+    //     } else {
+    //         return cardNumber;
+    //     }
+    // }
+    //
+    // function reverse(str) {
+    //     return str.toString().split("").reverse().join("");
+    // }
+    //
+    // console.log(reverse(123))
+    // console.log(newString(12345678))
+    //
 
     ////////////////////////////////////////////////////////////
 // var number = $('#creditCard');
