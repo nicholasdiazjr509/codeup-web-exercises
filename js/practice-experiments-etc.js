@@ -66,9 +66,7 @@
             return b;
         } else
             return false;
-        }
-
-
+    }
 
 
     /**
@@ -114,14 +112,12 @@
 
     function multiply(x, y) {
         if ((parseNumber(x) && parseNumber(y)) === Number) {
-            var result = (xy);
-            return result;
-
+            return (x * y);
         } else
             return false;
     }
 
-    console.log(x,y);
+    console.log(x * y);
 
     //===i.e.  ======  return !!(x * y);
 
@@ -189,51 +185,52 @@
 
 
     function calcAge(age) {
-        if (isNaN(age) || age !== "number") {
+        if (isNaN(age) || age === "string") {
             return false;
         } else {
             return age * 365;
         }
     }
 
-   console.log(calcAge())
+    console.log(calcAge(3))
 
 //
 // Create a function named increment that takes a number as an argument,
 // increments the number by +1 and returns the result. If input is not numeric
-            function increment(input) {
-                if (!isNan(parseFloat(input))) {
-                    return input + 1;
-                } else{
-                    return false;
+    function increment(input) {
+        if (!isNan(parseFloat(input))) {
+            return input + 1;
+        } else {
+            return false;
 
-    // if(age !== Number) {
-    // }else{
-    //     return age * 365;
-    // }
-                }
-            }
+            // if(age !== Number) {
+            // }else{
+            //     return age * 365;
+            // }
+        }
+    }
 
 //Define a function named isOdd that takes in a number,
 // return true is that number is odd. Return false if the number is either not a number or even.
 
-   function isOdd (number) {
-       if (typeof number !== "number" || isNaN(number)) {
-           return false;
-       } else if (number % 2 !== 0) {
-           return false;
-       } else {
-           return true;
-       }
-   }
-   // /** solution above causing error without the truthy **//
+    function isOdd(number) {
+        if (typeof number !== "number" || isNaN(number)) {
+            return false;
+        } else if (number % 2 !== 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // /** solution above causing error without the truthy **//
 //number % 2 === 0
 
 
 //Write a function named oddArr. Given the array of
 // var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] return the odd numbers.
 
-    var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //  var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     // arry.forEach(function oddArr(number, index) {
     //     if (index % 2 !== 0) {
@@ -248,23 +245,32 @@
 // and only displays the last four characters.
 // The rest of the card number must be replaced by ************.
 
-        // function creditCard(cardNumber) {
-        //     if (typeof cardNumber === 'number') {
-        //         cardNumber = cardNumber.toString();
-        //     }
-        //     var length = cardNumber.length;
-        //     for (let x = 0; x < cardNumber.length; x++) {
-        //
-        //     }
-        //    cardNumber = cardNumber.toString().split("");
-//for (var i = 0; i< cardNumber.length - 4; i++) {
-//  cardNumber[i] = '*';
-//  return  cardNumber().join("")
-//}
-//  return card.join('');
+    function creditCard(cardNumber) {
+        // if (typeof cardNumber === 'number') {
+        if (cardNumber.length > 4) {
+            let reversed = reverse(cardNumber);
+            let newString = ' ';
+            //if i < 4, we want to reveal these numbers in our output
+            for (let i = 0; i < reversed.length; i++) {
+                if (i < 4) {
+                    newString += reverse[i];
+                } else {
+                      += '#');
+                }
+            }
+            //return the reversal of the string to revert it back to origin
+            return reverse(newString);
+        } else {
+            return cardNumber;
+        }
+    }
 
-        //     console.log(creditCard(132164))
-        // })
+    function reverse(str) {
+        return str.toString().split("").reverse().join("");
+    }
+
+    console.log(reverse(123))
+    console.log(newString(12345678))
 
 
     ////////////////////////////////////////////////////////////
@@ -306,47 +312,44 @@
 //create a function named AlphabetSoup that takes a string
 // and returns a string with its letters in alphabetical order.
 // Return false if string is empty or null
-        function AlphabetSoup(str) {
-            if (str === "" || !str) {
-                return false;
-            } else {
-                return str.toString().split('').sort().join('');
-            }
+    function AlphabetSoup(str) {
+        if (str === "" || !str) {
+            return false;
+        } else {
+            return str.toString().split('').sort().join('');
         }
+    }
 
 //create a function named reverse that takes in and reverses an array.
 
+    // var numbers;
+    //
+    // function reverse(numbers) {
+    //     let arr = numbers.toString().split("");
+    //     let reversed = arr.reverse().join("");
+    //
+    //     return reverse;
+    // }
+    //
+    // return (reverse(numbers));
+    //
+    // console.log(reverse(56789))
 
-        function reverse(numbers) {
-            var arr = numbers.toString().split("");
-            var reversed = arr.reverse().join("");
-
-            return reversed;
+            function reversed(num) {
+        var last_digit, reversed = 0, number = num;
+        while (number !== 0) {
+            last_digit = number % 10;
+            reversed = reversed * 10 + last_digit;
+            number = Math.floor(number / 10)
         }
-
-        return (reverse(numbers));
-
-        console.log(reverse(12345))
-
-
-        function reverse(num) {
-            var last_digit, reversed = 0, number = num;
-            while (number != 0) {
-                last_digit = number % 10;
-                reversed = reversed * 10 + last_digit;
-                number = Math.floor(number / 10)
-            }
-
-        }
-
         if (num < 0) {
-            return -1 * reversed;
+            return -1 * reverse;
         } else {
-            return reversed;
+            return reverse;
         }
 
 
-   console.log(reverse(123456789))
+  // console.log(reverse(123456789))
 
-
+}
 })();
