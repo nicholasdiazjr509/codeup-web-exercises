@@ -43,7 +43,33 @@ function lessThan100(x, y){
 }
 console.log(lessThan100(1,  1))}
 
-//
+
+
+/** Write a function that takes in a string of one or more words, and returns the same string,
+ but with all five or more letter words reversed (like the name of this kata).
+ Strings passed in will consist of only letters and spaces.
+ Spaces will be included only when more than one word is present.
+
+ Examples:
+ spinWords("Hey fellow warriors") => "Hey wollef sroirraw"
+ spinWords("This is a test") => "This is a test"
+ spinWords("This is another test") => "This is rehtona test"
+ */
+
+function spinWords(sentence){
+    var sentenceArray = sentence.split(' ');
+    var result = '';
+
+    sentenceArray.map((str, i) =>{
+        if(str.length >= 5) {
+            sentenceArray[i] = str.split('').reverse().join('');
+        }else{
+            sentenceArray[i] = str;
+        }
+        result = sentenceArray.join(' ');
+        });
+                return result;
+}   console.log(spinWords('warriors'))
 
 // A farmer is asking you to tell him how many legs can be counted among all his animals.
 // The farmer breeds three species:
