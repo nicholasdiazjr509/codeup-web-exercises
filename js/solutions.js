@@ -71,6 +71,72 @@ function spinWords(sentence){
                 return result;
 }   console.log(spinWords('warriors'))
 
+/**
+ * Usually when you buy something, you're asked whether your credit card number,
+ * phone number or answer to your most secret question is still correct.
+ * However, since someone could look over your shoulder, you don't want that shown on your screen.
+ * Instead, we mask it.
+
+ Your task is to write a function maskify, which changes all but the last four characters into '#'.
+ Examples
+
+ maskify("4556364607935616") == "############5616"
+ maskify(     "64607935616") ==      "#######5616"
+ maskify(               "1") ==                "1"
+ maskify(                "") ==                 ""
+
+ // "What was the name of your first pet?"
+ maskify("Skippy")                                   == "##ippy"
+ maskify("Nananananananananananananananana Batman!") == "####################################man!"
+
+ * */
+
+//return a masked string
+function maskify(creditCard){
+    //If length is greater than 4, then we have things to mask
+    if(creditCard.length > 4) {
+        //reverse string dude
+        // var reversed = reverse(creditCard);
+        let newString = '';
+
+        for (let i = 0; i < creditCard.length; i++) {
+            //if i < 4, we want to reveal these numbers in our output
+            if (i < 4) {
+           //     newString += reversed[i];
+            } else {
+                //otherwise, just HIDE it.
+                creditCard += "*";
+            }
+        }
+        //return the REVERSAL of the string to revert it back to the original format
+       // return reverse(newString);
+    }else{
+        return creditCard;
+    }
+}
+    // function reverse(str){
+    //      return str.split("").reverse().join("");
+    // }
+    console.log(maskify(99876224))
+///////////////////////////////////////////////////////////////////////////
+// function maskify(cc){
+//     var maskedString = "";
+//         for (var i = 0; i < cc.length; i++) {
+//             if(i < cc.length - 4 )
+//             maskedString = maskedString + "#";
+//         }else
+//     {
+//         maskedString = maskedString + cc.charAt(i);
+//     };
+//         }
+//         return maskedString;
+// }
+
+
+
+/**------------------------------------------------------------------ **/
+
+
 // A farmer is asking you to tell him how many legs can be counted among all his animals.
 // The farmer breeds three species:
 //
