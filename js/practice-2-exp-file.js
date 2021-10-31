@@ -37,6 +37,17 @@
      Convert the assignments for a, b, and c to use the += operator.
  */
 
+/**   //////////more notes////////
+ * Code	Output
+ \'	single quote
+ \"	double quote
+ \\	backslash
+ \n	newline
+ \r	carriage return
+ \t	tab
+ \b	word boundary
+ \f	form feed
 
+ Note that the backslash itself must be escaped in order to display as a backslash.*/
 
 })();
