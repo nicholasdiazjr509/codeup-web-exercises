@@ -37,6 +37,56 @@
      Convert the assignments for a, b, and c to use the += operator.
  */
 
+/**   //////////more notes////////
+ * Code	Output
+ \'	single quote
+ \"	double quote
+ \\	backslash
+ \n	newline
+ \r	carriage return
+ \t	tab
+ \b	word boundary
+ \f	form feed
 
+ Note that the backslash itself must be escaped in order to display as a backslash.*/
+const someAdjective = "awesome!";
+    let myStr = "Learning to code is ";
+    myStr += someAdjective;
+    console.log(myStr)
+ /**
+  *  Use Bracket Notation to Find the First Character in a String
+  * Bracket notation is a way to get a character at a specific index within a string.
+  * Most modern programming languages, like JavaScript, don't start counting at 1 like humans do.
+  * They start at 0. This is referred to as Zero-based indexing.
+  * For example, the character at index 0 in the word Charles is C.
+  * So if const firstName = "Charles", you can get the value of the first letter of the string by using firstName[0].
 
+  Example:
+          const firstName = "Charles";
+          const firstLetter = firstName[0];
+  firstLetter would have a value of the string C.
+  Use bracket notation to find the first character in the lastName variable and assign it to firstLetterOfLastName.
+  Hint: Try looking at the example above if you get stuck.
+  */
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+
+firstLetterOfLastName = lastName[0];
+
+/**
+
+ In JavaScript, String values are immutable, which means that they cannot be altered once created.
+ For example, the following code:
+     let myStr = "Bob";
+        myStr[0] = "J";
+ cannot change the value of myStr to Job, because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
+---
+    let myStr = "Bob";
+        myStr = "Job";
+ Correct the assignment to myStr so it contains the string value of Hello World
+ using the approach shown in the example above.
+ */
+let myStr = "Jello World";
+
+    myStr[0] = "H";
 })();
