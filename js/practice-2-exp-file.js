@@ -79,14 +79,45 @@ firstLetterOfLastName = lastName[0];
  For example, the following code:
      let myStr = "Bob";
         myStr[0] = "J";
- cannot change the value of myStr to Job, because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
+ cannot change the value of myStr to Job, because the contents of myStr cannot be altered.
+ Note that this does not mean that myStr cannot be changed,
+ just that the individual characters of a string literal cannot be changed.
+ The only way to change myStr would be to assign it with a new string, like this:
 ---
     let myStr = "Bob";
         myStr = "Job";
  Correct the assignment to myStr so it contains the string value of Hello World
  using the approach shown in the example above.
  */
-let myStr = "Jello World";
+     let myStr1 = "Jello World";
+        myStr1 = "Hello World";
+console.log(myStr1)
 
-    myStr[0] = "H";
+ /**
+  * Manipulate Arrays With pop()
+  Another way to change the data in an array is with the .pop() function.
+  .pop() is used to pop a value off of the end of an array.
+  We can store this popped off value by assigning it to a variable.
+  In other words, .pop() removes the last element from an array and returns that element.
+
+  Any type of entry can be popped off of an array - numbers, strings, even nested arrays.
+        const threeArr = [1, 4, 6];
+        const oneDown = threeArr.pop();
+        console.log(oneDown);
+        console.log(threeArr);
+
+  The first console.log will display the value 6, and the second will display the value [1, 4].
+
+  ** Use the .pop() function to remove the last item from myArray and assign the popped
+  ** off value to a new variable, removedFromMyArray.
+  */
+
+ //Setup
+    const myArray = [["John, 23"], ["cat", 2]];
+
+ //only change code below this line.
+    const removedFromMyArray = myArray.pop();
+    console.log(removedFromMyArray);
+    console.log(myArray);
+
 })();
