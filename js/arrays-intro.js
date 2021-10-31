@@ -1,5 +1,5 @@
 "use strict";
-(function () {
+// (function () {
 
 
 // Our testArray variable has now been declared, but it is an empty array.
@@ -86,20 +86,20 @@
                     console.log("Hi, my name is " + name + "!");
 
 
-                instructors.forEach(introduction);
+                    instructors.forEach(introduction);
 
-                var otherSAInstructors = ["Justin", "Kenneth", "Samuel", "Laura", "Cody the Human"];
+                    var otherSAInstructors = ["Justin", "Kenneth", "Samuel", "Laura", "Cody the Human"];
 
-                otherSAInstructors.forEach(introduction);
+                    otherSAInstructors.forEach(introduction);
 
-                console.log(instructors);
-                console.log(otherSAInstructors);
+                    console.log(instructors);
+                    console.log(otherSAInstructors);
 
-                var numbers = [17, 22, 34, 52, 6];
+                    var numbers = [17, 22, 34, 52, 6];
 
                 numbers.forEach(function (number, index) {
                     if (index % 2 === 0) {
-                        console.log(number * 2);
-                    }})}}}}})
+                        console.log(number * 2);}})}}}}
 
- // Any Questions???
+
+                    //})();

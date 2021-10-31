@@ -1,12 +1,27 @@
 (function() {
     "use strict";
 
+//find area of the circle, and round it to the nearest whole number using Math object.
+//     function cA(radius) {
+//         var area = Math.PI * (radius * radius);
+//         console.log(area);
+//
+//         var areaRounded = Math.round(area * 100) / 100;
+//         console.log(areaRounded);
+//         //radius: 36
+//     };
+    var circle = {
+        radius: 36
+    }
+//Area of a circle = PI * radius^2
+    var area = Math.round(Math.Pi * (Math.pow(circle.radius, 2)));
+
+    console.log(area);
+
+
+
+
 //loops, arrays, objects
-
-
-
-
-
     var wrestlers = [
         {
             name: "Bret Hart",
@@ -81,20 +96,20 @@
         // console.log(dogs.indexOf([1]));
         // console.log(dogs[1].breed)
 
-        dogs.push(peridot);
-
-        console.log(dogs);
-        // console.log(dogs.indexOf(dogs[1]));
-        console.log(dogs[0].breed)
-
-        var numberOfAustralianCattleDogMixes = 0;
-        dogs.forEach(function (dog: { breed: string, name: string }) {
-            if (dog.breed === 'Austrailian Cattle Dog mix') {
-                numberOfAustralianCattleDogMixes += 1;
-
-            }
-        })
-        console.log(numberOfAustralianCattleDogsMixes)
+        // dogs.push(peridot);
+        //
+        // console.log(dogs);
+        // // console.log(dogs.indexOf(dogs[1]));
+        // console.log(dogs[0].breed)
+        //
+        // var numberOfAustralianCattleDogMixes = 0;
+        // dogs.forEach(function (dog: { breed: string, name: string }) {
+        //     if (dog.breed === 'Austrailian Cattle Dog mix') {
+        //         numberOfAustralianCattleDogMixes += 1;
+        //
+        //     }
+        // })
+        // console.log(numberOfAustralianCattleDogsMixes)
 
 
 // name       .compName

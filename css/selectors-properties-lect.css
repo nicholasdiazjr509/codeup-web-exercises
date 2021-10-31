@@ -1,0 +1,95 @@
+/* selectors */
+/* HTML Element Selector */
+
+h1 {
+    color: blue;
+}
+
+/* Class Selector*/
+
+.orange-bg {
+    background-color: #ff0000;
+}
+
+/* ID selector*/
+#back-to-top {
+    color: hotpink;
+}
+
+#blue-bg{
+    background-color: blue;
+}
+
+/* Descendant selector
+like this which points to an "li" element */
+.orange-bg li {
+    font-family: Helvetica, sans-serif;
+}
+
+#parent-div h2 {
+    color: lightblue;
+}
+
+/* Direct Child Dependant */
+main th {
+    color: darkblue;
+}
+
+#type>h2{
+    text-decoration: underline;
+}
+
+/* Combination Selector */
+
+ul.orange-bg {
+    font-size: 24px;
+}
+
+a:link{
+    color: hotpink;
+}
+a:visited {
+    color: limegreen;
+
+}
+a:hover {
+    color: firebrick;
+}
+a:active {
+    color: royalblue;
+}
+
+.description {
+    text-decoration: underline wavy blue;
+    text-align: left;
+    text-indent: 3em;
+}
+.pokemon-name{
+    font-family: "Comic Sans MS", sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 3em;
+
+}
+body {
+    background-color: yellow;
+    background-image: url("/image/background img.jpg") ;
+    background-repeat: repeat-y;
+    background-position-x: center ;
+
+}
+.type-list{
+    list-style: inside;
+    list-style:  url("/image/background img.jpg" ) ;
+}
+.type-list h1{
+
+}
+p {
+    color: green;
+}
+.card .description{
+    color: inherit;
+}
+
+#back-to-top
