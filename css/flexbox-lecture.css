@@ -1,0 +1,48 @@
+.flex-container {
+    display: flex;
+    align-items: baseline;
+    border: 5px solid goldenrod;
+    height: 100vh;
+}
+.box1 {
+    font-size: 15px;
+}
+.box2 {
+    font-size: 30px;
+}
+.box3 {
+    font-size: 45px;
+}
+.box4 {
+    font-size: 60px;
+}
+.box5 {
+    font-size: 75px;
+}
+/*
+**
+display: flex;
+    place-content: center space-between;
+    align-items: stretch;
+    flex-flow: row nowrap;
+
+        align-self: center;
+    order: 3;
+    flex-grow: 2;
+
+        align-self: flex-end;
+    order: 5;
+    flex-grow: 0;
+
+        align-self: flex-start;
+    order: 4;
+    flex-grow: 0;
+
+         align-self: flex-start;
+    order: 3;
+    flex-grow: 0;
+
+    align-self: baseline;
+    order: 0;
+    flex-grow: 2;
+*/
