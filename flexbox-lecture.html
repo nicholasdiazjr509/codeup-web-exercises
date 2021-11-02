@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Basics Examples</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+        .flex-container { /*implicit   ??    */
+            width: 80vw;
+            border: 3px solid goldenrod;
+            margin: 10vh auto;
+
+
+                flex-direction: row-reverse;
+                display: flex;
+
+                /* justify-content: center;/* by default, the value of justified content is FLEX-START.
+                For flex-end and is read left to right
+                */
+                justify-content: space-around;/*gains margin with space-around*/
+                /* space-even in the justify-content uses same amount of space all around*/
+
+            /* Stretch!! is implicit default for Align Items-- in minor axis they are called the align items.
+            -- main axis- we justify content!! */
+            /*<-- ////////////////////////   above was changed       ///////////////////////////-->*/
+
+        }
+        .flex-item {
+            background: #BFD45D;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+
+<!--    div.flex-item-->
+<!--    div.id-item-->
+    <div class="flex" id="the-weird-one">The Weird One</div>
+</div>
+
+</body>
+</html>
