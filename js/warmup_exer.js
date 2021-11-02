@@ -1,5 +1,53 @@
 (function() {
-    "use strict";
+    "use strict"
+
+
+}
+    var groceries = [
+        {
+            name: "carrots",
+            quantity: 5
+        },{
+            name: "yams",
+            quantity: 50
+        },{
+            name: "oranges",
+            quantity: 9
+        },{
+            name: "onions",
+            quantity: 2
+        },{
+            name: "cucumbers",
+            quantity: 6
+        },{
+            name: "potatoes",
+            quantity: 8
+        }
+    ];
+
+    function getHighestQuantityObject(arr) {
+
+        var largest = {
+            name: "something",
+            quantity: 0
+        }
+        arr.forEach(function(el){
+        if (el.quantity > obj.quantity){
+            obj = el;}
+        }
+    });
+       return obj;
+        }
+
+console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", quantity: 50};
+
+
+
+
+
+
+
+
 
 //find area of the circle, and round it to the nearest whole number using Math object.
 //     function cA(radius) {
@@ -434,7 +482,7 @@
             //"globally" (inside the IIFE).
             //kind of like containers of a function
 
-        }
+
 
 //console.log(ifyVar);
 })();
