@@ -1,4 +1,54 @@
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
 }
+h2 {
+    text-decoration: underline;
+    color: red;
+}
+table{
+    font-color: yellow;
+}
+body {
+    background-repeat: no-repeat;
+    background-size: 100% 1800px;
+    background-image: url("/image/pexels-photo-laptop.jpeg");
+    background-color: #74992e;
+
+    font-family: "fantasy";
+}
+
+ul{
+    list-style: armenian;
+}
+tr>th{
+    color: royalblue;
+}
+tr>td{
+    font-size: 28px;
+    padding:9px;
+    color: lightskyblue;
+}
+/* I was having fun changing font COLORS due to the background too dark to see the black font
+    and it makes it "pop". Gracias a dios!*/
+p>i{
+    color: red;
+}
+a {
+    color: royalblue;
+}
+ a:hover{
+     background-color: limegreen;
+ }
+ a:link{
+     color: yellow;
+ }
+ a:visited{
+     color: purple;
+ }
+ a:active {
+     background-color: gray;
+ }
+
+/** continue to experiment*/

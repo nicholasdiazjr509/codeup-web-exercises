@@ -58,3 +58,38 @@ a:hover {
 a:active {
     color: royalblue;
 }
+
+.description {
+    text-decoration: underline wavy blue;
+    text-align: left;
+    text-indent: 3em;
+}
+.pokemon-name{
+    font-family: "Comic Sans MS", sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 3em;
+
+}
+body {
+    background-color: yellow;
+    background-image: url("/image/background img.jpg") ;
+    background-repeat: repeat-y;
+    background-position-x: center ;
+
+}
+.type-list{
+    list-style: inside;
+    list-style:  url("/image/background img.jpg" ) ;
+}
+.type-list h1{
+
+}
+p {
+    color: green;
+}
+.card .description{
+    color: inherit;
+}
+
+#back-to-top
