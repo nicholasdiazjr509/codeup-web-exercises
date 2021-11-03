@@ -2,44 +2,65 @@
     "use strict"
 
 
-}
-    var groceries = [
+
+    var products = [
         {
-            name: "carrots",
-            quantity: 5
-        },{
-            name: "yams",
-            quantity: 50
-        },{
-            name: "oranges",
-            quantity: 9
-        },{
-            name: "onions",
-            quantity: 2
-        },{
-            name: "cucumbers",
-            quantity: 6
-        },{
-            name: "potatoes",
-            quantity: 8
-        }
-    ];
+            name: 'Playstation 5',
+            price: 599.99
+        }, {
+            name: 'Logitech Wireless Mouse',
+            price: 23.99
+        }, {
+            name: 'Macbook Pro',
+            price: 1099.99
+        }, {
+            name: 'GoPro HERO10',
+            price: 399.99
+        }, {
+            name: '12" & 6" Metal Ruler Set',
+            price: 5.99
+        }]
 
-    function getHighestQuantityObject(arr) {
+function sortByName(arr){
+      return arr.sort(function(a, b){
+          var aLower = a.name.toLowerCase();
+          var bLower = b.name.toLowerCase();
 
-        var largest = {
-            name: "something",
-            quantity: 0
-        }
-        arr.forEach(function(el){
-        if (el.quantity > obj.quantity){
-            obj = el;}
-        }
-    });
-       return obj;
-        }
+         if( aLower < bLower) {
+             return -1;
+         }else if(aLower > bLower) {
+             return 1;
+         }else{
+             return 0;
 
-console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", quantity: 50};
+         }
+      });
+
+    }
+   console.log(sortByName(products))
+/**
+//Suppose you have an array users. You may use "users.sort" and pass a
+// function that takes two arguments and compare them (comparator)
+//
+// It should return
+// something negative if first argument is less than second (should be placed before the second in resulting array)
+// something positive if first argument is greater (should be placed after second one)
+// 0 if those two elements are equal.
+// In our case if two elements are a and b we want to compare a.firstname and b.firstname
+//
+// Example:
+//
+// users.sort(function(a, b){
+//     if(a.firstname < b.firstname) { return -1; }
+//     if(a.firstname > b.firstname) { return 1; }
+//     return 0;
+// })
+// This code is going to work with any type.
+//
+// Note that in "real life"™ you often want to ignore case, correctly sort diacritics, weird symbols like ß,
+// etc when you compare strings, so you may want to use localeCompare. See other answers for clarity.
+//
+    ***/
 
 
 
@@ -47,6 +68,23 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
 
 
 
+    //
+    // function getHighestQuantityObject(arr) {
+    //     var obj = {
+    //         name: "something",
+    //         quantity: 0
+    //     }
+    //     arr.forEach(function (el) {
+    //         if (el.quantity > obj.quantity) {
+    //             obj = el;
+    //         }
+    //         console.log(obj);
+    //     });
+    //     return obj;
+    // }
+    //
+    // console.log(getHighestQuantityObject(groceries));
+    //returns { name: "yams", quantity: 50};
 
 
 //find area of the circle, and round it to the nearest whole number using Math object.
@@ -57,49 +95,47 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
 //         var areaRounded = Math.round(area * 100) / 100;
 //         console.log(areaRounded);
 //         //radius: 36
-//     };
-    var circle = {
-        radius: 36
-    }
-//Area of a circle = PI * radius^2
-    var area = Math.round(Math.Pi * (Math.pow(circle.radius, 2)));
+// //     };
+//     var circle = {
+//         radius: 36
+//     }
+// //Area of a circle = PI * radius^2
+//     var area = Math.round(Math.Pi * (Math.pow(circle.radius, 2)));
+//     console.log(area);
+//
+//
+// //loops, arrays, objects
+//     var wrestlers = [
+//         {
+//             name: "Bret Hart",
+//             nationality: "Canadian"
+//         }, {
+//             name: "Shawn Michaels",
+//             nationality: "American"
+//         }, {
+//             name: "Christian Cage",
+//             nationality: "Canadian"
+//         }, {
+//             name: "Keiji Mutoh",
+//             nationality: "Japanese"
+//         }, {
+//             name: "Eddy Guerrero",
+//             nationality: "American"
+//         }, {
+//             name: "Owen Hart",
+//             nationality: "Canadian"
+//         }
+//     ];
 
-    console.log(area);
-
-
-
-
-//loops, arrays, objects
-    var wrestlers = [
-        {
-            name: "Bret Hart",
-            nationality: "Canadian"
-        }, {
-            name: "Shawn Michaels",
-            nationality: "American"
-        }, {
-            name: "Christian Cage",
-            nationality: "Canadian"
-        }, {
-            name: "Keiji Mutoh",
-            nationality: "Japanese"
-        }, {
-            name: "Eddy Guerrero",
-            nationality: "American"
-        }, {
-            name: "Owen Hart",
-            nationality: "Canadian"
-        }
-    ];
 //Loop is already created. I derped, again.
-
-    function filterForCanadians(arr) {
-        var bucket = []; //fill bucket with canadians
-        arr.forEach(function (element) {
-            if (element.nationality === "Canadian") {
-                bucket.push(element);
-            }
-        });
+//
+//     function filterForCanadians(arr) {
+//         var bucket = []; //fill bucket with canadians
+//         arr.forEach(function (element) {
+//             if (element.nationality === "Canadian") {
+//                 bucket.push(element);
+//             }
+//         });
         /**
 
          Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt,
@@ -112,33 +148,33 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
          Hp-3, Atk-4, Def-3, Spec. Atk-4, Spec. Def-3, Speed-4
          Evolution from psyduck #054  => Golduck #055
          */
-
-        var Psyduck = {
-            name: 'Psyduck',
-            description: 'Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt,\n' +
-                '    apparently the pain subsides for a while.',
-            height: {
-                feet: 2,
-                inches: 7
-            },
-            type: ['water']
-        }
+        //
+        // var Psyduck = {
+        //     name: 'Psyduck',
+        //     description: 'Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt,\n' +
+        //         '    apparently the pain subsides for a while.',
+        //     height: {
+        //         feet: 2,
+        //         inches: 7
+        //     },
+        //     type: ['water']
+        // }
 
 
 //___________________________________________________________________________________________//
-        var dogs = [myDog];
-        var peridot = {
-            name: "Peridot",
-            breed: "Pit Bull Terrier Mix",
-            birthday: "08/30/2017",
-            sit: function (hasTreat) {
-                if (hasTreat === true) {
-                    return "Peridot is now sitting";
-                } else {
-                    return "Peridot is now ignoring you";
-                }
-            }
-        }
+//         var dogs = [myDog];
+//         var peridot = {
+//             name: "Peridot",
+//             breed: "Pit Bull Terrier Mix",
+//             birthday: "08/30/2017",
+//             sit: function (hasTreat) {
+//                 if (hasTreat === true) {
+//                     return "Peridot is now sitting";
+//                 } else {
+//                     return "Peridot is now ignoring you";
+//                 }
+//             }
+//         }
         // dogs.push(peridot);
         // console.log(dogs);
         // console.log(dogs.indexOf([1]));
@@ -179,42 +215,42 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
 
 
 /////////////////////////////////////////////////////////////////////
-        function moveToEnd(arr) {
-            var movElement = arr.shift();
-            arr.push(moveElement);
-
-            return arr;
-        }
-
-        console.log(moveToEnd(1, 2, 3, 4))
-        console.log(moveToEnd(['rock', 'roll', 'and']));
-
-// create a function that accepts an array argument that returns the second to last element
-        function secondToLast(arr) {
-            return arr[arr.length - 2];
-        }
-
-        console.log(secondToLast(["First", "Second", "not last dude", "Last"]));
+//         function moveToEnd(arr) {
+//             var movElement = arr.shift();
+//             arr.push(moveElement);
+//
+//             return arr;
+//         }
+//
+//         console.log(moveToEnd(1, 2, 3, 4))
+//         console.log(moveToEnd(['rock', 'roll', 'and']));
+//
+// // create a function that accepts an array argument that returns the second to last element
+//         function secondToLast(arr) {
+//             return arr[arr.length - 2];
+//         }
+//
+//         console.log(secondToLast(["First", "Second", "not last dude", "Last"]));
 
 
 //write a program that console.logs the numbers from 1 to 100.
 // multiples of three console.log "FIZZ" instead of the number
 //and for the multiples of five console.log " BUZZ". For numbers which
 //are multiples of both three and five console.log "FIZZBUZZ" . USE A FOR LOOP
-
-        for (var i = 1; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) //using the and && kind of threw me off, it works.
-            {
-                console.log("FIZZBUZZ");
-            } else if (i % 3 === 0) {
-                console.log("FIZZ");
-
-            } else if (i % 5 === 0) {
-                console.log("BUZZ");
-            } else {
-                console.log(i);
-            }
-        }
+//
+//         for (var i = 1; i <= 100; i++) {
+//             if (i % 3 == 0 && i % 5 == 0){ //using the and && kind of threw me off, it works.
+//                     console.log("FIZZBUZZ");
+//
+//             }else if (i % 3 === 0){
+//                     console.log("FIZZ");
+//
+//             } else if (i % 5 === 0) {
+//                     console.log("BUZZ");
+//             } else {
+//                     console.log(i);
+//             }
+//         }
 
 
 //A function is a block of re-usable code that performs a specific task.
@@ -242,20 +278,20 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
 //     typeCheck(4 + '4');
 //---------------------15 October----------------------------------//
 //isBoolean
-        function isBoolean(input) {
-            return typeof input == 'boolean';
-        }
-
-//Define a function named isString that takes in a value as an input and returns a boolean if the input provided is a string or not.
-// Numeric strings will count as strings sand should return true.
-        function isString(input) {
-            return typeof input === 'string';
-        }
-
-//Define a function named isNotString that accepts an input and returns true or false on whether an input is not a string
-        function isNotString(input) {
-            return typeof input !== 'string';
-        }
+//         function isBoolean(input) {
+//             return typeof input == 'boolean';
+//         }
+//
+// //Define a function named isString that takes in a value as an input and returns a boolean if the input provided is a string or not.
+// // Numeric strings will count as strings sand should return true.
+//         function isString(input) {
+//             return typeof input === 'string';
+//         }
+//
+// //Define a function named isNotString that accepts an input and returns true or false on whether an input is not a string
+//         function isNotString(input) {
+//             return typeof input !== 'string';
+//         }
 
 //we can reuse code and just add !
 // function isNotString(input){
@@ -406,6 +442,7 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
 // Execute function *function expression and declarations*****
 
         var date = todaysDate("Today's date is: ");
+
         console.log(date);
 
 // Function declaration
@@ -461,23 +498,23 @@ console.log    ( getHightestQuantityObject(groceries))//returns { name: "yams", 
 // console.log(global);
 
 
-        function greeting() {
-            var firstName = 'David';
-            var lastName = 'Stephens';
-            return 'Hello, ' + firstName + lastName;
-
-        }
-
-        console.log(greeting());
-        console.log(firstName, lastName);
+        // function greeting() {
+        //     var firstName = 'David';
+        //     var lastName = 'Stephens';
+        //     return 'Hello, ' + firstName + lastName;
+        //
+        // }
+        //
+        // console.log(greeting());
+        // console.log(firstName, lastName);
 
         // Immediately Invoked Function Expression (IIFE)
 
-    }
-        var ifyVar = 'I am local to the IIFE'
 
-        function myFunction() {
-            return info;
+        // var ifyVar = 'I am local to the IIFE'
+        //
+        // function myFunction() {
+        //     return info;
             //var of info can still be accessed here because it was defined
             //"globally" (inside the IIFE).
             //kind of like containers of a function
