@@ -38,7 +38,7 @@ function sortByName(arr){
 
     }
    console.log(sortByName(products))
-/**
+    /**
 //Suppose you have an array users. You may use "users.sort" and pass a
 // function that takes two arguments and compare them (comparator)
 //
