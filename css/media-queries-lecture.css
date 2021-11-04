@@ -1,0 +1,14 @@
+/*MOBILE FIRST*/
+
+#small{
+    color: crimson;
+}
+
+#medium{
+    color: blue;
+}
+@media screen and (min-width:768px){
+    #media{
+        color: darkorange;
+    }
+}
