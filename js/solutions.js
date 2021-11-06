@@ -129,6 +129,64 @@ function spinWords(sentence){
                 return result;
 }   console.log(spinWords('warriors'))
 
+
+// REVERSE words
+//---------------------//
+function spinWords(string){
+    //TODO Have fun :)
+    var stringArray  =  string.split(' ');
+    var result = '';
+
+    stringArray.map((str, i ) => {
+        if(str.length >= 5){
+            stringArray[i] = str.split('').reverse().join('');
+        }else{
+            stringArray[i] = str;
+        }
+        result = stringArray.join(' ');
+    });
+    return result;
+}
+
+/*Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+Example
+
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+
+The returned format must be correct in order to complete this challenge.
+Don't forget the space after the closing parentheses!
+*/
+function createPhoneNumber(numbers){
+    var format = "(xxx) xxx-xxxx";
+
+    for(var i = 0; i < numbers.length; i++)
+    {
+        format = format.replace('x', numbers[i]);
+    }
+
+    return format;
+}
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+/*
+* Given an integral number, determine if it's a square number:
+
+    In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+
+The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+Examples
+
+-1  =>  false
+ 0  =>  true
+ 3  =>  false
+ 4  =>  true
+25  =>  true
+26  =>  false
+*/
+
+var isSquare = function(n){
+    return Math.sqrt(n) % 1 == 0 ? true : false;
+};
+
 /**
  * Usually when you buy something, you're asked whether your credit card number,
  * phone number or answer to your most secret question is still correct.
