@@ -129,6 +129,26 @@ function spinWords(sentence){
                 return result;
 }   console.log(spinWords('warriors'))
 
+
+// REVERSE words
+//---------------------//
+function spinWords(string){
+    //TODO Have fun :)
+    var stringArray  =  string.split(' ');
+    var result = '';
+
+    stringArray.map((str, i ) => {
+        if(str.length >= 5){
+            stringArray[i] = str.split('').reverse().join('');
+        }else{
+            stringArray[i] = str;
+        }
+        result = stringArray.join(' ');
+    });
+    return result;
+}
+
+
 /**
  * Usually when you buy something, you're asked whether your credit card number,
  * phone number or answer to your most secret question is still correct.
