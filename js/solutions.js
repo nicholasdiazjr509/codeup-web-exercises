@@ -1,3 +1,72 @@
+/** It is not returning the right values. Can you help him fix it?
+  a = 100
+ b = 200
+ a, b = swap(a, b)
+ print(a, b) // Should print out "200, 100", but the function prints out "100, 100"
+
+ Examples
+ swap(100, 200) ➞ [200, 100]
+ swap(44, 33) ➞ [33, 44]
+ swap(21, 12) ➞ [12, 21] */
+function swap(a, b) {
+
+    return [b, a]
+}
+
+/**You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
+ Examples
+ points(1, 1) ➞ 5
+ points(7, 5) ➞ 29
+ points(38, 8) ➞ 100 */
+
+function points(twoPointers, threePointers){
+    return twoPointers * 2 + threePointers * 3;
+}
+
+
+/**Create a function that takes length and width and finds the perimeter of a rectangle. */
+function findPerimeter(length,width){
+    return (length + width) * 2;
+}
+
+
+/**Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+ Examples
+ lessThanOrEqualToZero(5) ➞ false
+ lessThanOrEqualToZero(0) ➞ true
+ lessThanOrEqualToZero(-2) ➞ true
+ */
+
+
+function lessThanOrEqualToZero(num) {
+    if (num <= 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+/**Description:
+
+ Given the triangle of consecutive odd numbers:
+
+ 1
+ 3     5
+ 7     9    11
+ 13    15    17    19
+ 21    23    25    27    29
+ ...
+ */
+
+ function rowSumOddNumbers(n) {
+  return Math.pow(n, 3);
+}
+
+ function rowSumOddNumbers(n) {
+  return n*n*n
+}
+
 
 /** if (a = true)  Then B, Else C, End if
  * Java If-ElseIn this challenge, we test your knowledge of using if-else
