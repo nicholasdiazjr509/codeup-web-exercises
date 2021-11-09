@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>T-Block Resume Exercise</title>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/t-block-resume.css">
     <script src="https://kit.fontawesome.com/244940f08c.js" crossorigin="anonymous"></script>
@@ -14,51 +13,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <style>
-        .row {
-            margin-top: 25px !important;
-        }
 
-    </style>
 </head>
 
 <body>
 
 <!--    <div class="container-fluid">-->
-<div class="container">
-       <div class="row d-flex justify-content-center">
-           <h1> Psyduck </h1>
+<header class="text-center mt-3 container">
+    <h1 class="name"> Codey the Duck </h1>
+    <h3 class="text-center mt-5">SOFTWARE DEVELOPER</h3>
+
     <!--      <h3>Software Developer</h3>-->
-       </div>
-</div>
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <h2>Software Developer</h2> <br>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque doloribus incidunt
-                    iste, nulla quasi repellat suscipit. Ad facilis illo laudantium mollitia quaerat quasi?
-                    Aliquam deleniti dolores quibusdam rerum unde.
-                </p>
-        </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque doloribus incidunt
+        iste, nulla quasi repellat suscipit. Ad facilis illo laudantium mollitia quaerat quasi?
+        Aliquam deleniti dolores quibusdam rerum unde.
+    </p>
 
-     <!--        <div class="col-xs-1 col-sm-1">-->
-
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-lg-3"><a href="#"><i class="fas fa-phone-alt"></i> 210-123-4567</a></div>
-                    <div class="col-12 col-lg-3"><a href="#"><i class="fab fa-linkedin-in"></i>psyduck@linkedin.com</a></div>
-                    <div class="col-12 col-lg-3"><a href="#"><i class="fas fa-envelope"></i>psyduck@gmail.com</a></div>
-                    <div class="col-12 col-lg-3"><a href="#"><i class="fab fa-github"></i>psyduck.gitHub.io</a></div>
-                </div>
-            </div>
-
-
-
+          <ul class="info row">
+               <li class="call-12 col-md-3"><a href="#"><i class="fas fa-phone-alt"></i> 210-123-4567</a></li>
+               <li class="call-12 col-md-3"><a href="#"><i class="fab fa-linkedin-in"></i>psyduck@linkedin.com</a></li>
+               <li class="call-12 col-md-3"><a href="#"><i class="fas fa-envelope"></i>psyduck@gmail.com</a></li>
+               <li class="call-12 col-md-3"><a href="#"><i class="fab fa-github"></i>psyduck.gitHub.io</a></li>
+        </ul>
+</header>
+<!---**********************************-->
+<hr class="divider container"><!-- I was missing this --omg dude-->
+<div class="container container-fluid">
    <div class="row">
-       <div class="col-md-4">
-            <div class="col">
-                <h4>SKILLS AND ABILITIES</h4>
+       <div class="col-12 col-md-5">
+            <section class="skills">
+                 <h2 class="text-primary">SKILLS AND ABILITIES</h2>
                     <!--    <div class="row" >-->
              <ul>
                  <li>HTML</li>
@@ -66,30 +50,36 @@
                  <li>Javascript</li>
                  <li>Bootstrap</li>
             </ul>
-            </div>
-            <div class="col">
-                   <h3>ACADEMICS</h3>
+            </section>
 
+           <!--*************************** -->
+            <section class="">
+               <h2 class="text-primary">ACADEMICS</h2>
                     <p>Elit rerum asperiores nostrum ipsum sint debitis et, quos harum.
                         Ut reiciendis id dolorem dolorum ad ex in. Illo odit atque dolore corporis vero.
                         Voluptatum cupiditate quisquam perspiciatis obcaecati neque.</p>
-            </div>
+            </section>
 
-    <!--                <div class="w-100"></div>-->
-                <div class="col">
-                <h4 >PROFESSIONAL EXPERIENCE</h4>
-                <p>Job 2</p>
-                   <p>Sit quibusdam dolorum delectus ducimus consequatur ullam cupiditate quia sit,
-                        laboriosam distinctio distinctio est blanditiis vitae laudantium dolore? Tempore
-                        doloremque aspernatur repellat consectetur sit vero velit possimus suscipit? Odit doloremque?</p>
-                <p>Job 1</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur facilis fugit neque pariatur sed.
-                        Asperiores blanditiis cupiditate deserunt dolores enim error ex illo.</p>
-                </div>
+    <!--      ?forced break? <div class="w-100"></div>-->
+            <section class="experience">
+                <h2 class="text-primary" >PROFESSIONAL EXPERIENCE</h2>
+                <p class="">Job 2
+                <br>
+                    Sit quibusdam dolorum delectus ducimus consequatur ullam cupiditate quia sit,
+                    laboriosam distinctio distinctio est blanditiis vitae laudantium dolore? Tempore
+                    doloremque aspernatur repellat consectetur sit vero velit possimus suscipit.
+                </p>
+                <p>Job 1
+                <br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur facilis fugit neque pariatur sed.
+                        Asperiores blanditiis cupiditate deserunt dolores enim error ex illo.
+                </p>
+            </section>
            </div>
+           <!-- ***********************************-->
         <div class="col-md-8">
             <div class="col" >
-                <h4>DEVELOPMENT PROJECT</h4>
+                <h4>DEVELOPMENT PROJECTS</h4>
                     <p>Project 3</p>
                        <p>Consectetur doloribus dolor quia iste sint! Totam suscipit possimus deserunt adipisci
                         beatae.
@@ -98,18 +88,23 @@
                     <p>Project 1</p>
                            <p>Rem ipsam itaque illo perspiciatis illo doloribus. Enim iste.</p>
             </div>
-            <div class="col" >
-                <h4>AWARDS AND INVOLVEMENT</h4>
-                    <p>AWARD 1</p>
-                        <p>Consectetur doloribus dolor quia iste sint! Totam suscipit possimus deserunt adipisci
-                    beatae? Mollitia explicabo voluptates hic delectus voluptates commodi necessitatibus perferendis.
-                    Rem ipsam itaque illo perspiciatis illo doloribus. Enim iste.</p>
-                    <p>INVOLVEMENT 1</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit a animi assumenda.</p>
-                </div>
+            <!--- *****************************-->
+            <section class="awards" >
+                <h2 class="text-primary">AWARDS AND INVOLVEMENT</h2>
+                    <p>AWARD 1
+                    <br>
+                        Consectetur doloribus dolor quia iste sint! Totam suscipit possimus deserunt adipisci
+                        beatae? Mollitia explicabo voluptates hic delectus voluptates commodi necessitatibus perferendis.
+                        Rem ipsam itaque illo perspiciatis illo doloribus. Enim iste.
+                    </p>
+                    <p>INVOLVEMENT 1
+                    <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit a animi assumenda.
+                    </p>
+                </section>
             </div>
         </div>
-        </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"

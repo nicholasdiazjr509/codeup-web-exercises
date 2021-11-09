@@ -1,0 +1,12 @@
+.name{
+    letter-spacing: 5px;
+        font-weight: bold;
+}
+.info{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.divider{
+    border-top: 5px solid gold;
+}
