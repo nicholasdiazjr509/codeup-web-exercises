@@ -1,3 +1,43 @@
+//Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+// Examples
+//
+// lessThanOrEqualToZero(5) ➞ false
+//
+// lessThanOrEqualToZero(0) ➞ true
+//
+// lessThanOrEqualToZero(-2) ➞ true
+
+function lessThanOrEqualToZero(num) {
+    if(num <= 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Write a function that returns the string "something" joined with a space " " and the given argument a.
+//     Examples
+//
+// giveMeSomething("is better than nothing") ➞ "something is better than nothing"
+//
+// giveMeSomething("Bob Jane") ➞ "something Bob Jane"
+//
+// giveMeSomething("something") ➞ "something something"
+//
+// Notes
+//
+// Assume an input is given.
+
+    function giveMeSomething(a) {
+
+    return "something" + " "  + a
+
+
+
+}
+
+
+
 /**
  * You are going to be given a word. Your job is to return the middle character of the word.
  * If the word's length is odd, return the middle character.
