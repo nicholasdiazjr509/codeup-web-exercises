@@ -18,7 +18,7 @@
     // TODO: This function needs to be called once every second
     var interval = 1000;
     function updateTimer() {
-        if (detonationTimer === 0) {
+        if (detonationTimer == 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
@@ -28,10 +28,16 @@
         detonationTimer--;
     }
 
+//setInterval(updateTimer, 1000);
+
+    // which then   >> var bombInterval = setInterval(updateTimer, 1000)
+    //
 
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
     var intervalId = setInterval(updateTimer, interval);
+
+
     function defuseTheBOM(){
         clearInterval(intervalId);
         alert(" BOM DEFUSED!!")
