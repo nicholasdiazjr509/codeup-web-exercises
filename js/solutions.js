@@ -1,3 +1,31 @@
+//There is an array with some numbers. All numbers are equal except for one. Try to find it!
+//
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// SAMPLE TESTS:
+// describe("Tests", () => {
+//   it("test", () => {
+// Test.assertEquals(findUniq([ 0, 1, 0 ]), 1);
+// Test.assertEquals(findUniq([ 1, 1, 1, 2, 1, 1 ]), 2);
+// Test.assertEquals(findUniq([ 3, 10, 3, 3, 3 ]), 10);
+//   });
+// });
+
+function findUniq(arr){
+    return +arr.filter((value) => {
+        return arr.indexOf(value) === arr.lastIndexOf(value) });
+}
+            /**  OR  */
+ function findUniq(arr) {
+  arr = arr.sort()
+  if (arr[0] === arr[1]){
+    return arr[arr.length -1]
+  } else {
+    return arr[0]
+  }
+}
+
+
 //Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
 // Examples
 //
