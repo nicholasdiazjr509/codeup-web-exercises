@@ -37,40 +37,52 @@
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
+
         subHeader.style.color ='blue';
+
+
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('ul')[0] ;
+        var listItems = document.getElementsByTagName('li') ;
         <!--went with <ul> element so it gets the <li>list-->
         <!--getting <li> only chooses 1, duh-->
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems.style.color='grey';
+        //listItems.style.color='grey';
 /**
               I guess a for loop??
-                        var listItems = document.getElementsByTagName('li');
+                        var listItems = document.getElementsByTagName('li');*/
+
                         for (var i = 0; i < listItems.length; i++) {
-                            var dbid =listItems[i].getAttribute('data-dbid')== 1;
-                        {    console.log(dbid);
+
+                         //   var listItems2=document.getElementsByTagName('li');
+                            if(listItems[i].getAttribute('data-dbid')===1){
+
+                                //console.log(dbid);
 
                             listItems[i].style.color = "blue";
-                            }else if (i % 2 == 0){
+                            }else if (i  % 2 ===0 ){
                             listItems[i].style.color = "grey";
                         } }
 
 
 
- */
-        var dbid= document.getAttribute ('1');
-           dbid.style.color='blue';
+
+       // var dbid = document.getElementsByTagName("li")[0].getAttribute("data-dbid");
+       // console.log(dbid)
+
+
+         //  dbid.style.color("blue");
 
         // let listItemsId = document.getAttribute('1');
         // listItemsId.style.color='blue';
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        //
+         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // subParagraphs.innerHTML = "Mission Accomplished!";
+         subParagraphs[0].innerText = "Mission Accomplished!";
     })();
 </script>
 </body>
