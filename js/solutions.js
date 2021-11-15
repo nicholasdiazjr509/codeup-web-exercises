@@ -1,3 +1,26 @@
+var i = 0;
+while(i <= 10) {
+    console.log(i);
+    i++;
+}
+var isColdOutside = true;
+
+// var clothingToWear;
+//
+// if (isColdOutside) {
+//     clothingToWear = 'sweater and a jacket';
+// } else {
+//     clothingToWear = 'shorts and a t-shirt';
+// }
+//ternary operator:
+var clothingToWear = isColdOutside ? 'sweater and a jacket' : 'shorts and a t-shirt';
+
+
+
+
+console.log(clothingToWear)
+console.log(10 % 3);
+
 //There is an array with some numbers. All numbers are equal except for one. Try to find it!
 //
 // findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
@@ -295,11 +318,11 @@ function getMiddle(s)
 
  Objects are like keys on a keyring that open a specific door and behind each door is a room that can store many things. If each key is labeled, you can quickly open doors and access the stuff inside.
 */
- const person2 = {
-    firstName: "Jon",
-    lastName: "Snow",
-    email: "brooding@thewall.com"
-}
+//  const person2 = {
+//     firstName: "Jon",
+//     lastName: "Snow",
+//     email: "brooding@thewall.com"
+// }
 
 /**
  The things on the left of the : are called keys and the things on the right are values. We refer to this as key-value pairs.
@@ -341,10 +364,10 @@ function getMiddle(s)
 --
  Subtract 2 from every element in the numbers array.
 */
-const numbers = [1, 4, 9, 16]
-    function subtractTwo(numbers) {
-        return numbers.map(x => x - 2)
-}
+// const numbers = [1, 4, 9, 16]
+//     function subtractTwo(numbers) {
+//         return numbers.map(x => x - 2)
+// }
 
 /**
  * The .map() method applies a function to every element in an array.
@@ -361,12 +384,12 @@ To multiply every element in the numbers array by 2, we do this:
 
  Subtract 2 from every element in the numbers array.
 */
-const numbers = [1, 4, 9, 16]
-
-function subtractTwo(numbers) {
-  return numbers.map(x => x - 2)
-
-}
+// const numbers = [1, 4, 9, 16]
+//
+// function subtractTwo(numbers) {
+//   return numbers.map(x => x - 2)
+//
+// }
 /**  The .filter() method returns a new array containing all elements
  * that pass a test from a function you provide.
  * In other words, .filter() takes an array,
