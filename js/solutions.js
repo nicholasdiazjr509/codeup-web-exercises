@@ -1,3 +1,94 @@
+var i = 0;
+while(i <= 10) {
+    console.log(i);
+    i++;
+}
+var isColdOutside = true;
+
+// var clothingToWear;
+//
+// if (isColdOutside) {
+//     clothingToWear = 'sweater and a jacket';
+// } else {
+//     clothingToWear = 'shorts and a t-shirt';
+// }
+//ternary operator:
+var clothingToWear = isColdOutside ? 'sweater and a jacket' : 'shorts and a t-shirt';
+
+
+
+
+console.log(clothingToWear)
+console.log(10 % 3);
+
+//There is an array with some numbers. All numbers are equal except for one. Try to find it!
+//
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// SAMPLE TESTS:
+// describe("Tests", () => {
+//   it("test", () => {
+// Test.assertEquals(findUniq([ 0, 1, 0 ]), 1);
+// Test.assertEquals(findUniq([ 1, 1, 1, 2, 1, 1 ]), 2);
+// Test.assertEquals(findUniq([ 3, 10, 3, 3, 3 ]), 10);
+//   });
+// });
+
+function findUniq(arr){
+    return +arr.filter((value) => {
+        return arr.indexOf(value) === arr.lastIndexOf(value) });
+}
+            /**  OR  */
+ function findUniq(arr) {
+  arr = arr.sort()
+  if (arr[0] === arr[1]){
+    return arr[arr.length -1]
+  } else {
+    return arr[0]
+  }
+}
+
+
+//Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+// Examples
+//
+// lessThanOrEqualToZero(5) ➞ false
+//
+// lessThanOrEqualToZero(0) ➞ true
+//
+// lessThanOrEqualToZero(-2) ➞ true
+
+function lessThanOrEqualToZero(num) {
+    if(num <= 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Write a function that returns the string "something" joined with a space " " and the given argument a.
+//     Examples
+//
+// giveMeSomething("is better than nothing") ➞ "something is better than nothing"
+//
+// giveMeSomething("Bob Jane") ➞ "something Bob Jane"
+//
+// giveMeSomething("something") ➞ "something something"
+//
+// Notes
+//
+// Assume an input is given.
+
+    function giveMeSomething(a) {
+
+    return "something" + " "  + a
+
+
+
+}
+
+
+
 /**
  * You are going to be given a word. Your job is to return the middle character of the word.
  * If the word's length is odd, return the middle character.
@@ -227,11 +318,11 @@ function getMiddle(s)
 
  Objects are like keys on a keyring that open a specific door and behind each door is a room that can store many things. If each key is labeled, you can quickly open doors and access the stuff inside.
 */
- const person2 = {
-    firstName: "Jon",
-    lastName: "Snow",
-    email: "brooding@thewall.com"
-}
+//  const person2 = {
+//     firstName: "Jon",
+//     lastName: "Snow",
+//     email: "brooding@thewall.com"
+// }
 
 /**
  The things on the left of the : are called keys and the things on the right are values. We refer to this as key-value pairs.
@@ -273,10 +364,10 @@ function getMiddle(s)
 --
  Subtract 2 from every element in the numbers array.
 */
-const numbers = [1, 4, 9, 16]
-    function subtractTwo(numbers) {
-        return numbers.map(x => x - 2)
-}
+// const numbers = [1, 4, 9, 16]
+//     function subtractTwo(numbers) {
+//         return numbers.map(x => x - 2)
+// }
 
 /**
  * The .map() method applies a function to every element in an array.
@@ -293,12 +384,12 @@ To multiply every element in the numbers array by 2, we do this:
 
  Subtract 2 from every element in the numbers array.
 */
-const numbers = [1, 4, 9, 16]
-
-function subtractTwo(numbers) {
-  return numbers.map(x => x - 2)
-
-}
+// const numbers = [1, 4, 9, 16]
+//
+// function subtractTwo(numbers) {
+//   return numbers.map(x => x - 2)
+//
+// }
 /**  The .filter() method returns a new array containing all elements
  * that pass a test from a function you provide.
  * In other words, .filter() takes an array,
