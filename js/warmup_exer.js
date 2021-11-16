@@ -1,44 +1,83 @@
 (function() {
     "use strict"
 
+    //Write a function in JavaScript that takes in an array of objects and returns the object with the lowest height property.
+    // Consider the following array to test your code.
+    var bBallPlayers =[{
 
+                name: "Hakeem Olajuwon",
+                height: 213
+            }, {
+                name: "Muggsy Bogues",
+                height: 160
+            }, {
+                name: "Chris Paul",
+                height: 183
+            }, {
+                name: "Bol Bol",
+                height: 218
+            }, {
+                name: "Moochie Norris",
+                height: 185
+            }, {
+                name: "Manu Ginobili",
+                height: 198
+            }
+        ];
+    function lowestHeight(arr){
+        var obj = { height: Number.MAX_VALUE}
 
-    var products = [
-        {
-            name: 'Playstation 5',
-            price: 599.99
-        }, {
-            name: 'Logitech Wireless Mouse',
-            price: 23.99
-        }, {
-            name: 'Macbook Pro',
-            price: 1099.99
-        }, {
-            name: 'GoPro HERO10',
-            price: 399.99
-        }, {
-            name: '12" & 6" Metal Ruler Set',
-            price: 5.99
-        }]
-
-function sortByName(arr){
-      return arr.sort(function(a, b){
-          var aLower = a.name.toLowerCase();
-          var bLower = b.name.toLowerCase();
-
-         if( aLower < bLower) {
-             return -1;
-         }else if(aLower > bLower) {
-             return 1;
-         }else{
-             return 0;
-
-         }
-      });
-
+        arr.forEach(function (el) { //el=element
+            if (el.height < obj.height) {
+                obj = el;
+            }
+                });
+        return obj;
     }
-   console.log(sortByName(products))
-    /**
+
+    console.log(lowestHeight(bBallPlayers));
+
+
+
+
+
+
+//     var products = [
+//         {
+//             name: 'Playstation 5',
+//             price: 599.99
+//         }, {
+//             name: 'Logitech Wireless Mouse',
+//             price: 23.99
+//         }, {
+//             name: 'Macbook Pro',
+//             price: 1099.99
+//         }, {
+//             name: 'GoPro HERO10',
+//             price: 399.99
+//         }, {
+//             name: '12" & 6" Metal Ruler Set',
+//             price: 5.99
+//         }]
+//
+// function sortByName(arr){
+//       return arr.sort(function(a, b){
+//           var aLower = a.name.toLowerCase();
+//           var bLower = b.name.toLowerCase();
+//
+//          if( aLower < bLower) {
+//              return -1;
+//          }else if(aLower > bLower) {
+//              return 1;
+//          }else{
+//              return 0;
+//
+//          }
+//       });
+//
+//     }
+//    console.log(sortByName(products))
+//     /**
 //Suppose you have an array users. You may use "users.sort" and pass a
 // function that takes two arguments and compare them (comparator)
 //
@@ -60,7 +99,6 @@ function sortByName(arr){
 // Note that in "real life"™ you often want to ignore case, correctly sort diacritics, weird symbols like ß,
 // etc when you compare strings, so you may want to use localeCompare. See other answers for clarity.
 //
-    ***/
 
 
 
