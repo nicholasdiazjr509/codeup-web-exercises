@@ -103,8 +103,25 @@ var carImage = document.querySelector('#car-image');// 3
 
 // titles.forEach(function(){
 //   header.style = 'font-family: Impact, sans-serif';
-//   })
 
+  // });
+  var nationalParks = [
+    {name: 'Grand Canyone National Park'},
+    {name: 'Rocky Mountain National Park'},
+    {name: 'White Sands National Park'}
+  ]
+
+  var parksList = document.querySelector('#nationalParksList');
+
+  console.log(titles);
+  console.log(listItems);
+  console.log(allHeaders);
+
+  // A forEach loop will not work because we are using an
+  // HTMLCollection prototype, rather than an Array prototype.
+  // titles.forEach(function(header){
+  //     header.style = 'font-family: Impact, sans-serif;';
+  // });
   for (var i = 0; i < titles.length; i++){
     console.log("Its working!");
     titles[i].style = 'font-family: Impact, sans-serif';
@@ -150,7 +167,10 @@ var carImage = document.querySelector('#car-image');// 3
   // family.style = 'background-color: yellow; color: red; font-weight: bolder;';
   family.style.backgroundColor = 'yellow';
   //family.style = 'background-color: yellow; color: red; font-weight: bolder';
-var colorChangingBG = setInterval(function(){
+
+
+
+  var colorChangingBG = setInterval(function(){
   var colors = ['blue', 'black', 'white'];
   var randomColor= ['red', 'pink', 'yellow'];
   document.querySelector('body').style.backgroundColor = randomColor;
