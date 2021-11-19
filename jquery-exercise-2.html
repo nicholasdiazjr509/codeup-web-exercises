@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Christmas List</title>
+</head>
+<body>
+    <h1 id="santa-greeting" class="title">Ho ho ho! Merry Christmas! - Santa Cleese</h1>
+
+    <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+        accusantium aperiam asperiores delectus dolor eius eligendi
+        eveniet facilis ipsam ipsum iure laudantium minima placeat quibusdam,
+        rem repudiandae soluta tempora tempore.</p>
+
+
+    <div id="christmasList">
+        <ul>
+            <li id="codeup"> PS5 </li>
+            <li class="codeup">Money/Cash/Bread</li>
+            <li class="codeup">World Peace</li>
+            <li class="gift">Xbox Series X</li>
+            <li class="gift">Fix My Wife's Back</li>
+            <li class="gift">Help My Family</li>
+            <li class="gift">Fix My Car</li>
+            <li class="gift">A New Truck</li>
+        </ul>
+    </div>
+    <h1>Happy Christmas folks!!!</h1>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+<script>
+   // alert($('#santa-greeting').html());
+   // alert($('#description').html())
+  //$('.codeup').css('border', '1px solid red');
+   //$('li').css('font-size', '30px')
+  //  $('li').css
+  // alert( $('h1').html);
+  //  $('p')
+  //  $('h1, p, li');
+
+   // for(var j = 0; j < $('h1').length; j++){
+   //     $('h1')[j].html();
+   // }
+
+
+    //Remove your custom jQuery code from previous exercises.
+    //Add jQuery code that will change the background color of an h1 element when clicked.
+    //Make all paragraphs have a font size of 18px when they are double clicked.
+    //Set all li text color to red when the mouse is hovering; reset to black when it is not.
+
+   $('h1') .click(
+       function  () {
+           $(this).css('background-color', 'blue');
+       });
+   $('li').hover(
+       function() {
+       }, function () {
+           $('li').css('color', 'black');
+       } );
+
+   $('p').dblclick(
+       function(){
+           $(this).css('font-size', '18px');
+       });
+</script>
+
+</body>
+</html>
