@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form WARMUP</title>
+</head>
+<body>
+<script>
+    //vanilla JS
+    // var submitButton = document.querySelector('#btn-submit');
+    // var errorMessage = document.querySelector('#error-message');
+    // var usernameInput = document.querySelector('#username');
+    // var passwordInput = document.querySelector('#password');
+    //
+    // var username = 'regulus1969';
+    // var password = 'gocodeup';
+    //
+    // submitButton.addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     if(username.value !== username && passwordInput !== password){
+    //         errorMessage.style.display = 'inline-block';
+    //
+    //     }
+    // })
+
+    var username = Regulus1969;
+    var password = gocodeup;
+
+
+    var submitButton = $(`#btn-submit`);
+    var errorMessage = $(`#error-message`);
+    var usernameInput = $('#username');
+    var passwordInput = $('#password');
+
+    submitButton.click(function(e){
+        e.preventDefault()
+        if(usernameInput.val() !== username || passwordInput.val() !== password``){
+            errorMessage.css('display', 'inline-block');
+        }
+    })
+
+</script>
+</body>
+</html>

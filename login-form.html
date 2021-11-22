@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+"use strict"
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,18 +10,35 @@
 <body>
 <main>
     <form action="#">
-        <fieldset class="width-80">
-            <div class="form-group">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control">
-            </div>
+<!--        <fieldset class="width-80">-->
+<!--            <div class="form-group">-->
+<!--                <label for="username" class="form-label">Username</label>-->
+<!--                <input type="text" id="username" name="username" class="form-control">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="password" class="form-label">Password</label>-->
+<!--                <input type="password" id="password" name="password" class="form-control">-->
+<!--            </div>-->
+<!--        </fieldset>-->
+        <form id="register-form">
+            <label for="name"><input id="name" type="text" placeholder="Name" value=""/>
+            </label>
+            <label for="pw"><input id="pw" type="password" placeholder="Password" value=""/>
+            </label>
+            <input id="rgstr_btn" type="submit" value="get Account" onClick="store()"/>
+        </form>
+
+        <form id="login-form">
+            <input id="userName" type="text" placeholder="Enter Username" value=""/>
+            <input id="userPw" type="password" placeholder="Enter Password" value=""/>
+            <input id="login_btn" type="submit" value="Login" onClick="check()"/>
+        </form>
             <button class="btn btn-block">Login</button>
-        </fieldset>
+
     </form>
+
+
 </main>
+<script type="text/javascript"  src="js/login.js"></script>
 </body>
 </html>
