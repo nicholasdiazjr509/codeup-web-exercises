@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+
+
+    <h1>Enter Konami Code</h1>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--**************************************************************************************************/-->
+
+<script>
+    (function(){
+"use strict";
+
+var konami = {
+    codeSequence: ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+        'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'], index: 0
+    };
+        $(document).keydown(function(e){
+            konami.codeSequence[konami.index] === e.key ? konami.index += 1 : konami.index = 0;
+        if (konami.index === konami.codeSequence.length){
+                alert("You Have Added 30 Lives!");
+                konami.index = 0;
+
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>

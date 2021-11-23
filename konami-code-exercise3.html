@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code2 </title>
+
+</head>
+<body class="parentBody">
+<audio id="cylonEye">
+    <source src="sounds/CylonEye.mp3">
+</audio>
+
+<audio id="byc">
+    <source src="sounds/byc.wav">
+</audio>
+
+<div class="header">
+    <h1>Enter Konami Code</h1>
+</div>
+<!--<div class="header2">-->
+<!--    <h1>BEWARE!!!</h1>-->
+<!--</div>-->
+<image id="cylon">
+    <script type="img" src="assets/images/cylon-eye.gif"></script>
+</image>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--**************************************************************************************************/-->
+
+<script>
+    (function(){
+        "use strict";
+
+        var konami = {
+            codeSequence: ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+                'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'], index: 0
+        };
+        $(document).keydown(function(e){
+            konami.codeSequence[konami.index] === e.key ? konami.index += 1 : konami.index = 0;
+            if (konami.index === konami.codeSequence.length) {
+                //  alert("You Have Added 30 Lives!");
+
+                    //Tried this first but I wanted to do more so than just a text change.
+                // $('div.header').each(function(x){
+                //     var new_text = $(this).text("BEWARE!!!");
+                //     $(this).text("font-size", "100px");
+                // });
+
+               $(document).ready(function() {
+                // $('div.header').html('BEWARE');
+                $('h1').replaceWith("<div style='text-align: center;\
+                \ background-color: red;\ font-size: 100px;\ vertical-align:middle'>\
+                    <strong>BEWARE!!</strong></div>")
+                });
+        //FINALLY found out about changing the text style and not just adding the text!
+                //https://www.geeksforgeeks.org/how-to-replace-html-element-in-jquery/
+
+                //Adding the image of the cylon as a background image and as an actual GIF.
+                $('body').css({'background-image': 'url("image/cylon.gif")',
+               'background-repeat': 'no-repeat',
+                'background-position': 'center',
+                'background-color': 'black',
+                'background-size': 'cover',
+                'height': '700px' });
+
+                //added the sound along with "by your command" voice.
+                $('audio#cylonEye')[0].play();
+                $('audio#byc')[0].play();
+                //need to look for a way to loop warble of cylon.
+                //Maybe a way to turn off also.
+            }
+
+        });
+        konami.index = 0;
+    })();
+</script>
+
+</body>
+</html>
