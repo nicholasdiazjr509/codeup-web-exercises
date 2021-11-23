@@ -36,20 +36,21 @@
             konami.codeSequence[konami.index] === e.key ? konami.index += 1 : konami.index = 0;
             if (konami.index === konami.codeSequence.length){
               //  alert("You Have Added 30 Lives!");
-                konami.index = 0;
-                $('body').css({
-                     'background': 'url("image/cylon.gif")',
-                     'background-size': '60%',
-                     'background-repeat': 'no-repeat',
-                     'background-color': 'black',
 
-
+                $('body').css({'background-image': 'url("image/cylon.gif")',
+                    'background-repeat': 'no-repeat',
+                    'background-position': 'center',
+                    //'background-color': 'black',
+                    'background-size': 'cover',
+                    'height': '700px'
                 });
+
                 $('audio#cylonEye')[0].play();
                 $('audio#byc')[0].play();
             }
 
         });
+        konami.index = 0;
     })();
 </script>
 
