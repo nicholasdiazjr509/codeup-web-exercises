@@ -24,4 +24,8 @@ $(document).ready(function(){//no arguements with no methods in it
     $("highlighted").click(function (){
         $(this).removeClass("highlighted");
     });
+
+    $('p').click(function (){
+       $(this).toggleClass("underline");
+    });
 });
