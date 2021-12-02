@@ -16,9 +16,12 @@ tr{
     font-style: italic;
     mso-text-indent-alt: 100px ;
 }
-#thead{
-    text-align: center;
-}
+/*#thead{*/
+/*    text-align: center;*/
+/*}*/
+
+
+
 
 .container-fluid{
     align-content: start;
