@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapBox-1</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/mapbox-geocoder-utils.js"></script>
+</head>
+<body>
+<script src="js/keys.js"></script>
+<!--above any CDN I input-->
+<div id='map' style='width: 600px; height: 500px;'></div>
+<input type="button" id="zoom" value="zoom IN, Dewddddd">
+
+<script>
+        //   add MAPBOX_KEY HERE!!!!!!!!!!!!
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4683, 29.5312], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+    });
+
+    // TODO: Mini exercise #1 - Create an HTML file named mapbox-1.html Create a map that is centered at the San Antonio Airport with the zoom set to 12.
+    //TODO: After 5 seconds, use a method found in the documentation to fly to the DFW Airport and change the map style to satellite streets.
+    //      *BONUS* Create a button labeled "Zoom In", and when the button is clicked, increases the zoom value by 1.\-->
+    setTimeout(function(){
+        map.flyTo({
+            center: [-97.03984256969109, 32.89923198186237],
+            speed: 0.5
+        })
+        map.setStyle('mapbox://styles/mapbox/satellite-streets-v11')
+    }, 5000)
+
+document.querySelector("#zoom").addEventListener('click', function (){
+    //    var mapZoom = map.getZoom();
+        map.setZoom(map.getZoom() + 1);
+        })//clicked and add +1
+//console.log(map.getCenter());
+
+        //MARKERS
+        //Instantiate a new Marker object.
+        var codeup = new mapboxgl.Marker({
+            color: "blue",
+        })
+            .setLngLat([-98.48615, 29.426827]).setDraggable(true)
+    //adding our newly instantiated Marker object to the
+        //map object for rendering
+        codeup.addTo(map)
+    //must use the ".on" method to recognize mapbox events. Below are
+        // listening for a 'dragend' event.
+
+        codeup.on('dragend', function (){
+            popup.setLngLat(codeup.getLngLat())
+})
+        //POPUPS
+        var popup = new mapboxgl.Popup()
+        .setLngLat(codeup.getLngLat())
+        .setHTML('<h3>Hello form Codeup!</h3>')
+        .addTo(map)
+
+
+</script>
+</body>
+</html>

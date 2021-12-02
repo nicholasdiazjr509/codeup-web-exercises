@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mapbox api mini exercise</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<!--    // Mini Exercise 2
+    // Create an HTML file called mapbox-2.html. In this file, create a map centered
+    // on New York with a marker on the Statue of Liberty. Add a popup to the Statue of
+    // Liberty marker with the text "Statue of Liberty".
+    // *BONUS - when the marker is dragged and released, display the coordinates in an H1 below the map.-->
+<script src="js/keys.js"></script>
+<!--above any CDN I input-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<div id='map' style='width: 700px; height: 600px;'></div>
+<input type="button" id="zoom" value="zoom IN, Dewddddd">
+<div class="mapboxgl-popup-anchor-bottom" id="coord"></div>
+<script>
+    <!--        add MAPBOX_KEY HERE!!!!!!!!!!!!-->
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-73.99207775130611, 40.73670263703375], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+
+      });
+
+    var statueOfLiberty = new mapboxgl.Marker()
+        .setLngLat([-74.04494945441164, 40.69077185481202])
+        .setDraggable(true)
+        .addTo(map);
+
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat(statueOfLiberty.getLngLat())
+        .setHTML('<h1>Statue of Liberty</h1>')
+          .add(map)
+
+    statueOfLiberty.on('dragend', function(){
+        $('#coordinates').html('Current Location: Latitude' + statueOfLiberty.getLngLat())
+    })
+
+
+    /**
+    document.querySelector("#zoom").addEventListener('click', function (){
+        //    var mapZoom = map.getZoom();
+        map.setZoom(map.getZoom() + 1);
+    })//clicked and add +1
+    //console.log(map.getCenter());
+
+    //MARKERS
+    //Instantiate a new Marker object.
+    var statueOfLiberty = new mapboxgl.Marker({
+        color: "blue",
+    })
+        .setLngLat([ -73.99207775130611, 40.73670263703375
+        ]).setDraggable(true)
+    //adding our newly instantiated Marker object to the
+    //map object for rendering
+    statueOfLiberty.addTo(map)
+    //must use the ".on" method to recognize mapbox events. Below are
+    // listening for a 'dragend' event.
+
+
+    //POPUPS
+    var popup = new mapboxgl.Popup()
+        .setLngLat(statueOfLiberty.getLngLat())
+        .setHTML('<h3>Statue of Liberty</h3>')
+        .addTo(map)
+
+
+    var statueOfLiberty = new mapboxgl.Marker()
+    .setLngLat([-74.0466837, 40.6892534])
+    .addTo(map);
+
+*/
+
+</script>
+</body>
+</html>
