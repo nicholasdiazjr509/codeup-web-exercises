@@ -1,0 +1,42 @@
+h1{
+    font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
+    border: 1px solid;
+    color: blue;
+    padding-left: 1em;
+    padding-top: 1em;
+    text-align: center;
+    font-size: 60px;
+
+}
+/*th{*/
+/*    padding-top: 1px;*/
+/*    color: hotpink;*/
+/*    padding-left: 1em;*/
+
+
+/*}*/
+#posts{
+    font-family: "Comic Sans MS", sans-serif;
+    color: red;
+    padding-bottom: 5em;
+    float: left;
+
+    font-size: 18px;
+    font-style: italic;
+    /*mso-text-indent-alt: 100px ;*/
+}
+
+
+.btn-refresh{
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    border: 2px solid;
+
+
+}
+.button{
+    align-content: center;
+    padding-left: 2em;
+    padding-top: 2em;
+}
