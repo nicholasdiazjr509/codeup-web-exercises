@@ -9,18 +9,18 @@
 <body>
     <h1>My First Blog Post</h1>
     <div class="container-fluid">
-        <div id="posts">
-            <table id="blogPosts">
-                <tbody class="table table-bordered" id="insertPosts" ></tbody>
-                <thead>
+        <div id="posts" style="text-align: left; padding-left: 10px">
+            <table id="blogPosts"  >
+
+                <thead >
                 <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>Categories</th>
-                    <th>Date</th>
+                    <th style="padding-left: 22px" ><u>Title</u></th>
+                    <th style="padding-left: 30em"><u>Content</u></th>
+                    <th style="padding-left: 40em"><u>Categories</u></th>
+                    <th style="padding-left: 40px"><u>Date</u></th>
                 </tr>
                 </thead>
-
+                <tbody class="table table-bordered"  id="insertPosts"   ></tbody>
             </table>
         </div>
     </div>
@@ -54,7 +54,7 @@
                         })
                     });
                 $("button").click(function(){
-                    $("html").load("ajax-blog.json");
+                    $("html").load("ajax-blog.html");
                 });
 
 
