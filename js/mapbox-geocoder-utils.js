@@ -20,13 +20,13 @@ function geocode(search, token) {
         .then(function(res) {
             return res.json();
             // to get all the data from the request, comment out the following three lines...
-        // }).then(function(data) {
-        //     return data.features[0].center;
+        }).then(function(data) {
+            return data.features[0].center;
         });
 }
-    geocode("600 Navarro street San Antonio, Texas, United States", MAPBOX_KEY).then(function(results){
-        console.log(results)
-    })
+    // geocode("6200 Bandera Rd, San Antonio, Texas, United States", MAPBOX_KEY).then(function(results){
+    //     console.log(results)
+    // })
 
 
 /***
@@ -50,7 +50,7 @@ function reverseGeocode(coordinates, token) {
             return res.json();
         })
         // to get all the data from the request, comment out the following three lines...
-        .then(function(data) {
-            return data.features[0].place_name;
-        });
+        // .then(function(data) {
+        //     return data.features[0].place_name;
+        // });
 }

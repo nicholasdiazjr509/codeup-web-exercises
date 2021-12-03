@@ -13,9 +13,15 @@
 <body>
 <script src="js/keys.js"></script>
 <!--above any CDN I input-->
-<div id='map' style='width: 600px; height: 500px;'></div>
-        <label for="zoom-level">Zoom Level</label>
+
+<div id='map' style='width: 600px; height: 500px; border:5px solid blueviolet;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;'></div>
+
+    <label for="zoom-level" style="padding: 10px">Zoom Level</label>
                 <select name="zoom" id="zoom-level">
+                    <option selected>Zoom</option>
                     <option value="5" >Level 5</option>
                     <option value="15" >Level 15</option>
                     <option value="20">Level 20</option>
@@ -26,16 +32,79 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-98.50358604720338, 29.355318150370003], // starting position [lng, lat]
-        zoom: 5 // starting zoom
+        center: [-98.501556, 29.427002], // starting position [lng, lat]
+        zoom: 10 // starting zoom
     });
+    geocode("6200 Bandera Rd, San Antonio, Texas, United States", MAPBOX_KEY).then(function(results){
+        console.log(results)
+    })
+
+
+
 var zoomSelect = document.querySelector('#zoom-level');
     zoomSelect.addEventListener('change', function(){
         var zoomValue = zoomSelect.value;
         map.setZoom(zoomValue);
     })
-    //2418 Pleasanton Rd, San Antonio, TX 78221
-    //-98.50358604720338, 29.355318150370003
+
+    // var myFavRestaurant = new mapboxgl.Marker({
+    //     color: "blue",
+    // })
+    //     .setLngLat([-98.607356, 29.485257]).setDraggable(true)
+    //
+    // myFavRestaurant.addTo(map)
+    //
+    // myFavRestaurant.on('dragend', function() {
+    //     popup.setLngLat(myFavRestaurant.getLngLat())
+    //
+    // })
+
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat(myFavRestaurant.getLngLat())
+    //     .setHTML('<h3 style="color: green">King Buffet Sushi and Grill</h3>')
+    //     .addTo(map)
+
+        // var popup = new mapboxgl.Popup()
+        //      .setHTML(info.popupHTML);
+        // var marker = new mapboxgl.Marker()
+
+
+
+    var restaurants = [{
+        address: '6200 Bandera Rd, Leon Valley, TX 78238',
+        popupHTML: '<h4 style="color: green" > My favorite: King Buffet Sushi and Grill</h4>'
+      },{
+        address: '8181 Tezel Rd, San Antonio, TX 78250',
+            popupHTML: '<h4>Tink-A-Tako</h4>'
+    },{
+        address: '3555 Fredericksburg Rd, San Antonio, TX 78201',
+            popupHTML: '<h4>Taqueria La Tapatia</h4>'
+    },{
+        address: '11026 Culebra Rd ste 109, San Antonio, TX 78253',
+            popupHTML: '<h4>Hon Machi Korean BBQ</h4>'
+    }];
+
+    function markerPopup(info, token, map){
+        geocode(info.address, token).then(function(coordinates){
+            var popup = new mapboxgl.Popup()
+                    .setHTML(info.popupHTML);
+            var marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map)
+                    .setPopup(popup);
+        });
+    }
+        restaurants.forEach(function (restaurant){
+            markerPopup(restaurant, MAPBOX_KEY, map);
+        });
+    // reverseGeocode({lat: -98.60, lng: -29.50}, MAPBOX_KEY).then(function(results) {
+    //     console.log(results)  // do something with results
+    //   })
+    //
+
+    //29.505292752454615, -98.49850936549176
+    //29.505423476210268, -98.49843962804572
+    //King Buffet sushi and grill 6200 Bandera Rd, Leon Valley, TX 78238
 </script>
 </body>
 </html>

@@ -21,14 +21,51 @@
         const map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
-            center: [-74.5, 40], // starting position [lng, lat]
+            center: [-98.49458826509347, 29.433204152613115], // starting position [lng, lat]
             zoom: 9 // starting zoom
         });
+
+
+
+// MARKERS
+
+// Instantiate a new Marker object.
+var codeup = new mapboxgl.Marker({
+    color: "blue",
+})
+    .setLngLat([ -98.60734256154979, 29.48531930898744 ]).setDraggable(true)
+
+// adding our newly instantiated Marker object to the
+// Map object for rendering
+codeup.addTo(map)
+// must use the ".on" method to recognize mapbox events. Below we are
+// listening for a 'dragend' event.
+codeup.on('dragend', function() {
+    popup.setLngLat(codeup.getLngLat())
+})
+
+// POPUPS
+
+var popup = new mapboxgl.Popup()
+    .setLngLat(codeup.getLngLat())
+    .setHTML('<h3 style="color: green">Hello From Codeup!</h3>')
+    .addTo(map)
+
+var mysteryPlace = new mapboxgl.Marker()
+    .setLngLat([-96.79, 32.77])
+    .addTo(map)
+
+
+reverseGeocode({lat: 32.77, lng: -96.79}, MAPBOX_KEY).then(function(results) {
+    console.log(results)
+})
+
 </script>
 
  <!--<script>-->
 <!--  //  var key = MAPBOX_KEY;-->
 <!--    // console.log(key);-->
 <!--</script>-->
+
 </body>
 </html>
