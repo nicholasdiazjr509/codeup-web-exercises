@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map LECTURE</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script>
+    //https://api.openweathermap.org/data/2.5/onecall?lat=   {lat}  &lon=  {lon}  &exclude={part}  &appid={API key}
+// $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.7604&lon=95.3698&appid=" + "OPEN_WEATHER_KEY").done(function(data) {
+//         console.log(data);
+// });
+$.get("https://api.openweathermap.org/data/2.5/onecall", {
+    lat: 29.423017,
+    lon: -95.48527,
+    exclude: "minutely, hourly",
+    units: "imperial",
+    APPID: OPEN_WEATHER_KEY
+}).done(function(data){
+    console.log(data)
+    $("#weather_icon").attr("src", "https://openweathermap.org/img/w/"+ data.daily[0].weather[0].icon + ".png");
+    //console.log(data.daily[0].dt);      //it's times 1000   //for conversion of UTC date  (unviversal time conversion?)
+    console.log(new Date(data.daily[0].dt * 1000));
+});
+
+//abstract the calling of the function
+</script>
+</body>
+</html>
