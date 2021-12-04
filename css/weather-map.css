@@ -15,26 +15,52 @@
 }
 
 #main-header, #info {
-    font-family:battlestarregular, Arial, sans-serif; /* Used the generic Arial, san-serif*/
-    color: darkgoldenrod;
-    outline-color: darkmagenta;
-    outline-width: 2em;
+    color: #3B94D9;
+    text-align: center;
+    /*font-family:battlestarregular, Arial, sans-serif; !* Used the generic Arial, san-serif*!*/
+    /*color: darkgoldenrod;*/
+    /*outline-color: darkmagenta;*/
+    /*outline-width: 2em;*/
 }
 #sub-header{
+    color: red;
+    text-align: center;
+    text-blink: orange ;
+    mso-text-animation: sparkle;
 
 }
-body{
+/*body{*/
+/*    background-image: url('/assets/images/cylon-base.jpg');*/
+/*    background-color: gray;*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*    background-size: cover;*/
+/*    max-width: inherit;*/
+/*    color: black;*/
+/*    font-family: battlestarregular, Arial, sans-serif;*/
 
+/*}*/
+#three-day{
+    color: gray;
+    text-align: center;
 }
 #temp{
-
+    /*font-weight:bold;*/
+    font-size: x-large;
+    color: goldenrod;
 }
 #date-time-group{
+    font-size: x-large;
+    color: #74992e;
 
 }
 #map-canvas{
-
+    width: 600px;
+    height: 300px;
+    border: 1px solid gray;
+    padding: 0;
 }
 #instructions{
-
+color: gray;
+    text-align: center;
 }
