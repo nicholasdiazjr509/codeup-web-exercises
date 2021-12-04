@@ -1,0 +1,40 @@
+/*downloaded the fonts I wanted to use and made "FONTS" file in assets */
+/*Found out I needed to make a webkit so that intelliJ can use the fonts*/
+/* For custom downloaded FONTS, went to fontsquirrel.com for the webfont generator to use the FONT.TTF file for a webkit*/
+/* over at pagecloud/blog/how-to-add-custom-fonts-to-any-website  --for instructions on how*/
+
+
+@font-face {
+    font-family: 'battlestarregular';
+    /*in the URL is where I pointed to in order to get file from */
+    src: url('/assets/fonts/battlest-webfont.woff2') format('woff2'),
+    url('/assets/fonts/battlest-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#main-header, #info {
+    font-family:battlestarregular, Arial, sans-serif; /* Used the generic Arial, san-serif*/
+    color: darkgoldenrod;
+    outline-color: darkmagenta;
+    outline-width: 2em;
+}
+#sub-header{
+
+}
+body{
+
+}
+#temp{
+
+}
+#date-time-group{
+
+}
+#map-canvas{
+
+}
+#instructions{
+
+}
