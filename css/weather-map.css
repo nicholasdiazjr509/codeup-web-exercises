@@ -1,0 +1,90 @@
+/*downloaded the fonts I wanted to use and made "FONTS" file in assets */
+/*Found out I needed to make a webkit so that intelliJ can use the fonts*/
+/* For custom downloaded FONTS, went to fontsquirrel.com for the webfont generator to use the FONT.TTF file for a webkit*/
+/* over at pagecloud/blog/how-to-add-custom-fonts-to-any-website  --for instructions on how*/
+
+
+@font-face {
+    font-family: 'battlestarregular';
+    /*in the URL is where I pointed to in order to get file from */
+    src: url('/assets/fonts/battlest-webfont.woff2') format('woff2'),
+    url('/assets/fonts/battlest-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#main-header, #info {
+    color: #3B94D9;
+    text-align: center;
+    /*font-family:battlestarregular, Arial, sans-serif; !* Used the generic Arial, san-serif*!*/
+    /*color: darkgoldenrod;*/
+    /*outline-color: darkmagenta;*/
+    /*outline-width: 2em;*/
+}
+#sub-header{
+    color: red;
+    text-align: center;
+    text-blink: orange ;
+    mso-text-animation: sparkle;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+
+    background-image: url('/assets/images/cylon-base.jpg');
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: inherit;
+    color: black;
+    font-family: battlestarregular, Arial, sans-serif;
+
+}
+#three-day{
+    color: gray;
+    text-align: center;
+}
+#temp{
+    /*font-weight:bold;*/
+    font-size: x-large;
+    color: goldenrod;
+}
+#date-time-group{
+    font-size: x-large;
+    color: #74992e;
+
+}
+/*#map-canvas{*/
+/*    width: 600px;*/
+/*    height: 300px;*/
+/*    border: 1px solid gray;*/
+/*    padding: 0;*/
+/*}*/
+#map{
+    width: 600px; height: 500px; border:5px solid blueviolet;
+    position: absolute;
+    top: 22em;
+    left: 37em;
+    bottom: 0;
+    /*width: 100%;*/
+}
+#instructions{
+color: gray;
+    text-align: center;
+}
+.coordinates{
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    display: none;
+
+}
