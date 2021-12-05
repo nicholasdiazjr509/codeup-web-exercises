@@ -29,17 +29,20 @@
     mso-text-animation: sparkle;
 
 }
-/*body{*/
-/*    background-image: url('/assets/images/cylon-base.jpg');*/
-/*    background-color: gray;*/
-/*    background-repeat: no-repeat;*/
-/*    background-attachment: fixed;*/
-/*    background-size: cover;*/
-/*    max-width: inherit;*/
-/*    color: black;*/
-/*    font-family: battlestarregular, Arial, sans-serif;*/
+body{
+    margin: 0;
+    padding: 0;
 
-/*}*/
+    background-image: url('/assets/images/cylon-base.jpg');
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: inherit;
+    color: black;
+    font-family: battlestarregular, Arial, sans-serif;
+
+}
 #three-day{
     color: gray;
     text-align: center;
@@ -54,13 +57,34 @@
     color: #74992e;
 
 }
-#map-canvas{
-    width: 600px;
-    height: 300px;
-    border: 1px solid gray;
-    padding: 0;
+/*#map-canvas{*/
+/*    width: 600px;*/
+/*    height: 300px;*/
+/*    border: 1px solid gray;*/
+/*    padding: 0;*/
+/*}*/
+#map{
+    width: 600px; height: 500px; border:5px solid blueviolet;
+    position: absolute;
+    top: 22em;
+    left: 37em;
+    bottom: 0;
+    /*width: 100%;*/
 }
 #instructions{
 color: gray;
     text-align: center;
+}
+.coordinates{
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    display: none;
+
 }
