@@ -2,27 +2,25 @@
 
 
 $(document).ready(function() {
-    // function popForecast(value) {
-    //     var date = moment.date(value.dt).format("dddd. MMM-DD-YYYY");
-    //
-    //     return "<div id='every-box'  class='col-md-4'>"
-    //         + "<p id='date-time-group'>" + date + "</p>"
-    //         + "<p id='temp'>" + Math.round(value.temp.max) + "&#176;"
-    //         + Math.round(value.temp.min) + "#&176;" +  "< /p>"
-    //         + "<img src='https://openweathermap.org/img/w/"
-    //         + value.weather[0].icon + ".png'>"
-    //         + "<p id='conditions'>" + "<strong>Conditions:</strong> " //+ "</p>"
-    //         + value.weather[0].description + "</p>"
-    //         + "<p>" + "<strong>Winds:</strong> " + value.speed + "</p>"
-    //         + "<p>" + "<strong>Pressure:</strong> " + value.pressure + "</p>"
-    //         + "</div>";
-    //
-    //
-    // }
+    function popForecast(value) {
+        var date = moment.date(value.dt).format("dddd. MMM-DD-YYYY");
+
+        return "<div id='every-box'  class='col-md-4'>"
+            + "<p id='date-time-group'>" + date + "</p>"
+            + "<p id='temp'>" + Math.round(value.temp.max) + "&#176;"
+            + Math.round(value.temp.min) + "#&176;" +  "< /p>"
+            + "<img src='https://openweathermap.org/img/w/"
+            + value.weather[0].icon + ".png'>"
+            + "<p id='conditions'>" + "<strong>Conditions:</strong> " //+ "</p>"
+            + value.weather[0].description + "</p>"
+            + "<p>" + "<strong>Winds:</strong> " + value.speed + "</p>"
+            + "<p>" + "<strong>Pressure:</strong> " + value.pressure + "</p>"
+            + "</div>";
+
+
+    }
 
     mapboxgl.accessToken = MAPBOX_KEY;
-    //const map = new mapboxgl.Map({
-
       const coordinates = document.getElementById('coordinates');
       const map = new mapboxgl.Map({
             container: 'map',
@@ -30,7 +28,14 @@ $(document).ready(function() {
             center: [-98.501556, 29.427002], // starting position [lng, lat]
             zoom: 5 // starting zoom
     });
-
+    // Add the control to the map. Used map geocoder.api for user search box.
+    // This is so neat!!!!
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
     const marker = new mapboxgl.Marker({
 
         draggable: true
@@ -38,10 +43,12 @@ $(document).ready(function() {
         .setLngLat([-98.501556, 29.427002])
         .addTo(map);
 
+    //LonLat box for coordinates to show from placement of the marker.
     function onDragEnd(){
         const lngLat = marker.getLngLat();
         coordinates.style.display = 'block';
-        coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+        coordinates.innerHTML = `Longitude: ${lngLat.lng}<br/>Latitude: ${lngLat.lat}`;
+        // Had "/" slash in Long and Lat typed here for some odd reason.
     }
     marker.on('dragend', onDragEnd);
 
@@ -76,21 +83,14 @@ $(document).ready(function() {
     //         APPID: OPEN_WEATHER_KEY,
     //         units: "imperial"
     //     });
-        // userPick.done(function (data) {
-        //     $("sub-header").text(data.city.name);
-        //     var userWeatherInfo = '';
-        //     data.list.forEach(function (value) {
-        //         $('#cover-div').html(userWeatherInfo);
-        //     });
-    //     });
-    // });
+
     // map.setCenter(marker.position);
     // marker.addTo(map);
-// //autocomplete??
+//**autocomplete?? DO NOT NEED. Used MapBox documentation find how to use GEOCODE and for search box for user.
 //     var autocomplete = new google.maps.places.Autocomplete(
 //         (document.getElementById("location")),
 //         {types: ["geocode"]});
-
+//
 
 
 //

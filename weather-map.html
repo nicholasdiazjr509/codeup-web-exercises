@@ -9,7 +9,13 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script><!-- after like 5 hrs, guess what I forgot, omg!! -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
     <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+<!--My geocoder file. Do I need this if using mapbox.api itself??  -->
+    <script src="js/mapbox-geocoder-utils.js"></script>
+<!--    MAPBOX GEOCODER plugin -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
     <link rel="stylesheet" href="css/weather-map.css">
 
 </head>
@@ -17,7 +23,7 @@
 
 <h1 id="main-header">WEATHER MAP EXERCISE</h1>
 <br>
-<h3 id="info">Drag the map maker for 3-day forecast.</h3>
+<h3 id="info">Drag the map maker for the weather forecast.</h3>
 <br>
 
 <h3 id="sub-header">little human</h3>
