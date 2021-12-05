@@ -1,7 +1,7 @@
 "use strict";
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
     function popForecast(value) {
         var date = moment.date(value.dt).format("dddd. MMM-DD-YYYY");
 
@@ -52,15 +52,48 @@ $(document).ready(function() {
     }
     marker.on('dragend', onDragEnd);
 
-    // var weatherSA = $.get("https://api.openweathermap.org/data/2.5/onecall", {
-    //     lat: 29.423017,
-    //     lon: -95.48527,
-    //   //  q: "San Antonio, TX",
-    //     exclude: "minutely, hourly",
-    //     units: "imperial",
-    //     APPID: OPEN_WEATHER_KEY,
 
-    });
+// });
+
+function write(){
+    $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0] + "&lon="
+    + coordinates[1] + "&exclude=minutely,hourly&appid=" + OPEN_WEATHER_KEY)
+        .done(function(response){
+            $("#insertInfo").html("");
+    for (var i = 0; i < response.daily.length; i++){
+        var today = response.daily[i];
+        var todaysDate = new Date(today.dt * 1000);
+        todaysDate = todaysDate.toDateString()
+        var html = ""
+            html = "<div class='container grow col-sm weather-" + (i + 1) + "'>";
+            html += "<div class='headerContainer'><h3>" + todaysDate + "</h4></div>"
+
+                //current weather
+                if( i === 0)
+        {
+            html += "<h1 style='background-image: url(https://openweathermap.org/img/w/" +
+                todays.weather[0].icon + ".png);" +
+                "background-repeat: no-repeat; background-position: top;'>" +
+                Math.round(todays.temp.day) + "\u00B0 </h1>";
+        }else {
+                    html += "<h1 style='background-image: url(https://openweathermap.org/img/w/" +
+                        todays.weather[0].icon + ".png);" +
+                        "background-repeat: no-repeat; background-position: top;'>" +
+                        Math.round(todays.temp.day) + "\u00B0 </h1>"; //HexCode	"\u00B0" degree sign
+                }
+        $(".weather-" + (i + 1) + "").click(function(){
+            $(".hideTillClick").slideToggle(1000);
+               })
+        $(".weather-5, .weather-6, .weather-7, .weather-8").addClass("hideTill");
+    }
+       });
+            }write();
+
+
+
+
+
+
     // weatherSA.done(function (data) {
     //     // console.log(data)
     //     $("#sub-header").text(data.city.name);
