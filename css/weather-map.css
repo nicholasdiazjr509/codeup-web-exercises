@@ -33,20 +33,20 @@ body{
     margin: 0;
     padding: 0;
 
-    background-image: url('/assets/images/cylon-base.jpg');
-    background-color: gray;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    max-width: inherit;
-    color: black;
-    font-family: battlestarregular, Arial, sans-serif;
+    /*background-image: url('/assets/images/cylon-base.jpg');*/
+    /*background-color: gray;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+    /*max-width: inherit;*/
+    /*color: black;*/
+    /*font-family: battlestarregular, Arial, sans-serif;*/
 
 }
-#three-day{
-    color: gray;
-    text-align: center;
-}
+/*#three-day{*/
+/*    color: gray;*/
+/*    text-align: center;*/
+/*}*/
 #temp{
     /*font-weight:bold;*/
     font-size: x-large;
@@ -57,6 +57,37 @@ body{
     color: #74992e;
 
 }
+.riseSet{
+    width: 100%;
+    margin: 10px 0 -10px 0;
+    padding: 10px;
+    border-top: 1px solid black;
+}
+i{
+    color: pink;
+    margin: 0 44%;
+}
+#moon{
+    color: ivory;
+}
+.hidden {
+    display: none;
+}
+.grow{
+    transition: all .2s ease-in-out;
+}
+.grow:hover{
+    transform: scale(1.1);
+}
+button, input, select{
+    padding: 5px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+.onBottom{
+    margin-bottom: 10px;
+}
 /*#map-canvas{*/
 /*    width: 600px;*/
 /*    height: 300px;*/
@@ -64,10 +95,10 @@ body{
 /*    padding: 0;*/
 /*}*/
 #map{
-    width: 600px; height: 500px; border:5px solid blueviolet;
+    width: 800px; height: 600px; border:5px solid blueviolet;
     position: absolute;
     top: 22em;
-    left: 37em;
+    left: 28em;
     bottom: 0;
     /*width: 100%;*/
 }
@@ -87,4 +118,23 @@ color: gray;
     line-height: 18px;
     display: none;
 
+}
+p{
+    font-weight: bolder;
+}
+#toggleCards {
+    margin: 50px 10% 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.containerWeather{
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    width: 90%;
+    background-color: white;
 }
