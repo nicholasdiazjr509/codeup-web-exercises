@@ -7,28 +7,34 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossOrigin="anonymous">
     <title>Weather MAP exercise</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script><!-- after like 5 hrs, guess what I forgot, omg!! -->
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- after like 5 hrs, guess what I forgot, omg!! -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
 
     <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
-
-<!--    MAPBOX GEOCODER plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <!--    MAPBOX GEOCODER plugin -->
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css"
+          type="text/css">
     <link rel="stylesheet" href="css/weather-map.css">
 
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <h4 style="padding-left: 30px; color: red">map option</h4>
 <!--<h1 id="main-header">WEATHER MAP EXERCISE</h1>-->
 <div class="container">
-<!--    <div>-->
-<!--        <input type="text" id="user-input" placeholder="san antonio, texas">-->
-<!--        <button id="search" type="button">Search</button>-->
-<!--    </div>-->
+    <!--    <div>-->
+    <!--        <input type="text" id="user-input" placeholder="san antonio, texas">-->
+    <!--        <button id="search" type="button">Search</button>-->
+    <!--    </div>-->
     <label for="mapStyle"></label>
-    <select id="mapStyle" >
+    <select id="mapStyle">
         <option value="mapbox://styles/mapbox/streets-v11">Street</option>
         <option value="mapbox://styles/mapbox/outdoors-v11">Outdoor</option>
         <option value="mapbox://styles/mapbox/light-v10">Light</option>
@@ -54,14 +60,17 @@
 <pre id="coordinates" class="coordinates"></pre>
 
 <button id="toggleCards">Show all days</button>
+
+
 <div class="mainContainer">
     <div id="insertInfo" class="d-flex row justify-content-evenly"></div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/weather-map.js"></script>
