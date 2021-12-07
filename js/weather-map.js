@@ -2,12 +2,12 @@
 
 "use strict";
 
-
- $(document).ready(function() {
+// $.ajax("https://api.openweathermap.org/data/2.5/onecall?lat=29.427002&lon=-98.501556&appid=" + "OPEN_WEATHER_KEY")
+    // .done(function(data){
 
 
     mapboxgl.accessToken = MAPBOX_KEY;
-    const coordinates = document.getElementById('coordinates');
+    var coordinates = document.getElementById('coordinates');
       const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -27,8 +27,8 @@
     })
         .setLngLat([-98.501556, 29.427002])
         .addTo(map);
-//var coordinates = [marker.getLngLat().lat, marker.getLngLat().lng];
-//
+// var coordinates = [marker.getLngLat().lat, marker.getLngLat().lng];
+
     //LonLat box for coordinates to show from placement of the marker.
     function onDragEnd(){
         const lngLat = marker.getLngLat();
@@ -36,11 +36,15 @@
         coordinates.innerHTML = 'Longitude: ${lngLat.lng}<br/>Latitude: ${lngLat.lat}';
         // Had "/" slash in Long and Lat typed here for some odd reason.
     }
-    marker.on('dragend', onDragEnd() )
-      // const coordinates = [marker.getLngLat().lat, marker.getLngLat().lng]
+   function onDragEnd(){
+        var lngLat = marker.getLngLat();
+        var weather = "https://api.openweathermap.org/data/2.5/onccall?lat=29.427002&lon=-98.501556&appid="
+            + "OPEN_WEATHER_KEY" + "/" + lngLat.lat + "," + lngLat.lng;
+
+        var coordinates = [marker.getLngLat().lat, marker.getLngLat().lng]
       //  console.log(coordinates)
         write()
-    });
+    }
                 //found the api for the search
                     // $("#search").click(function(){
                     //     userInput = $("#user-input").val();
@@ -51,10 +55,26 @@
      })
 // $(document).ready(() => {
 //     function write() {
-        // $.get("https://api.openweathermap.org/data/2.5/onecall",{ + coordinates[0] + "&lon="
-        //     + coordinates[1] + "&exclude=minutely,hourly&appid=" + OPEN_WEATHER_KEY)
-        //     .done(function (data) {
-        //         console.log(data)
+
+$(document).ready(function() {
+
+
+$.get("https://api.openweathermap.org/data/2.5/onecall", {
+    lat: 29.423017,
+    lon: -95.48527,
+    exclude: "minutely, hourly",
+    units: "imperial",
+    APPID: OPEN_WEATHER_KEY
+}).done(function(data) {
+    console.log(data)
+    $("#weather_icon").attr("src", "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png");
+    //console.log(data.daily[0].dt);      //it's times 1000   //for conversion of UTC date  (unviversal time conversion?)
+    console.log(new Date(data.daily[0].dt * 1000));
+});
+})
+
+// });})
+
 
 
 
