@@ -11,7 +11,7 @@
 <body>
     <h1> Welcome to MAPBOX!!</h1>
 
-
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/keys.js"></script>
     <!--above any CDN I input-->
     <div id='map' style='width: 400px; height: 300px;'></div>
@@ -56,9 +56,21 @@ var mysteryPlace = new mapboxgl.Marker()
     .addTo(map)
 
 
-reverseGeocode({lat: 32.77, lng: -96.79}, MAPBOX_KEY).then(function(results) {
-    console.log(results)
-})
+// reverseGeocode({lat: 32.77, lng: -96.79}, MAPBOX_KEY).then(function(results) {
+//     console.log(results)
+// })
+
+$.get("https://api.openweathermap.org/data/2.5/onecall", {
+    lat: 29.7604,
+    lon: -95.3698,
+    exclude: "minutely,hourly",
+    units: "imperial",
+    APPID: OPEN_WEATHER_KEY
+}).done(function(data) {
+    console.log(data);
+    $("#weather_icon").attr("src", "http://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png");
+    console.log(new Date(data.daily[0].dt * 1000));
+});
 
 </script>
 

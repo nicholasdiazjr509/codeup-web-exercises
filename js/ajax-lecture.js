@@ -168,6 +168,7 @@ $('#submit').click(function (e) {
 
     }
 });
+})
 /** append method*/
 // $('#submit').click(function(e) {
 //     e.preventDefault();
