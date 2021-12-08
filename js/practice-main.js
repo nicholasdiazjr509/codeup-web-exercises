@@ -21,7 +21,7 @@ $("#go-to-btn").click(function(){
     //var go = $("#custom-url").val();
     //location = go;
     var go = " https: ".$("#custom-url").val();
-     window.location = go   //or replace??
+     window.location = go;   //or replace??
 });
 $("#append-to-ul").click(function(){
     $("append-to-me").append("<li>text</li>");

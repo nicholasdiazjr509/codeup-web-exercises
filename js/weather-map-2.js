@@ -10,7 +10,7 @@
 
     mapboxgl.accessToken = MAPBOX_KEY;
     const coordinates = document.getElementById('coordinates');
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [-98.501556, 29.427002], // starting position [lng, lat]
@@ -19,17 +19,30 @@
     // Add the control to the map. Used map geocoder.api for user search box.
     // This is so neat!!!!
     map.addControl(
-        new mapboxgl.NavigationControl());
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl,
 
-    const marker = new mapboxgl.Marker({
+        })
+    );
+    var marker = new mapboxgl.Marker({
         draggable: true,
         color: "blue",
     })
         .setLngLat([-98.5015, 29.42702])
-        .addTo(map);
+        .setDraggable(true)
+        marker.addTo(map)
+        marker.on('dragend', function(){
+            $('#coordinates').html('Current Location ' + marker.getLngLat())
+        })
 
-    //set coordinates to use in the "write" function
-    //var coordinates = [marker.getLngLat().lat, marker.getLngLat().lng];
+geocode("San Antonio", MAPBOX_KEY).then(function(data){
+$('.current').html(geocode)
+})
+
+
+
+
 
     function onDragEnd() {
         const lngLat = marker.getLngLat();
@@ -65,23 +78,39 @@
     $("#mapStyle").change(function () {
         map.setStyle($("#mapStyle").val())
     })
-// $(document).ready(function () {
+
+
+
+
+
+
+    //---------------------------------------------------------//
     // (function () {
         function write() {
-            $.get("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0]
-                + "&lon=" + coordinates[1] + "&exclude=minutely,hourly&appid=" + OPEN_WEATHER_KEY)
-
-            .done(function () {
-                console.log(response)
+            //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=<MY API KEY>
+            // $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0]
+            //     + "&lon=" + coordinates[1] + "&exclude=minutely,hourly&appid=" + OPEN_WEATHER_KEY)
+            $.get("https://api.openweathermap.org/data/2.5/onecall", {
+                lat: 29.423017,
+                lon: -95.48527,
+                exclude: "minutely, hourly",
+                units: "imperial",
+                APPID: OPEN_WEATHER_KEY,}
+            )  .done(function () {
+                // console.log(data)
+            {
                 // $("#weather_icon").attr("src", "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png");
                 // $("#weather_icon").append(data);
                 //console.log(data.daily[0].dt);      //it's times 1000   //for conversion of UTC date  (unviversal time conversion?)
-                console.log(new Date(data.daily[0].dt * 1000));
-            });
-            $("#insertInfo").html(" ");
+                // console.log(new Date(data.daily[0].dt * 1000));
 
-            for (var i = 0; i < response.daily.length; i++) {
-                var today = response.daily[i];
+                $("#insertInfo").html(" ");
+
+
+
+            for (var i = 0; i < data.daily.length; i++) {
+
+                var today = data.daily[i];
                 var todaysDate = new Date(today.dt * 1000);
                 todaysDate = todaysDate.toDateString()
 
@@ -130,7 +159,7 @@
                 //set 5-8 to hide
                 $(".weather-5, .weather-6, .weather-7, .weather-8").addClass("hiddenTest");
             }
-            console.log(response);
+            console.log(data);
 
         write();
         // });
@@ -178,18 +207,26 @@
             return cardinalDirection;
         }
 
-      //  function moveMarkerToInput() {
-            geocode(userInput, MAPBOX_KEY).then(function (data) {
-                marker.setLngLat(data);
+        function moveMarkerToInput() {
+            var mapCity = geocode(search, userInput, MAPBOX_KEY)
+                mapCity.then(function (data) {
+                console.log(data);
+                var data = data[0];
+                var data = data[1];
+                var coordinates = {
+                    "lng": dataLong,
+                    "lat": dataLat,
+                };
+                    marker.setLngLat([coordinates.lng, coordinates.lat]);
                 //coordinates = [marker.getLngLat().lat, marker.getLngLat().lng];
 
-                map.flyTo({
-                    center: data,
-                    zoom: 10,
-                    speed: 1
-                });
-                write();
-            })
+            map.flyTo({
+                center: data,
+                zoom: 10,
+                speed: 1
+            });
+            write();
+        })
 
 
         //toggle the last 4 to show
@@ -205,4 +242,27 @@
 
     }
     }
+    } ;})}
 // })();
+
+const { main, name, sys, weather } = data;
+const icon = `https://openweathermap.org/img/wn/${
+    weather[0]["icon"]
+}@2x.png`;
+
+const li = document.createElement("li");
+li.classList.add("city");
+const markup = `
+  <h2 class="city-name" data-name="${name},${sys.country}">
+    <span>${name}</span>
+    <sup>${sys.country}</sup>
+  </h2>
+  <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup>
+  </div>
+  <figure>
+    <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
+    <figcaption>${weather[0]["description"]}</figcaption>
+  </figure>
+`;
+li.innerHTML = markup;
+list.appendChild(li);

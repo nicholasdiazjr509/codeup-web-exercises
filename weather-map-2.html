@@ -10,9 +10,7 @@
     <!-- after like 5 hrs, guess what I forgot, omg!! -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
     <!--    MAPBOX GEOCODER plugin -->
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
@@ -22,7 +20,10 @@
     <link rel="stylesheet" href="css/weather-map-2.css">
 </head>
 <body>
-<!--<div id="weather">-->
+<div>
+<h1>Weather Map</h1>
+</div>
+    <!--<div id="weather">-->
 <!--    <div id="description"></div>-->
 <!--    <h1 id="temp"></h1>-->
 <!--    <div id="location"></div>-->
@@ -32,6 +33,8 @@
 <!--            <label for="user-input"></label><input type="text" id="user-input" placeholder="Example: San Antonio, Tx">-->
 <!--            <button id="search" type="button">Search</button>-->
 <!--        </div>-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <label for="mapStyle">Option Views </label><select id="mapStyle">
             <option value="mapbox://styles/mapbox/streets-v11">Streets </option>
             <option value="mapbox://styles/mapbox/outdoors-v11">Outdoor</option>
@@ -44,15 +47,49 @@
             <option value="mapbox://styles/mapbox/navigation-guidance-day-v4">Navigational Day</option>
             <option value="mapbox://styles/mapbox/navigation-guidance-night-v4">Navigational Night</option>
         </select>
-
-
-    <div id='map'></div>
-    <pre id="coordinates" class="coordinates"></pre>
-    <button id="toggleCards">Show all days</button>
     <div class="mainContainer">
         <div id="insertInfo" class="d-flex row justify-content-evenly"></div>
     </div>
+<section class="top-banner">
+    <div class="container-fluid">
 
+        <form>
+            <input type="text" placeholder="Search for a city" autofocus>
+            <button type="submit">SUBMIT</button>
+            <span class="msg"></span>
+        </form>
+    </div>
+</section>
+<section class="ajax-section">
+    <div class="container">
+        <ul class="cities">
+
+        <li class="city">
+            <h2 class="city-name" data-name="...">
+                <span>...</span>
+                <sup>...</sup>
+            </h2>
+            <span class="city-temp">...<sup>°F</sup></span>
+            <figure>
+                <img class="city-icon" src="..." alt="...">
+                <figcaption>...</figcaption>
+            </figure>
+        </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+<div class="-fluid">
+    <div class= "float-md-right">
+    <div id='map'></div>
+    </div>
+</div>
+    <pre id="coordinates" class="coordinates"></pre>
+    <button id="toggleCards">Show all days</button>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <script src="js/keys.js"></script>
 <!--    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>-->

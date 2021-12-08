@@ -4,14 +4,40 @@
     width: 90%;
     margin: auto;
 }
+body{
+    margin: 0;
+    padding: 0;
+
+    background-image: url('/assets/images/cylon-base.jpg');
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: inherit;
+    color: black;
+    font-family: battlestarregular, Arial, sans-serif;
+
+}
+#five-day{
+    color: gray;
+    text-align: center;
+}
+
 #map{
+
+    align-items:center;
     width: 600px; height: 600px; border:5px solid blueviolet;
-    margin-top: 20px;
+    margin-bottom: 10em;
     border-radius: 1em;
-    position: absolute;
-    top: 3em;
-    left: 38em;
-    bottom: 0;
+
+    /*flex-wrap: wrap;*/
+
+
+
+    /*position: absolute;*/
+    /*top: 11em;*/
+    /*left: 38em;*/
+    /*bottom: 0;*/
 }
 .container {
     border: 1px solid #e0e0e0;
@@ -36,11 +62,11 @@
     border-radius: 3px;
     /*display: none;*/
 }
-.searchContainer, #toggleCards{
-    margin: 50px 10% 0 10%;
+#toggleCards{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 50px 10% 0 10%;
 }
 button, input, select{
     padding: 6px;
@@ -51,18 +77,20 @@ button, input, select{
 .onBottom{
     margin-bottom: 10px;
 }
-#toggleCards{
-    margin: 50px 10% 0 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 h1 {
+    text-align:center;
     margin-top: 20px;
-    border: 1px solid grey;
-    padding: 50px;
-    border-radius: 50%;
-    background-color: whitesmoke;
+    border: 1px solid goldenrod;
+    padding-bottom: 50px;
+    background-color: gold;
+    height: 50px;
+    /*flex-direction: column;*/
+    /*margin-top: 20px;*/
+    /*border: 1px solid grey;*/
+    /*padding: 50px;*/
+    /*border-radius: 50%;*/
+    /*background-color: whitesmoke;*/
 }
 #weather_icon{
     width: calc(20% + 24px);
@@ -102,3 +130,145 @@ p{
     transform: scale(1.1);
 }
 
+:root {
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+button,
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+.top-banner {
+    color: var(--text_light);
+}
+
+.heading {
+
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+}
+
+.top-banner form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-banner form input {
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+}
+
+.top-banner form input::placeholder {
+    color: currentColor;
+}
+
+.top-banner form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    transition: background 0.3s ease-in-out;
+}
+
+.top-banner form button:hover {
+    background: var(--darkred);
+}
+
+.top-banner form .msg {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .top-banner form {
+        flex-direction: column;
+    }
+
+    .top-banner form input,
+    .top-banner form button {
+        width: 100%;
+    }
+
+    .top-banner form button {
+        margin: 20px 0 0 0;
+    }
+
+    .top-banner form .msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 10px;
+    }
+}
+.ajax-section {
+    margin: 50px 0 20px;
+}
+
+.ajax-section .cities {
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+    .ajax-section .cities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .ajax-section .cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ajax-section .cities {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
