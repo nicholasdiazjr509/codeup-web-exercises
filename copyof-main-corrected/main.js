@@ -98,7 +98,7 @@ $('#go-to-btn').click(function(){
     //         $(this).css("background-color", "transparent");
     //     }
     // });
-$("#hl-toggle li").click(function(){
+$("#h1-toggle li").click(function(){
     console.log($(this).toggleClass("star"));
     if($(this).css("background-color") === "rgba(0, 0, 0, 0)") {
         $(this).css("background-color", "yellow");
@@ -129,3 +129,14 @@ $('#font-grow li').dblclick(function () {
 
 });
 
+function changeBackground() {
+    var color = document.getElementById("color").value; // cached
+
+    // The working function for changing background color.
+    document.backgroundColor = color;
+
+    // The code I'd like to use for changing the text simultaneously - however it does not work.
+    document.getElementById("coltext").style.color = color;
+}
+
+document.getElementById("submitColor").addEventListener("click", changeBackground, false);
