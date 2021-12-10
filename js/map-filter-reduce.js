@@ -81,6 +81,7 @@ const instructorList = users.map(function (user) {
 // const instructorList = users.reduce((a, b) => {
 //         return `${a} ${b.name},` },
 //     "Your instructors are:");
+//////////////////////////////////////////////
 
 // });
 //let sentenceArray = ['Row,', ' row', ' row', ' your', ' boat'];
