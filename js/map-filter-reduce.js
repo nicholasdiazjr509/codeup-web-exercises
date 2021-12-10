@@ -72,23 +72,35 @@
     // }, []);
     //
     // console.log(instructorList);
-const instructorList = users.map(function (user) {
-    return user.name;
-}).join(", ");
-    console.log(instructorList);
+// const instructorList = users.map(function (user) {
+//     return user.name;
+// }).join(", ");
+//     console.log(instructorList);
 
-
+let userNames = users.reduce((total, person, index, array) =>{
+      if (index === array.length -1){
+          total.push(person.name)
+            total.sort((a, b) => b.length -a.length)
+          return "Your instructors are: " + total.join(', ')
+      }else{
+          total.push(person.name)
+          return total
+      }
+}, []);
+console.log(userNames);
 // const instructorList = users.reduce((a, b) => {
 //         return `${a} ${b.name},` },
 //     "Your instructors are:");
 //////////////////////////////////////////////
 
-// });
-//let sentenceArray = ['Row,', ' row', ' row', ' your', ' boat'];
-// let combineSentence = sentenceArray.reduce((previousValue, currentValue) => previousValue + currentValue);
-//     console.log(combineSentence)
+
+// let sentenceArray = ['Row,', ' row', ' row', ' your', ' boat'];
+// let combineSentence = sentenceArray.reduce((previousValue, currentValue) =>
+//     previousValue + currentValue);
+// {
+//    // console.log(combineSentence);
 //
-// })
+// };
 
 // var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // var evens = [];
