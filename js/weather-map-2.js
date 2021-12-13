@@ -96,8 +96,8 @@ $('.current').html(geocode)
                 exclude: "minutely, hourly",
                 units: "imperial",
                 APPID: OPEN_WEATHER_KEY,}
-            )  .done(function () {
-                // console.log(data)
+            )  .done(function (data) {
+                 console.log(data)
             {
                 // $("#weather_icon").attr("src", "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png");
                 // $("#weather_icon").append(data);
@@ -248,7 +248,7 @@ $('.current').html(geocode)
 const { main, name, sys, weather } = data;
 const icon = `https://openweathermap.org/img/wn/${
     weather[0]["icon"]
-}@2x.png`;
+}#2x.png`;
 
 const li = document.createElement("li");
 li.classList.add("city");

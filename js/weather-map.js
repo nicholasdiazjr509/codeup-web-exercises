@@ -39,7 +39,7 @@
    function onDragEnd(){
         var lngLat = marker.getLngLat();
         var weather = "https://api.openweathermap.org/data/2.5/onccall?lat=29.427002&lon=-98.501556&appid="
-            + "OPEN_WEATHER_KEY" + "/" + lngLat.lat + "," + lngLat.lng;
+            + OPEN_WEATHER_KEY + "/" + lngLat.lat + "," + lngLat.lng;
 
         var coordinates = [marker.getLngLat().lat, marker.getLngLat().lng]
       //  console.log(coordinates)
