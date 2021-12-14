@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice DOM</title>
+    <style>
+        body {
+            padding: 5em;
+        }
+
+        hr {
+            margin: 5em 0;
+        }
+
+        #font-grow, #hl-toggle {
+            cursor: pointer;
+
+        }
+        .star {
+            cursor: pointer;
+            background-color: yellow;
+        }
+    </style>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<button id="change-bg-color">
+    Change the background color
+</button>
+
+<hr>
+
+<button class="btn">First</button>
+<button class="btn">Second</button>
+<button class="btn">Third</button>
+
+<hr>
+
+<button id="reset-btn">Reset</button>
+
+<hr>
+
+<div>
+    <p>
+        <i class="star fa fa-star checked" data-value="1"></i>
+        <i class="star fa fa-star checked" data-value="2"></i>
+        <i class="star fa fa-star checked" data-value="3"></i>
+    </p>
+    <p>You are hovering star number: <span id="review-result"></span> </p>
+</div>
+
+<hr>
+
+<div>
+    <label for="custom-url">URL: </label>
+    <input type="text" id="custom-url">
+    <button id="go-to-btn">Go to</button>
+</div>
+
+<hr>
+
+<button id="append-to-ul">Append to the ul</button>
+<ul id="append-to-me"></ul>
+
+<hr>
+
+<h1 id="message">Hello, World!</h1>
+
+<hr>
+
+<ul id="hl-toggle">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<hr>
+
+<input id="input">
+<button id="upcase-name">Upper Case</button>
+<p id="output"></p>
+<hr>
+
+<ul id="font-grow">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+<script src="js/practice-main.js"></script>
+</body>
+</html>

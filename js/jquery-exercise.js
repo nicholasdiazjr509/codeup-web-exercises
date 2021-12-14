@@ -43,14 +43,6 @@ $("btn-1").click(function() {
         $(this).children().last().css({"background-color": "yellow", "width": "10%"})
     } )
 });
-$("dt").click(function(){
-    $(this).css({ backgroundColor: "yellow", "width": "10%"})
-
-});
-$("h3").addClass("highlighted").addClass("underline"); //affects all paragraphs// do not work retroactively  .add class etc.
-//
-$("highlighted").click(function (){
-//     $(this).removeClass("highlighted");
 
 
-});
+
