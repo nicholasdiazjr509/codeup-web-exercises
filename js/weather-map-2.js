@@ -25,6 +25,7 @@
 
         })
     );
+    //
     var marker = new mapboxgl.Marker({
         draggable: true,
         color: "blue",
