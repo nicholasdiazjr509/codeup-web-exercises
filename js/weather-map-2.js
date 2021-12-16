@@ -42,9 +42,6 @@ $('.current').html(geocode)
 })
 
 
-
-
-
     function onDragEnd() {
         const lngLat = marker.getLngLat();
         coordinates.style.display = 'block';
@@ -55,7 +52,7 @@ $('.current').html(geocode)
 
     // const  coordinates = [marker.getLngLat().lat, marker.getLngLat().lng]
     //    console.log(coordinates)
-    write();
+    // write();
 
     //when the user double clicks on the map, move the cursor and post that information.
     map.on("dblclick", listener => {
@@ -66,7 +63,7 @@ $('.current').html(geocode)
             zoom: 8,
         });
         // coordinates = [listener.lngLat.lat, listener.lngLat.lng]
-        write();
+        // write();
     });
 
     //Button calls the "moveMarker" function and uses geocode to turn text input into Longitude and Latitudinal coordinates.
@@ -86,174 +83,180 @@ $('.current').html(geocode)
 
 
     //---------------------------------------------------------//
-    // (function () {
-        function write() {
-            //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=<MY API KEY>
-            // $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0]
-            //     + "&lon=" + coordinates[1] + "&exclude=minutely,hourly&appid=" + OPEN_WEATHER_KEY)
-            $.get("https://api.openweathermap.org/data/2.5/onecall", {
-                lat: 29.423017,
-                lon: -95.48527,
-                exclude: "minutely, hourly",
-                units: "imperial",
-                APPID: OPEN_WEATHER_KEY,}
-            )  .done(function (data) {
-                 console.log(data)
-            {
-                // $("#weather_icon").attr("src", "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png");
-                // $("#weather_icon").append(data);
-                //console.log(data.daily[0].dt);      //it's times 1000   //for conversion of UTC date  (unviversal time conversion?)
-                // console.log(new Date(data.daily[0].dt * 1000));
-
-                $("#insertInfo").html(" ");
 
 
+            function write() {
+                //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=<MY API KEY>
+                $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0]
+                    + "&lon=" + coordinates[1] + "&exclude=minutely,hourly&appid=" + OPEN_WEATHER_KEY)
 
-            for (var i = 0; i < data.daily.length; i++) {
+                $.get("https://api.openweathermap.org/data/2.5/onecall", {
+                        lat: 29.423017,
+                        lon: -95.48527,
+                        exclude: "minutely, hourly",
+                        units: "imperial",
+                        APPID: OPEN_WEATHER_KEY,
+                    }
+                ).done(function (data) {
+                    console.log(data)
+                    {
+                        // $("#weather_icon").attr("src", "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png");
+                        // $("#weather_icon").append(data);
+                        //console.log(data.daily[0].dt);      //it's times 1000   //for conversion of UTC date  (unviversal time conversion?)
+                        // console.log(new Date(data.daily[0].dt * 1000));
 
-                var today = data.daily[i];
-                var todaysDate = new Date(today.dt * 1000);
-                todaysDate = todaysDate.toDateString()
+                        $("#insertInfo").html(" ");
 
-                //Create cards:
-                var html = ""
-                html = "<div class='container grow col-sm weather-" + (i + 1) + "'>";
-                html += "<div class='headerContainer'><h4>" + todaysDate + "</h4></div>"
 
-                //Current weather
-                if (i === 0) {
-                    html += "<h1 style='background-image: url(https://openweathermap.org/img/w/" + today.weather[0].icon
-                        + ".png); background-repeat: no-repeat; background-position: top;'>" + Math.round(data.current.temp) + "°</h1>";
-                } else {
-                    html += "<h1 style='background-image: url(https://openweathermap.org/img/w/" + today.weather[0].icon
-                        + ".png); background-repeat: no-repeat; background-position: top;'>" + Math.round(today.temp.day) + "°</h1>";
-                }
-                html += "<p>Real Feel: " + Math.round(today.feels_like.day) + "°</p>";
-                html += "<div> low: " + Math.round(today.temp.min) + "° / High: " + Math.round(today.temp.max) + "°</div>";
-                html += "<div> Humidity: " + today.humidity + "%</div>";
-                html += "<div class='onBottom'> Chance of rain: " + Math.round(today.pop * 100) + "%</div>";
-                html += "<div class='hiddenTillClick hiddenTest'>";
+                        for (var i = 0; i < data.daily.length; i++) {
 
-                /**wind speed/*/    html += "<div style='border-bottom: 1px solid black; width: 100%;'><p style='margin: 0 35%;'>Wind</p></div>";
-                /**direction */     html += "<div style='text-align: center'>";
-                /** -gusts  */      html += "<div>" + displayWindDirection(today.wind_deg) + " " + Math.round(today.wind_speed) + "MPH</div>";
-                                    html += "<div>Gusts: " + Math.round(today.wind_gust) + "MPH</div></div>";
+                            var today = data.daily[i];
+                            var todaysDate = new Date(today.dt * 1000);
+                            todaysDate = todaysDate.toDateString()
 
-                /**sunrise*/    html += "<div class='riseSet'><i class=\"fas fa-sun\"></i></div>";
-                                html += "<div class='row'>";
-                                html += "<div class='col'>Rise:<p>" + riseSet(today.sunrise) + "am</p></div>";
-                                html += "<div class='col'>Set:<p>" + riseSet(today.sunset) + "pm</p></div></div>";
+                            //Create cards:
+                            var html = ""
+                            html = "<div class='container grow col-sm weather-" + (i + 1) + "'>";
+                            html += "<div class='headerContainer'><h4>" + todaysDate + "</h4></div>"
 
-                /**moonrise*/  html += "<div class='riseSet'><i id='moon' class=\"fas fa-moon\"></i></div>";
-                                html += "<div class='row'>";
-                                html += "<div class='col'>Rise:<p>" + riseSet(today.moonset) + "pm</p></div>";
-                                html += "<div class='col'>Set:<p>" + riseSet(today.moonrise) + "am</p></div></div></div>";
-                                html += "</div>";
+                            //Current weather
+                            if (i === 0) {
+                                html += "<h1 style='background-image: url(https://openweathermap.org/img/w/" + today.weather[0].icon
+                                    + ".png); background-repeat: no-repeat; background-position: top;'>" + Math.round(data.current.temp) + "°</h1>";
+                            } else {
+                                html += "<h1 style='background-image: url(https://openweathermap.org/img/w/" + today.weather[0].icon
+                                    + ".png); background-repeat: no-repeat; background-position: top;'>" + Math.round(today.temp.day) + "°</h1>";
+                            }
+                            html += "<p>Real Feel: " + Math.round(today.feels_like.day) + "°</p>";
+                            html += "<div> low: " + Math.round(today.temp.min) + "° / High: " + Math.round(today.temp.max) + "°</div>";
+                            html += "<div> Humidity: " + today.humidity + "%</div>";
+                            html += "<div class='onBottom'> Chance of rain: " + Math.round(today.pop * 100) + "%</div>";
+                            html += "<div class='hiddenTillClick hiddenTest'>";
 
-               $("#insertInfo").append(html);
+                            /**wind speed/*/    html += "<div style='border-bottom: 1px solid black; width: 100%;'><p style='margin: 0 35%;'>Wind</p></div>";
+                            /**direction */     html += "<div style='text-align: center'>";
+                            /** -gusts  */      html += "<div>" + displayWindDirection(today.wind_deg) + " " + Math.round(today.wind_speed) + "MPH</div>";
+                            html += "<div>Gusts: " + Math.round(today.wind_gust) + "MPH</div></div>";
 
-                //hide the second half of the card till clicked
-                $(".weather-" + (i + 1) + "").click(function () {
-                    $(".hiddenTillClick").slideToggle(1000);
+                            /**sunrise*/    html += "<div class='riseSet'><i class=\"fas fa-sun\"></i></div>";
+                            html += "<div class='row'>";
+                            html += "<div class='col'>Rise:<p>" + riseSet(today.sunrise) + "am</p></div>";
+                            html += "<div class='col'>Set:<p>" + riseSet(today.sunset) + "pm</p></div></div>";
+
+                            /**moonrise*/  html += "<div class='riseSet'><i id='moon' class=\"fas fa-moon\"></i></div>";
+                            html += "<div class='row'>";
+                            html += "<div class='col'>Rise:<p>" + riseSet(today.moonset) + "pm</p></div>";
+                            html += "<div class='col'>Set:<p>" + riseSet(today.moonrise) + "am</p></div></div></div>";
+                            html += "</div>";
+
+                            $("#insertInfo").append(html);
+
+                            //hide the second half of the card till clicked
+                            $(".weather-" + (i + 1) + "").click(function () {
+                                $(".hiddenTillClick").slideToggle(1000);
+                            })
+
+                            //set 5-8 to hide
+                            $(".weather-5, .weather-6, .weather-7, .weather-8").addClass("hiddenTest");
+                        }
+                        console.log(data);
+
+                        write();
+                        // });
+                        //click to enable/disable cards
+                        $("#toggleCards").click(toggle);
+
+                        //Find the cardinal direction of the wind using the angle given by API
+                        function displayWindDirection(windDirection) {
+                            var cardinalDirection = "";
+                            if (windDirection >= 349 || windDirection <= 11) {
+                                cardinalDirection = "N";
+                            } else if (windDirection >= 12 && windDirection <= 34) {
+                                cardinalDirection = "NNE";
+                            } else if (windDirection >= 35 && windDirection <= 56) {
+                                cardinalDirection = "NE";
+                            } else if (windDirection >= 57 && windDirection <= 79) {
+                                cardinalDirection = "ENE";
+                            } else if (windDirection >= 80 && windDirection <= 101) {
+                                cardinalDirection = "E";
+                            } else if (windDirection >= 102 && windDirection <= 124) {
+                                cardinalDirection = "ESE";
+                            } else if (windDirection >= 125 && windDirection <= 146) {
+                                cardinalDirection = "SE";
+                            } else if (windDirection >= 147 && windDirection <= 169) {
+                                cardinalDirection = "SSE";
+                            } else if (windDirection >= 170 && windDirection <= 191) {
+                                cardinalDirection = "S";
+                            } else if (windDirection >= 192 && windDirection <= 214) {
+                                cardinalDirection = "SSW";
+                            } else if (windDirection >= 215 && windDirection <= 236) {
+                                cardinalDirection = "SW";
+                            } else if (windDirection >= 237 && windDirection <= 258) {
+                                cardinalDirection = "WSW";
+                            } else if (windDirection >= 259 && windDirection <= 281) {
+                                cardinalDirection = "W";
+                            } else if (windDirection >= 282 && windDirection <= 303) {
+                                cardinalDirection = "WNW";
+                            } else if (windDirection >= 304 && windDirection <= 326) {
+                                cardinalDirection = "NW";
+                            } else if (windDirection >= 327 && windDirection <= 348) {
+                                cardinalDirection = "NNW";
+                            } else {
+                                cardinalDirection = "Error";
+                            }
+                            return cardinalDirection;
+                        }
+
+                        function moveMarkerToInput() {
+                            var mapCity = geocode(search, userInput, MAPBOX_KEY)
+                            mapCity.then(function (data) {
+                                console.log(data);
+                                var data = data[0];
+                                var data = data[1];
+                                var coordinates = {
+                                    "lng": dataLong,
+                                    "lat": dataLat,
+                                };
+                                marker.setLngLat([coordinates.lng, coordinates.lat]);
+                                //coordinates = [marker.getLngLat().lat, marker.getLngLat().lng];
+
+                                map.flyTo({
+                                    center: data,
+                                    zoom: 10,
+                                    speed: 1
+                                });
+                                write();
+                            })
+
+
+                            //toggle the last 4 to show
+                            function toggle() {
+                                $(".weather-5, .weather-6, .weather-7, .weather-8").toggleClass("hiddenTest");
+                            }
+
+                            //get the sun(moon)rise and sun(moon)set as readable variables
+                            function riseSet(item) {
+                                var readableItem = new Date(item * 1000);
+                                readableItem = readableItem.getHours() + ":" + readableItem.getMinutes();
+                                return readableItem;
+
+                            }
+                        }
+                    }
+                    ;
                 })
-
-                //set 5-8 to hide
-                $(".weather-5, .weather-6, .weather-7, .weather-8").addClass("hiddenTest");
             }
-            console.log(data);
 
-        write();
-        // });
-        //click to enable/disable cards
-        $("#toggleCards").click(toggle);
-
-        //Find the cardinal direction of the wind using the angle given by API
-        function displayWindDirection(windDirection) {
-            var cardinalDirection = "";
-            if (windDirection >= 349 || windDirection <= 11) {
-                cardinalDirection = "N";
-            } else if (windDirection >= 12 && windDirection <= 34) {
-                cardinalDirection = "NNE";
-            } else if (windDirection >= 35 && windDirection <= 56) {
-                cardinalDirection = "NE";
-            } else if (windDirection >= 57 && windDirection <= 79) {
-                cardinalDirection = "ENE";
-            } else if (windDirection >= 80 && windDirection <= 101) {
-                cardinalDirection = "E";
-            } else if (windDirection >= 102 && windDirection <= 124) {
-                cardinalDirection = "ESE";
-            } else if (windDirection >= 125 && windDirection <= 146) {
-                cardinalDirection = "SE";
-            } else if (windDirection >= 147 && windDirection <= 169) {
-                cardinalDirection = "SSE";
-            } else if (windDirection >= 170 && windDirection <= 191) {
-                cardinalDirection = "S";
-            } else if (windDirection >= 192 && windDirection <= 214) {
-                cardinalDirection = "SSW";
-            } else if (windDirection >= 215 && windDirection <= 236) {
-                cardinalDirection = "SW";
-            } else if (windDirection >= 237 && windDirection <= 258) {
-                cardinalDirection = "WSW";
-            } else if (windDirection >= 259 && windDirection <= 281) {
-                cardinalDirection = "W";
-            } else if (windDirection >= 282 && windDirection <= 303) {
-                cardinalDirection = "WNW";
-            } else if (windDirection >= 304 && windDirection <= 326) {
-                cardinalDirection = "NW";
-            } else if (windDirection >= 327 && windDirection <= 348) {
-                cardinalDirection = "NNW";
-            } else {
-                cardinalDirection = "Error";
-            }
-            return cardinalDirection;
-        }
-
-        function moveMarkerToInput() {
-            var mapCity = geocode(search, userInput, MAPBOX_KEY)
-                mapCity.then(function (data) {
-                console.log(data);
-                var data = data[0];
-                var data = data[1];
-                var coordinates = {
-                    "lng": dataLong,
-                    "lat": dataLat,
-                };
-                    marker.setLngLat([coordinates.lng, coordinates.lat]);
-                //coordinates = [marker.getLngLat().lat, marker.getLngLat().lng];
-
-            map.flyTo({
-                center: data,
-                zoom: 10,
-                speed: 1
-            });
-            write();
-        })
-
-
-        //toggle the last 4 to show
-        function toggle() {
-            $(".weather-5, .weather-6, .weather-7, .weather-8").toggleClass("hiddenTest");
-        }
-
-        //get the sun(moon)rise and sun(moon)set as readable variables
-        function riseSet(item) {
-            var readableItem = new Date(item * 1000);
-            readableItem = readableItem.getHours() + ":" + readableItem.getMinutes();
-            return readableItem;
-
-    }
-    }
-    } ;})}
 // })();
 
-const { main, name, sys, weather } = data;
-const icon = `https://openweathermap.org/img/wn/${
-    weather[0]["icon"]
-}#2x.png`;
+            const {main, name, sys, weather} = data;
+            const icon = `https://openweathermap.org/img/wn/${
+                weather[0]["icon"]
+            }#2x.png`;
 
-const li = document.createElement("li");
-li.classList.add("city");
-const markup = `
+            const li = document.createElement("li");
+            li.classList.add("city");
+            const markup = `
   <h2 class="city-name" data-name="${name},${sys.country}">
     <span>${name}</span>
     <sup>${sys.country}</sup>
@@ -265,5 +268,5 @@ const markup = `
     <figcaption>${weather[0]["description"]}</figcaption>
   </figure>
 `;
-li.innerHTML = markup;
-list.appendChild(li);
+            li.innerHTML = markup;
+            list.appendChild(li);
