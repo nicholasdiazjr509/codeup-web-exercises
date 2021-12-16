@@ -47,7 +47,7 @@
             <option value="mapbox://styles/mapbox/navigation-guidance-day-v4">Navigational Day</option>
             <option value="mapbox://styles/mapbox/navigation-guidance-night-v4">Navigational Night</option>
         </select>
-    <div class="mainContainer">
+    <div class="mainContainer"><div class="-fluid">
         <div id="insertInfo" class="d-flex row justify-content-evenly"></div>
     </div>
     <div>
@@ -88,31 +88,32 @@
             <span class="msg"></span>
         </form>
     </div>
-</section>
-<section class="ajax-section">
     <div class="container">
         <ul class="cities">
 
-        <li class="city">
-            <h2 class="city-name" data-name="...">
-                <span>...</span>
-                <sup>...</sup>
-            </h2>
-            <span class="city-temp">...<sup>°F</sup></span>
-            <figure>
-                <img class="city-icon" src="image/city-icon.jpg" alt="...">
-                <figcaption>...</figcaption>
-            </figure>
-        </li>
+            <li class="city">
+                <h2 class="city-name" data-name="city">
+                    <span>...</span>
+                    <sup>...</sup>
+                </h2>
+                <span class="city-temp"><sup>°F</sup></span>
+                <figure>
+                    <img class="city-icon" src="image/city-icon.jpg" alt="city-icon">
+                    <figcaption>...</figcaption>
+                </figure>
+            </li>
         </ul>
     </div>
+</section>
+<section class="ajax-section">
+
 </section>
 
 
 
 
 
-<div class="-fluid">
+
     <div class= "float-md-right">
     <div id='map'></div>
     </div>
