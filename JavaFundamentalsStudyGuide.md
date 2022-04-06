@@ -21,7 +21,7 @@
 The following are several points of competency and skill that are intended to help identify areas of additional practice and study. Not all answers are found in the Codeup curriculum.
 ## Knowledge
 ### Java I
-- [ ] I can explain how Java code runs: from being written to executing on an operation system.
+- [ ] I can explain how Java code runs: from being written to executing on an operating system.
 - [ ] I can explain the difference between a primitive type and a reference type in Java.
 - [ ] I can name several primitive types in Java.
 - [ ] I can explain why multiple number primitive types are used.
@@ -29,6 +29,30 @@ The following are several points of competency and skill that are intended to he
 - [ ] I can explain the difference between a runtime and compile-time error.
 - [ ] I can identify the major editions of Java.
 - [ ] I can define what a Java wrapper class is.
+- Describe in some detail the process by which a Java program is able to run on an operating system.
+- Why is Java touted as a "write once, run anywhere" language?
+ capability. Because the code runs on the cross-platform Java Virtual Machine, developers can write a Java program on a Windows laptop, 
+ then run it on a Linux or Solaris server without recompiling the code for the new platform
+
+- What is the difference between a .java and .class file? java file contains your Java source code while a .class file contains the 
+ Java bytecode produced by the Java compiler. It is your . class files that run on the JVM to execute a Java application
+
+- Why are we using an IDE (IntelliJ) instead of a simple text editor for writing Java code?
+
+- What is the difference between a JRE and a JDK?
+
+- Are we currently learning about JavaSE, JavaEE, JavaME, or JavaFX?
+
+- What are some key differences between JavaScript and Java?
+
+- Java is a statically typed Object-oriented language and is ran almost everywhere.
+
+- Why does Java have multiple number data types? Why use one over the other?
+
+- Is a string a primitive type in Java?
+
+- Describe the difference between explicit and implicit casting using examples.
+
 ### Java II
 - [ ] I can articulate what OOP is.
 - [ ] I can identify the four levels of visibility for a class/field/method and the identifiers used.
@@ -41,6 +65,45 @@ The following are several points of competency and skill that are intended to he
 - [ ] I can explain the difference between a checked and unchecked exception.
 - [ ] I can explain what a Java annotation is, why they are used, and give examples.
 - [ ] I can explain the difference between the throws and throw keywords with regard to exceptions.
+- What are the 4 Pillars of Object Oriented Programming?
+  
+- What is a statically typed programming language?
+  
+- What are the differences between an interface and abstract class?
+  
+- What control structure SPECIFICALLY allows for multiple cases to be assessed against a value?
+  
+- What is a class?
+  
+- What is the difference between a class and an object?
+  
+- What is the difference between static and instance fields? Give an example of each.
+  
+- What is the purpose of a main method?
+  
+- What makes a method recursive? Give an example.
+  
+- Define the following terms and cite a specific example for each…
+    Encapsulation
+    Inheritance
+    Polymorphism
+    Abstraction
+  
+- What is the difference between method overloading and method overriding?
+  
+- What are four types of visibility in Java?
+  
+- Give two examples of how to define an array.
+- Under what conditions would use a map collection be preferred over a list collection and vice versa?
+  
+- What are annotations and what are some specific examples?
+  
+- What is the difference between a checked and unchecked exception?
+  
+- What is the difference between the ‘throw’ and ‘throws’ keywords in Java?
+
+
+
 ## Skills
 ### Java I
 - [ ] I can write a hello world Java program from scratch.
