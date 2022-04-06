@@ -2,8 +2,8 @@
 
 "use strict";
 
-$.ajax("https://api.openweathermap.org/data/2.5/onecall?lat=29.427002&lon=-98.501556&appid=" + OPEN_WEATHER_KEY)
-    .done(function(data){
+
+
 
 
     mapboxgl.accessToken = MAPBOX_KEY;
@@ -69,6 +69,20 @@ $.ajax("https://api.openweathermap.org/data/2.5/onecall?lat=29.427002&lon=-98.50
             //console.log(data.daily[0].dt);      //it's times 1000   //for conversion of UTC date  (unviversal time conversion?)
             console.log(new Date(data.daily[0].dt * 1000));
         });
+
+
+
+    //Initial weather map on load
+    function weatherMap() {
+        $.ajax("https://api.openweathermap.org/data/2.5/onecall?lat=29.427002&lon=-98.501556&appid="
+            + OPEN_WEATHER_KEY).done(function(weather){
+        console.log(weather);
+        renderWeather(weather);
+    });
+    }
+       weatherMap();
+
+        //Logs and displays entire weather object
         function renderWeather(weather){
             var html = "";
             html += "<div >";
@@ -134,8 +148,8 @@ $(document).ready(function() {
 
 
 
-} )
-    })
+})
+
 
 // });})
 
