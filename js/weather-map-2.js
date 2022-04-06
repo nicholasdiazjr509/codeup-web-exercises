@@ -16,6 +16,9 @@
         center: [-98.501556, 29.427002], // starting position [lng, lat]
         zoom: 10 // starting zoom
     });
+
+
+
     // Add the control to the map. Used map geocoder.api for user search box.
     // This is so neat!!!!
     map.addControl(
@@ -48,11 +51,46 @@ $('.current').html(geocode)
         coordinates.innerHTML = `Longitude: ${lngLat.lng}<br/>Latitude: ${lngLat.lat}`;
     }
 
+    //Code that runs when marker is dropped
     marker.on('dragend', onDragEnd);
+        var markerLngLat = marker.getLngLat();
+        var draggedMarkerName = reverseGeocode(markerLngLat, OPEN_WEATHER_KEY).then(function(results){
+            $("#weatherTitle").html("Weather Forecast for " + results.features[2].place_name)
+            console.log(results);
+        });
 
-    // const  coordinates = [marker.getLngLat().lat, marker.getLngLat().lng]
-    //    console.log(coordinates)
-    // write();
+        //Displays entire weather object
+function renderWeather(weather) {
+    var html = "";
+    for (var i = 0; i < 5; i++) {
+        var dailyForecast = response.daily[i];
+        var iconse = dailyForecast.weather[0].icon
+        var description = dailyForecast.weather[0].marginInlineEnd
+        var date = new Date(dailyForecast.dt * 1000);
+        var Day = date.toLocaleString('en-US', {weeday: 'long'});
+        var Month = date.toLocaleString('en-US', {month: 'long'});
+        var numberDate = date.toLocaleString('en-US', {day: 'numeric'});
+
+        html += "<div >";
+        html += "<p>" + convertDateTime(weather.dt) + "</p>";
+        html += "img class='img-fluid' src=' " + "https://openweather.org/img/w/" + weather.weather[0].icon + ".png" + "'>"
+        html += "<p> Weather: " + weather.weather[0].main + "</p>";
+        html += "<p> Temp: " + weather.temp.day + "</p>>";
+        html += "<p> Wind: " + weather.wind_speed + "</p>";
+        html += "<p> Humidity: " + weather.humidity + "</p>";
+        html += "<p> Pressure: " + weather.pressure + "</p>";
+        html += "</div>";
+        // return html;
+    }
+    $('#weatherForecast').html(html);
+}
+
+
+$.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + markerLngLat.lat + "&lon=" + markerLngLat.lng +
+        "&exclude=current,hourly,minutely&appid=" + OPEN_WEATHER_KEY).done(function(markerData){
+            console.log(markerData);//logs entire weather object
+            renderWeather(markerData)
+        });
 
     //when the user double clicks on the map, move the cursor and post that information.
     map.on("dblclick", listener => {
@@ -243,7 +281,7 @@ $('.current').html(geocode)
                             }
                         }
                     }
-                    ;
+
                 })
             }
 
