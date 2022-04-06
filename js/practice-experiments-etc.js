@@ -3,7 +3,7 @@
 
 
     /**
-     Doing the assessment exercises here. :)
+     Doing the assessment practice exercises here. :)
      */
 
 
@@ -13,6 +13,24 @@
      * true if the input is numeric or not. Numeric strings are not considered
      * as numbers and should return false.
      */
+
+    function isANumber(input){
+        if(isNaN(input) === false) {
+            return true;
+        }else if(input === true) {
+            return false;
+        }else if (input === null) {
+            return false;
+        }else if (input === false) {
+            return false;
+        }else if(toString.call(input) === "[object Array]") {
+            return false;
+        }else if (toString.call(input) === "object") {
+        }else{
+            return true;
+        }
+    }
+    //*************
     function isANumber(input) {
         return typeof input === 'number';
     }
@@ -132,7 +150,8 @@
 
     /**
      * 8.
-     *Define a function named square. If the provided input is numeric, square should return the number multiplied by itself. If the input is not numeric, square, should return false.
+     *Define a function named square. If the provided input is numeric, square should return the number multiplied by itself.
+     * If the input is not numeric, square, should return false.
 
      square(2)                   // 4
      square(3)                   // 9
@@ -147,9 +166,39 @@
      square()                    // false
      */
 
+    function square(input) {
+        if (input === number){
+            return false;
+    }
+    if(input === false) {
+        return false;
+    }else if(input === null){
+        return false;
+    }else if (input === true) {
+        return false;
+    }else if (isNaN(input) === true ){
+        return false;
+    }else if (isNaN(input)=== false){
+        return Math.pow(input, 2);
+    }else{
+        return false;}
+    }
+
+    //answer
+    function square(input){
+        if(isANumber(input)) {
+            return Math.pow(input, 2)
+        }else{
+            return false;
+        }
+    }
+
     /**
      * 9.
-     *Write a function named sumOfSquares that takes in two inputs. If both inputs are numeric, sumOfSquares should square each input and return the sum of them added together. For example, if we pass a and b then we should square a and add it to the square of b. If either or both inputs are not numeric, sumOfSquares should return false.
+     *Write a function named sumOfSquares that takes in two inputs.
+     *  If both inputs are numeric, sumOfSquares should square each input and return the sum of them added together.
+     *  For example, if we pass a and b then we should square a and add it to the square of b.
+     *  If either or both inputs are not numeric, sumOfSquares should return false.
 
      sumOfSquares(2, 3)          // 13
      sumOfSquares(1, 0)          // 1
