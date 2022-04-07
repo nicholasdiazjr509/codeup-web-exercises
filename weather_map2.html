@@ -26,7 +26,7 @@
 <body>
 <div>
 <h1>Weather Map</h1>
-</div>
+<script src="mapbox-geocoder-utils.js"></script>
     <!--<div id="weather">-->
 <!--    <div id="description"></div>-->
 <!--    <h1 id="temp"></h1>-->
@@ -51,17 +51,18 @@
             <option value="mapbox://styles/mapbox/navigation-guidance-day-v4">Navigational Day</option>
             <option value="mapbox://styles/mapbox/navigation-guidance-night-v4">Navigational Night</option>
         </select>
-    <div class="mainContainer"><div class="-fluid">
-        <div id="insertInfo" class="d-flex row justify-content-evenly"></div>
-    </div>
-    <div>
+ 
+    <div class="mainContainer"> 
+        <div id="insertInfo" > 
+
+         <div>
         <span class="city-bullet"></span>
-        <div class="city-data">
-            <div class="row city-main-info">
-                <span class="city-weather">10</span>
-                <span class="city-name weather-average"></span>
-            </div>
-            <div class="row city-full-info">
+                <div class="city-data">
+                <div class="row city-main-info">
+                    <span class="city-weather">10</span>
+                    <span class="city-name weather-average"></span>
+                </div>
+                <div class="row city-full-info">
                 <table>
                     <thead>
                     <th colspan="2" class="city-param weather-average">San Antonio</th>
@@ -81,11 +82,9 @@
                     </tbody>
                 </table>
             </div>
+    
         </div>
-    </div>
-   
-
-
+</div>
     <!-- Make a card -->
     <div class="card">
         <!-- search bar -->
@@ -95,7 +94,7 @@
                 <path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path>
             </button>
         
-
+            <section class="ajax-section">
             <li class="city">
                 <h2 class="city-name" data-name="city">
                     <span>...</span>
@@ -108,21 +107,18 @@
                 </figure>
             </li>
         </ul>
+            </section>
     </div>
-</section>
-<section class="ajax-section">
 
-</section>
+</div>
+</div>
 
-
-
-
-
-
+ 
     <div class= "float-md-right">
     <div id='map'></div>
     </div>
 </div>
+
     <pre id="coordinates" class="coordinates"></pre>
     <button id="toggleCards">Show all days</button>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
