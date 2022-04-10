@@ -68,7 +68,7 @@ function showWeatherData(data){
                 <div>${window.moment(sunrise * 1000).format('HH:mm a')}</div>
         </div>
         <div class="weather-item">
-        <   div>Sunset</div>
+        <div>Sunset</div>
             <div>${window.moment(sunset * 1000).format('HH:mm a')}</div>
         </div>
         `;
@@ -79,9 +79,9 @@ function showWeatherData(data){
             currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
-                <div class="day">${window.moment(day.dt*1000).format('dddd')}</div>
-                <div class="temp">Night - ${day.temp.night}&#176;F</div>
-                <div class="temp">Day - ${day.temp.day}&#176;F</div>
+                <div class="day">${window.moment(day.dt * 1000).format('dddd')}</div>
+                <div class="temp">Night - ${day.temp.night}&#176; F</div>
+                <div class="temp">Day - ${day.temp.day}&#176; F</div>
             </div>
             
             `
@@ -90,8 +90,8 @@ function showWeatherData(data){
             <div class="weather-forecast-item">
                 <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - ${day.temp.night}&#176;F</div>
-                <div class="temp">Day - ${day.temp.day}&#176;F</div>
+                <div class="temp">Night - ${day.temp.night}&#176; F</div>
+                <div class="temp">Day - ${day.temp.day}&#176; F</div>
             </div>
             
             `
