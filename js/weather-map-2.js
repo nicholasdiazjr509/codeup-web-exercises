@@ -64,7 +64,7 @@ function renderWeather(weather) {
     var html = "";
     for (var i = 0; i < 5; i++) {
         var dailyForecast = response.daily[i];
-        var iconse = dailyForecast.weather[0].icon
+        var icons = dailyForecast.weather[0].icon
         var description = dailyForecast.weather[0].marginInlineEnd
         var date = new Date(dailyForecast.dt * 1000);
         var Day = date.toLocaleString('en-US', {weeday: 'long'});
