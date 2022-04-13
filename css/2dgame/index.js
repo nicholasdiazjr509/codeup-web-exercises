@@ -1,6 +1,21 @@
 const grid = document.querySelector('.grid')
 const blockWidth = 100
 const blockHeight = 20
+const boardWidth = 560
+const ballDiameter = 20
+const boardHeight = 300
+
+let timerId 
+let xDirection = 2
+let yDirection = 2
+
+//always user starts here
+const userStart = [270, 40]
+let currentPosition = userStart
+
+//ball start position
+const ballStart = [230, 40]
+let ballCurrentPosition = ballStart
 
 //create Block
 class Block{
@@ -45,3 +60,80 @@ grid.appendChild(block)
 }
 
 addBlocks()
+
+//add the user
+const user = document.createElement('div')
+user.classList.add('user')
+drawUser()
+grid.appendChild(user)
+
+//draw the ball
+function drawBall(){
+    ball.style.left = ballCurrentPosition[0] + 'px'
+ball.style.bottom = ballCurrentPosition[1] + 'px'
+}
+
+//draw the user function
+function drawUser(){
+    user.style.left = currentPosition[0] + 'px'
+    user.style.bottom = currentPosition[1] + 'px'
+}
+
+//user moving of block
+function moveUser(e){
+    switch (e.key){
+        case 'ArrowLeft':
+            if(currentPosition[0] > 0){
+        // currentPosition[0] -=10
+        // user.style.left = currentPosition[0] + 'px'
+        drawUser()
+            }
+        break;
+
+        case 'ArrowRight':
+            if(currentPosition[0] < boardWidth - blockWidth){
+                currentPosition[0] += 10
+                drawUser()
+            }
+            break;
+    }
+}
+
+document.addEventListener('keydown', moveUser)
+
+// add a ball
+const ball = document.createElement('div')
+ball.classList.add('ball')
+drawBall()
+grid.appendChild(ball)
+
+//move the ball
+function moveBall(){
+    ballCurrentPosition[0] += xDirection
+    ballCurrentPosition[1] += yDirection
+    drawBall()
+    checkForCollisions()
+}
+
+timerId = setInterval(moveBall, 30)
+
+//check for collisions
+function checkForCollisions(){
+    //check for wall collisions
+    if(ballCurrentPosition[0] >= (boardWidth - ballDiameter) ||
+        ballCurrentPosition[1] >= (boardHeight - ballDiameter)
+        ) {
+        changeDirection()
+
+    }
+}
+function changeDirection(){
+    if(xDirection === 2 && yDirection === 2){
+        yDirection = -2
+        return
+    }
+    if(xDirection == -2 && yDirection == 2){
+    xDirection = 2
+    return
+}
+}
