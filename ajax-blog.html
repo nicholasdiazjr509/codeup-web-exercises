@@ -42,7 +42,7 @@
             // $(document).ready(() => {
                 // function getData(){
                 //     $.ajax("data/blog.json").done((data) => {
-               let getData = $.get("data/blog.json");
+               let getData = $.get('https://jsonplaceholder.typicode.com/data/blog.json');
 
                 getData.done(function(getData) {
                     $.each(getData, function(index, item){
