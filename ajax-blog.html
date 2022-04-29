@@ -42,7 +42,7 @@
             // $(document).ready(() => {
                 // function getData(){
                 //     $.ajax("data/blog.json").done((data) => {
-               let getData = $.get('https://jsonplaceholder.typicode.com/data/blog.json');
+               let getData = $.get("data/blog.json");
 
                 getData.done(function(getData) {
                     $.each(getData, function(index, item){
@@ -53,6 +53,8 @@
                         "<td>" + item.date + "</td></tr>");
                         })
                     });
+
+                    
                 $("button").click(function(){
                     $("html").load("ajax-blog.html");
                 });
